@@ -88,10 +88,11 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 I'm not a traditional engineer—I'm an **entrepreneur who learned to code to survive**.
 
-**No CS degree. No bootcamp. No team. Just:**
+**No CS degree. Never employed as dev. No team. Just:**
 - 🎖️ **Marine Corps Discipline** (Honor-Courage-Commitment, Semper Fi, OOH RAH!!)
 - 🌿 **Mission:** Descheduling Cannabis sativa L ASAP **Leading Self-Regulation Revolution**
-- ⚡ **Biology:** 24/7 grind (genetic /mind over matter outlier)
+- 🧠 **Lessons:** Continuous Recursive HITL Super Learning (R&D every day, all day!)
+- ⚡ **Biology:** 24/7 grind (genetic + mind over matter outlier)
 - 🤖 **Force Multiplier:** AI agents doing the work of 15-30 engineers
 
 **Philosophy:**
@@ -99,7 +100,7 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 
 ---
 
-## 🚀 4-Business Layers (CEO / Founder / Owner of Each)
+## 🚀 4-Business Layers (CEO, Founder, Owner of Each)
 
 | Company | Focus |
 |---------|------|-------|
