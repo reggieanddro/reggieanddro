@@ -118,7 +118,7 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 - 🌐 **Sites:** [ReggieAndDro.com](http://reggieanddro.com) | [HighNoonCartoon.com](http://highnooncartoon.com)
 - 📧 **Email:** [high@reggieanddro.com](mailto:high@reggieanddro.com)
 - 📍 **Location:** San Antonio, Texas
-- 🐦 **X:** [@jeeseniesen](https://twitter.com/jeeseniesen)
+- 🐦 **X:** [@reggieanddro](https://twitter.com/reggieanddro)
 
 ---
 
