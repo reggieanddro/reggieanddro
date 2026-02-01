@@ -89,23 +89,24 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 I'm not a traditional engineer—I'm an **entrepreneur who learned to code to survive**.
 
 **No CS degree. No bootcamp. No team. Just:**
-- 🎖️ **Marine Corps discipline** (0311 Infantry)
-- 🌿 **Mission:** Descheduling Cannabis sativa L through compliant commerce
-- ⚡ **Biology:** 24/7 grind (genetic outlier territory)
+- 🎖️ **Marine Corps discipline** (Honor-Courage-Commitment, Semper Fi-OOH RAH!!)
+- 🌿 **Mission:** Descheduling Cannabis sativa L ASAP Leading Self-Regulation Revolution "Bullet Out The Barrel of the Gun"
+- ⚡ **Biology:** 24/7 grind (genetic /mind over matter outlier)
 - 🤖 **Force multiplier:** AI agents doing the work of 15-30 engineers
 
 **Philosophy:**
-> "I grind 24/7 so you don't have to—Liv Hana SI handles compliance while you close sales."
+> "I grind 24/7 so you don't have to—Liv Hana SI handles it all."
 
 ---
 
-## 🚀 Companies
+## 🚀 FOur Business Layers (CEO / Founder / Owner of Each)
 
-| Company | Role | Focus |
+| Company | Focus |
 |---------|------|-------|
-| [Reggie & Dro](http://reggieanddro.com) | CEO & Sole Founder | Texas THCA Dispensary |
-| [High Noon Cartoon](http://highnooncartoon.com) | CEO & Sole Founder | Hemp Entertainment |
-| [One Plant Solution](http://oneplantsolution.com) | CEO & Sole Founder | B2B Hemp Tech |
+| [Reggie & Dro](http://reggieanddro.com) | Texas THCA Cannabis Dispensary & Consumption Lounge |
+| [High Noon Cartoon](http://highnooncartoon.com) | Satire, Music, Media, Entertainment |
+| [One Plant Solution](http://oneplantsolution.com) | Education & Advocacy
+| [Herbitrage](http://herbitrage.com) | Cannabis, Business & Tech Incubator & Collab Scaling Engine
 
 ---
 
@@ -118,7 +119,7 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 | **Deploy Velocity** | 82/day | 1-2/day | 0.3-0.4/day |
 | **Code Review** | AI-assisted | Peer mandatory | Peer mandatory |
 
-**Position:** Top 0.01% work capacity phenotype—solo shipping what takes teams of 15-30.
+**Position:** Top 0.01% work capacity phenotype—solo DAILY shipping Tier 1 Dev Monthly Output...
 
 ---
 
