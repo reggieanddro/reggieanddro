@@ -2,8 +2,8 @@
 
 # Jesse Niesen 🌿⚡
 ### 1,128/mo | Building Liv Hanna S.I.
-Rough & Ready, NorCal Native | Born-Again Texan</br>
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
+Rough & Ready, NorCal Native | Born-Again Texan</br>
 MISSION: "Grow, Sell, Heal. DE-SCHEDULE NOW!"</br>
 **US Marine Corps Veteran**</br>
 CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
