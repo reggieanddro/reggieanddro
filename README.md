@@ -1,10 +1,13 @@
 <div align="center">
 
 # Jesse Niesen 🌿⚡
-### Self-Taught AI Pioneer | Texas Hemp CEO | 1,128 Commits/Month Solo
+### 1,128/mo | Building Liv Hanna S.I. | All Cattle, No Hat—threw it into the Unicorn Race | **US Marine Corps Veteran** from Rough & Ready, NorCal | Born-Again Texan | CEO @ [Reggie & Dro](http://reggieanddro.com)**
 
-**US Marine Corps Veteran** | **CEO @ [Reggie & Dro](http://reggieanddro.com)** | **Building Liv Hana SI**
+📍 San Antonio, Texas 🤠
 
+🏢 Reggie & Dro | High Noon Cartoon | One Plant Solution
+🌐 reggieanddro.com
+🧠 🗣️ 🎼 Herbitrage.com
 </div>
 
 ---
@@ -12,6 +15,12 @@
 ## 🎯 What I Ship
 
 **Liv Hana SI:** Autonomous multi-agent singularity handling Texas THCA compliance, real-time price indexing, voice commerce, and age verification—so hemp entrepreneurs can focus on revenue, not regulations.
+
+Shipping Soveriegn Autonomous 👑🤖 Agentic Singularity Streams of Scaffolding 🌌🛠️ | Pioneering 2026 SOTA Frontier Recursive Learning, Self Improvement Systems 🌀🚀, Deterministic Verification Machines 🔒⚙️ & Cognitive Voice Orchestration 🧠🗣️🎼
+
+Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hanna!
+
+Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ### January 2026 Stats (Solo, No CS Degree)
 
