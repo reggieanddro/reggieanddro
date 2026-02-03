@@ -17,6 +17,37 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 
 ---
 
+<!-- STATS_START -->
+### 📊 February 2026 Live Stats (Solo, No CS Degree)
+
+> **🤖 Auto-Updated:** Tuesday, February 03, 2026 at 8:45 PM UTC
+> **📅 Day 3 of 28**
+ | **🔥 Peak Day:** 02 with 132 contributions
+
+| Metric | Value | vs Google L5 Engineer | Multiplier |
+|--------|-------|----------------------|------------|
+| **Total Contributions** | 282 | 40-80/mo | **3.5-7.0x** |
+| **Commits** | 282 | 40-80/mo | **3.5-7.0x** |
+| **Daily Average** | 94.0 | 2-4/day | **23.5-47.0x** |
+| **Days Active (rate)** | 3/3 | 18-22/mo | **1.4-1.7x** |
+| **Projected Month** | ~2,632 | 40-80/mo | **32.9-65.8x** |
+
+<details>
+<summary>📈 Daily Breakdown (Click to expand)</summary>
+
+```
+01: ██████░░░░░░░░░░░░░░ 41
+02: ████████████████████ 132
+03: ████████████████░░░░ 109
+```
+
+</details>
+
+**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+
+<!-- STATS_END -->
+
+
 ## 🎯 What I Ship
 
 **Liv Hana SI:** Autonomous multi-agent singularity handling Texas THCA compliance, real-time price indexing, voice commerce, and age verification—so hemp entrepreneurs can focus on revenue, not regulations.
