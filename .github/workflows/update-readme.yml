@@ -1,0 +1,312 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# GITHUB ACTION: Daily README Stats Auto-Update (Production-Grade)
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Schedule: Daily at 4:20 AM Texas Time (Central Standard Time)
+# Purpose: Fetch GitHub contribution stats via GraphQL API, compare against
+#          Google L5 engineer benchmarks (Worklytics 2025), and update README.md
+#
+# Components:
+#   - get_github_stats.py: Fetches stats from GitHub GraphQL API
+#   - compare_l5.py: Compares stats against L5 benchmarks, generates markdown
+#   - update_readme.py: Updates README.md between markers
+#   - test_stats.py: Unit tests (>=80% coverage target)
+#
+# Markers Required in README.md:
+#   <!-- STATS_START -->
+#   <!-- STATS_END -->
+#
+# Security:
+#   - Uses GITHUB_TOKEN with minimal permissions (contents: write)
+#   - No hardcoded credentials
+#   - All secrets stored in GitHub encrypted secrets
+#
+# Copy to: reggieanddro/reggieanddro/.github/workflows/update-readme.yml
+#
+# Author: Jesse Niesen / Liv Hana SI
+# Version: 2.0.0 (Python modular architecture)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+name: 📊 Update README Stats Daily (4:20 AM TX)
+
+on:
+  schedule:
+    # 4:20 AM Central Time = 10:20 UTC (CST, Nov-Mar)
+    # Note: During CDT (Mar-Nov), this runs at 5:20 AM local time
+    - cron: '20 10 * * *'
+
+  # Allow manual triggering for testing
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no commit)'
+        required: false
+        default: 'false'
+        type: boolean
+
+  # Run on push to workflow files for testing
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-profile-readme.yml'
+      - '.github/workflows/scripts/*.py'
+
+# Permissions: Minimal required for updating README
+permissions:
+  contents: write
+
+# Concurrency: Cancel in-progress runs on new push
+concurrency:
+  group: readme-stats-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GITHUB_USERNAME: reggieanddro
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  # ═══════════════════════════════════════════════════════════════════════════
+  # JOB 1: Run Tests (on push only)
+  # ═══════════════════════════════════════════════════════════════════════════
+  test:
+    name: 🧪 Run Unit Tests
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 Install Test Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov
+
+      - name: 🧪 Run Unit Tests
+        working-directory: .github/workflows/scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m pytest test_stats.py -v --cov=. --cov-report=term-missing
+          echo "✅ Tests passed"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # JOB 2: Update README Stats
+  # ═══════════════════════════════════════════════════════════════════════════
+  update-readme:
+    name: 📊 Update README Stats
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: always() && (needs.test.result == 'success' || needs.test.result == 'skipped')
+
+    steps:
+      # ─────────────────────────────────────────────────────────────────────
+      # Setup
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Fetch GitHub Stats
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📊 Fetch GitHub Stats
+        id: fetch-stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ env.GITHUB_USERNAME }}
+        run: |
+          echo "🔄 Fetching GitHub stats for $GITHUB_USERNAME..."
+
+          # Run stats fetcher
+          STATS=$(python .github/workflows/scripts/get_github_stats.py "$GITHUB_USERNAME")
+          EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ Failed to fetch stats"
+            echo "stats_error=true" >> $GITHUB_OUTPUT
+            exit 0  # Don't fail workflow, just skip update
+          fi
+
+          # Store stats for next step (handle multiline JSON)
+          echo "GITHUB_STATS<<EOF" >> $GITHUB_ENV
+          echo "$STATS" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          # Extract key metrics for logging
+          TOTAL=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('total_contributions', 0))")
+          COMMITS=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('commits', 0))")
+          DAILY=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('daily_avg', 0))")
+
+          echo "📈 Stats fetched:"
+          echo "   Total Contributions: $TOTAL"
+          echo "   Commits: $COMMITS"
+          echo "   Daily Average: $DAILY"
+
+          echo "stats_error=false" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Compare to L5 Benchmarks & Generate Markdown
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📏 Compare to L5 Benchmarks
+        id: compare
+        if: steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          echo "🔄 Comparing stats to Google L5 benchmarks..."
+
+          # Run comparison and get markdown output
+          MARKDOWN=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --markdown-only)
+          EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ Failed to generate comparison"
+            echo "compare_error=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Store markdown for next step
+          echo "STATS_MARKDOWN<<EOF" >> $GITHUB_ENV
+          echo "$MARKDOWN" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "✅ Markdown generated successfully"
+          echo "compare_error=false" >> $GITHUB_OUTPUT
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Update README
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📝 Update README
+        id: update-readme
+        if: steps.compare.outputs.compare_error != 'true' && steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          echo "🔄 Updating README.md..."
+
+          # Check if dry run
+          DRY_RUN="${{ inputs.dry_run || 'false' }}"
+
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "🏃 DRY RUN - Not writing to file"
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --dry-run
+          else
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md
+          fi
+
+          echo "✅ README update complete"
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Commit & Push
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📤 Commit & Push Changes
+        if: inputs.dry_run != 'true' && steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          # Configure git
+          git config --global user.name 'Liv Hana Stats Bot 🤖'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Stage README
+          git add README.md
+
+          # Check for changes
+          if git diff --staged --quiet; then
+            echo "📭 No changes to commit - stats unchanged"
+            exit 0
+          fi
+
+          # Get commit message details
+          MONTH=$(date +'%B')
+          DAY=$(date +'%d')
+          YEAR=$(date +'%Y')
+          TOTAL="${{ steps.fetch-stats.outputs.total }}"
+
+          # Commit with descriptive message
+          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} contributions vs L5
+
+          Daily stats refresh at 4:20 AM Texas Time
+          Source: GitHub GraphQL API
+          Benchmarks: 2025 Worklytics L5 Engineer"
+
+          # Push changes
+          git push
+
+          echo "✅ Changes pushed successfully"
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Summary
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📋 Job Summary
+        if: always()
+        run: |
+          echo "## 📊 README Stats Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Fetch Stats | ${{ steps.fetch-stats.outputs.stats_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Compare L5 | ${{ steps.compare.outputs.compare_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Total Contributions | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Schedule:** Daily at 4:20 AM Texas Time (10:20 UTC)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Benchmark Source:** [2025 Worklytics](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)" >> $GITHUB_STEP_SUMMARY
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # JOB 3: Notify on Failure (optional)
+  # ═══════════════════════════════════════════════════════════════════════════
+  notify-failure:
+    name: 🚨 Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [update-readme]
+    if: failure()
+
+    steps:
+      - name: 🚨 Create Issue on Failure
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `📊 README Stats Update Failed - ${new Date().toISOString().split('T')[0]}`;
+            const body = `
+            ## README Stats Update Failed
+
+            The daily stats update workflow failed. Please investigate.
+
+            **Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}
+
+            **Triggered by:** ${context.eventName}
+            **Time:** ${new Date().toISOString()}
+            `;
+
+            // Check if issue already exists today
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'stats-failure'
+            });
+
+            const today = new Date().toISOString().split('T')[0];
+            const existingIssue = issues.data.find(i => i.title.includes(today));
+
+            if (!existingIssue) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['stats-failure', 'automated']
+              });
+              console.log('Issue created');
+            } else {
+              console.log('Issue already exists for today');
+            }
