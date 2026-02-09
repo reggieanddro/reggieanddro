@@ -3,6 +3,7 @@
 Google L5 Benchmark Comparison - Daily README Auto-Update
 ==========================================================
 Compares GitHub contribution statistics against Google L5 engineer benchmarks.
+Outputs green-colored (#0ab123) markdown using LaTeX syntax for GitHub rendering.
 
 Benchmarks Source: 2025 Worklytics Software Engineering Productivity Report
 https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores
@@ -11,11 +12,8 @@ Usage:
     echo '{"total_contributions": 275, ...}' | python compare_l5.py
     python compare_l5.py --stats '{"total_contributions": 275, ...}'
 
-Output:
-    JSON object with comparison results and formatted markdown table
-
 Author: Jesse Niesen / Liv Hana SI
-Version: 1.0.0
+Version: 2.0.0
 """
 
 import os
@@ -24,7 +22,7 @@ import json
 import argparse
 import logging
 from datetime import datetime, timezone
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, Tuple
 
 # Configure logging
 logging.basicConfig(
@@ -33,6 +31,9 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger(__name__)
+
+# Green color for GitHub LaTeX rendering
+GREEN = "#0ab123"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -73,18 +74,21 @@ L5_BENCHMARKS = {
 }
 
 
+def green(text: str) -> str:
+    """Wrap text in green LaTeX color for GitHub markdown rendering."""
+    # Escape special LaTeX chars
+    safe = str(text).replace("~", r"\~")
+    return rf"$\color{{{GREEN}}}{{\textsf{{{safe}}}}}$"
+
+
+def green_bold(text: str) -> str:
+    """Wrap text in green bold LaTeX color for GitHub markdown rendering."""
+    safe = str(text).replace("~", r"\~")
+    return rf"$\color{{{GREEN}}}{{\textbf{{{safe}}}}}$"
+
+
 def calculate_multiplier(value: float, benchmark_min: int, benchmark_max: int) -> Tuple[float, float]:
-    """
-    Calculate multiplier range compared to benchmark.
-
-    Args:
-        value: Actual value
-        benchmark_min: Minimum benchmark value
-        benchmark_max: Maximum benchmark value
-
-    Returns:
-        Tuple of (multiplier_vs_max, multiplier_vs_min)
-    """
+    """Calculate multiplier range compared to benchmark."""
     if benchmark_max == 0 or benchmark_min == 0:
         return (0.0, 0.0)
 
@@ -95,27 +99,17 @@ def calculate_multiplier(value: float, benchmark_min: int, benchmark_max: int) -
 
 
 def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Compare GitHub stats against Google L5 benchmarks.
-
-    Args:
-        stats: Dictionary containing GitHub statistics
-
-    Returns:
-        Dictionary with comparison results
-    """
+    """Compare GitHub stats against Google L5 benchmarks."""
     comparisons = []
 
-    # Total contributions vs commits benchmark (most comparable)
     total = stats.get("total_contributions", 0)
     commits = stats.get("commits", 0)
     daily_avg = stats.get("daily_avg", 0)
     days_active = stats.get("days_active", 0)
-    prs = stats.get("pull_requests", 0)
     day_of_month = stats.get("day_of_month", 1)
     projected = stats.get("projected_month", 0)
 
-    # Commits comparison
+    # Total contributions
     commit_mult = calculate_multiplier(total, L5_BENCHMARKS["commits_per_month"]["min"],
                                         L5_BENCHMARKS["commits_per_month"]["max"])
     comparisons.append({
@@ -176,30 +170,36 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
         "status": "above" if proj_mult[0] >= 1.0 else "below"
     })
 
-    # Overall assessment
     avg_multiplier = sum(c["multiplier_min"] for c in comparisons) / len(comparisons)
-    overall_status = "above" if avg_multiplier >= 1.0 else "below"
 
     return {
         "comparisons": comparisons,
         "overall_multiplier": round(avg_multiplier, 1),
-        "overall_status": overall_status,
+        "overall_status": "above" if avg_multiplier >= 1.0 else "below",
         "benchmark_source": "2025 Worklytics Software Engineering Productivity Benchmarks",
         "benchmark_url": "https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores",
         "compared_at": datetime.now(timezone.utc).isoformat()
     }
 
 
+def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
+    """
+    Generate the green YTD subtitle line for the profile header.
+
+    Returns a line like:
+    ### $\\color{#0ab123}{\\textsf{62.4/day · 2,494 YTD (2026) | Building Liv Hanna S.I.}}$
+    """
+    ytd_avg = stats.get("ytd_daily_avg", 0)
+    ytd_total = stats.get("ytd_total", 0)
+    year = stats.get("year", 2026)
+
+    subtitle_text = f"{ytd_avg}/day \\cdot {ytd_total:,} YTD ({year}) | Building Liv Hanna S.I."
+    return rf"### $\color{{{GREEN}}}{{\textsf{{{subtitle_text}}}}}$"
+
+
 def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -> str:
     """
-    Generate a formatted markdown table for the README.
-
-    Args:
-        stats: GitHub statistics
-        comparison: L5 comparison results
-
-    Returns:
-        Formatted markdown string
+    Generate a formatted markdown table with green (#0ab123) colored values.
     """
     month = stats.get("month", "Unknown")
     year = stats.get("year", 2026)
@@ -207,9 +207,8 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
     days_in_month = stats.get("days_in_month", 30)
     peak = stats.get("peak_day", {})
 
-    # Format timestamp for Texas time
     now = datetime.now(timezone.utc)
-    tx_time = now.strftime("%A, %B %d, %Y at %-I:%M %p") + " UTC"  # Adjust for display
+    tx_time = now.strftime("%A, %B %d, %Y")
 
     lines = [
         f"### 📊 {month} {year} Live Stats (Solo, No CS Degree)",
@@ -222,15 +221,22 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         peak_day_num = peak.get("date", "").split("-")[-1] if peak.get("date") else "?"
         lines.append(f" | **🔥 Peak Day:** {peak_day_num} with {peak['count']} contributions")
 
-    lines.extend(["", "| Metric | Value | vs Google L5 Engineer | Multiplier |",
-                  "|--------|-------|----------------------|------------|"])
+    # Green-colored header row
+    lines.extend([
+        "",
+        f"| {green('Metric')} | {green('Value')} | {green('vs Google L5 Engineer')} | {green('Multiplier')} |",
+        "|--------|-------|----------------------|------------|"
+    ])
 
+    # Green-colored data rows
     for comp in comparison["comparisons"]:
         value = comp["value"]
         if isinstance(value, (int, float)) and not isinstance(value, bool):
             value = f"{value:,}" if isinstance(value, int) else f"{value}"
-        mult_str = f"**{comp['multiplier_min']}-{comp['multiplier_max']}x**"
-        lines.append(f"| **{comp['metric']}** | {value} | {comp['benchmark']} | {mult_str} |")
+        mult_str = f"{comp['multiplier_min']}-{comp['multiplier_max']}x"
+        lines.append(
+            f"| **{comp['metric']}** | {green(value)} | {green(comp['benchmark'])} | {green_bold(mult_str)} |"
+        )
 
     # Daily breakdown (collapsible)
     daily = stats.get("daily_breakdown", [])
@@ -266,40 +272,29 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
 
 
 def generate_full_output(stats: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Generate full output including comparison and markdown.
-
-    Args:
-        stats: GitHub statistics
-
-    Returns:
-        Complete output dictionary
-    """
+    """Generate full output including comparison, markdown, and YTD subtitle."""
     if "error" in stats:
         return {
             "error": stats["error"],
             "markdown": f"⚠️ Failed to fetch stats: {stats['error']}",
+            "ytd_subtitle": "",
             "generated_at": datetime.now(timezone.utc).isoformat()
         }
 
     comparison = compare_to_l5(stats)
     markdown = generate_markdown_table(stats, comparison)
+    ytd_subtitle = generate_ytd_subtitle(stats)
 
     return {
         "stats": stats,
         "comparison": comparison,
         "markdown": markdown,
+        "ytd_subtitle": ytd_subtitle,
         "generated_at": datetime.now(timezone.utc).isoformat()
     }
 
 
 def main() -> int:
-    """
-    Main entry point for the script.
-
-    Returns:
-        Exit code (0 for success, 1 for failure)
-    """
     parser = argparse.ArgumentParser(description="Compare GitHub stats to L5 benchmarks")
     parser.add_argument("--stats", type=str, help="JSON string of GitHub stats")
     parser.add_argument("--markdown-only", action="store_true",
@@ -307,7 +302,6 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        # Read stats from argument, stdin, or GITHUB_STATS env var
         if args.stats:
             stats = json.loads(args.stats)
         elif not sys.stdin.isatty():

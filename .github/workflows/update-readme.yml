@@ -48,7 +48,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/update-profile-readme.yml'
+      - '.github/workflows/update-readme.yml'
       - '.github/workflows/scripts/*.py'
 
 # Permissions: Minimal required for updating README
@@ -167,8 +167,8 @@ jobs:
         run: |
           echo "🔄 Comparing stats to Google L5 benchmarks..."
 
-          # Run comparison and get markdown output
-          MARKDOWN=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --markdown-only)
+          # Run comparison and get full JSON output (includes markdown + ytd_subtitle)
+          FULL_OUTPUT=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py)
           EXIT_CODE=$?
 
           if [ $EXIT_CODE -ne 0 ]; then
@@ -177,12 +177,22 @@ jobs:
             exit 0
           fi
 
-          # Store markdown for next step
+          # Extract markdown table
+          MARKDOWN=$(echo "$FULL_OUTPUT" | python -c "import sys, json; print(json.load(sys.stdin)['markdown'])")
+
+          # Extract YTD subtitle
+          YTD_SUBTITLE=$(echo "$FULL_OUTPUT" | python -c "import sys, json; print(json.load(sys.stdin).get('ytd_subtitle', ''))")
+
+          # Store for next step
           echo "STATS_MARKDOWN<<EOF" >> $GITHUB_ENV
           echo "$MARKDOWN" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-          echo "✅ Markdown generated successfully"
+          echo "YTD_SUBTITLE<<EOF" >> $GITHUB_ENV
+          echo "$YTD_SUBTITLE" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "✅ Markdown + YTD subtitle generated successfully"
           echo "compare_error=false" >> $GITHUB_OUTPUT
 
       # ─────────────────────────────────────────────────────────────────────
@@ -199,9 +209,9 @@ jobs:
 
           if [ "$DRY_RUN" = "true" ]; then
             echo "🏃 DRY RUN - Not writing to file"
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --dry-run
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --ytd-subtitle "$YTD_SUBTITLE" --dry-run
           else
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --ytd-subtitle "$YTD_SUBTITLE"
           fi
 
           echo "✅ README update complete"

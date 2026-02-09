@@ -1,7 +1,9 @@
 <div align="center">
 
 # Jesse Niesen 🌿⚡
-### 1,128/mo | Building Liv Hanna S.I.
+<!-- YTD_START -->
+### $\color{#0ab123}{\textsf{62.4/day · 2,494 YTD (2026) | Building Liv Hanna S.I.}}$
+<!-- YTD_END -->
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
 Rough & Ready, NorCal Native | Born-Again Texan</br>
 MISSION: "Grow, Sell, Heal. DE-SCHEDULE NOW!"</br>
@@ -20,17 +22,17 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 <!-- STATS_START -->
 ### 📊 February 2026 Live Stats (Solo, No CS Degree)
 
-> **🤖 Auto-Updated:** Sunday, February 08, 2026 at 10:47 AM UTC
-> **📅 Day 8 of 28**
+> **🤖 Auto-Updated:** Sunday, February 09, 2026
+> **📅 Day 9 of 28**
  | **🔥 Peak Day:** 03 with 172 contributions
 
-| Metric | Value | vs Google L5 Engineer | Multiplier |
+| $\color{#0ab123}{\textsf{Metric}}$ | $\color{#0ab123}{\textsf{Value}}$ | $\color{#0ab123}{\textsf{vs Google L5 Engineer}}$ | $\color{#0ab123}{\textsf{Multiplier}}$ |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | 618 | 40-80/mo | **7.7-15.4x** |
-| **Commits** | 618 | 40-80/mo | **7.7-15.4x** |
-| **Daily Average** | 77.2 | 2-4/day | **19.3-38.6x** |
-| **Days Active (rate)** | 8/8 | 18-22/mo | **1.4-1.7x** |
-| **Projected Month** | ~2,162 | 40-80/mo | **27.0-54.0x** |
+| **Total Contributions** | $\color{#0ab123}{\textsf{1,253}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.3x}}$ |
+| **Commits** | $\color{#0ab123}{\textsf{1,253}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.3x}}$ |
+| **Daily Average** | $\color{#0ab123}{\textsf{139.2}}$ | $\color{#0ab123}{\textsf{2-4/day}}$ | $\color{#0ab123}{\textbf{34.8-69.6x}}$ |
+| **Days Active (rate)** | $\color{#0ab123}{\textsf{9/9}}$ | $\color{#0ab123}{\textsf{18-22/mo}}$ | $\color{#0ab123}{\textbf{1.5-1.8x}}$ |
+| **Projected Month** | $\color{#0ab123}{\textsf{\~3,897}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{48.7-97.4x}}$ |
 
 <details>
 <summary>📈 Daily Breakdown (Click to expand)</summary>
@@ -44,6 +46,7 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 06: ██████████████░░░░░░ 121
 07: █░░░░░░░░░░░░░░░░░░░ 13
 08: █░░░░░░░░░░░░░░░░░░░ 10
+09: ████████████████████ 635
 ```
 
 </details>
@@ -65,13 +68,13 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ### January 2026 Stats (Solo, No CS Degree)
 
-| Metric | Value | vs Google L5 Engineer |
+| $\color{#0ab123}{\textsf{Metric}}$ | $\color{#0ab123}{\textsf{Value}}$ | $\color{#0ab123}{\textsf{vs Google L5 Engineer}}$ |
 |--------|-------|----------------------|
-| **Commits** | 1,128 | **14-28x** (L5 avg: 40-80/mo) |
-| **Net Lines Shipped** | 334,311 | **2,200x** (L5 avg: 125-185/mo) |
-| **Production Deploys** | 2,537 | **211x** (L5 avg: 8-12/mo) |
-| **Files Changed** | 4,912 | **49x** (L5 avg: 50-100/mo) |
-| **Days Active** | 24/31 | 24/7 commit pattern |
+| **Commits** | $\color{#0ab123}{\textsf{1,128}}$ | $\color{#0ab123}{\textbf{14-28x}}$ (L5 avg: 40-80/mo) |
+| **Net Lines Shipped** | $\color{#0ab123}{\textsf{334,311}}$ | $\color{#0ab123}{\textbf{2,200x}}$ (L5 avg: 125-185/mo) |
+| **Production Deploys** | $\color{#0ab123}{\textsf{2,537}}$ | $\color{#0ab123}{\textbf{211x}}$ (L5 avg: 8-12/mo) |
+| **Files Changed** | $\color{#0ab123}{\textsf{4,912}}$ | $\color{#0ab123}{\textbf{49x}}$ (L5 avg: 50-100/mo) |
+| **Days Active** | $\color{#0ab123}{\textsf{24/31}}$ | 24/7 commit pattern |
 
 **Source:** Git log verified, Cloud Run revision count, [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
@@ -85,7 +88,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 ![AlloyDB](https://img.shields.io/badge/AlloyDB-4285F4?style=flat-square&logo=postgresql&logoColor=white)
 ![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)
 
-**AI Orchestration:** DSPy MIPROv2, LangGraph, Claude Opus 4.5, Gemini 3 Flash
+**AI Orchestration:** DSPy MIPROv2, LangGraph, Claude Opus 4.6, Gemini 3 Flash
 **Infrastructure:** Cloud Run (GCS Buildpacks, NO Docker), AlloyDB PostgreSQL, pgvector
 **Voice:** Deepgram STT, ElevenLabs TTS, <500ms latency
 **Commerce:** Shopify GraphQL, LightSpeed X-Series, Square
@@ -100,7 +103,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 ├─────────────────────────────────────────────────────────────────┤
 │  GOLDEN VOICE     │  MAYOR OF MAYORS  │     VERITAS            │
 │  (Voice Agent)    │  (Orchestrator)   │     (Constitutional)   │
-│  Gemini 3 Flash   │  Claude Opus 4.5  │     Guard              │
+│  Gemini 3 Flash   │  Claude Opus 4.6  │     Guard              │
 ├─────────────────────────────────────────────────────────────────┤
 │                    SPAWN ORCHESTRATOR                           │
 │  Stateful agent instances in AlloyDB                            │
@@ -112,7 +115,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ---
 
-## 🔥 Shipped Infrastructure (130 Migrations, 2,537 Deploys)
+## 🔥 Shipped Infrastructure (219 Migrations, 2,537+ Deploys)
 
 | System | Status | Impact |
 |--------|--------|--------|
@@ -144,11 +147,11 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 ## 🚀 4-Business Layers (CEO, Founder, Owner of Each)
 
 | Company | Focus |
-|---------|------|-------|
+|---------|-------|
 | [Reggie & Dro](http://reggieanddro.com) | Texas THCA Cannabis Dispensary & Consumption Lounge |
 | [High Noon Cartoon](http://highnooncartoon.com) | Satire, Music, Media, Entertainment |
-| [One Plant Solution](http://oneplantsolution.com) | Education & Advocacy
-| [Herbitrage](http://herbitrage.com) | Cannabis, Business & Tech Incubator & Collab Scaling Engine
+| [One Plant Solution](http://oneplantsolution.com) | Education & Advocacy |
+| [Herbitrage](http://herbitrage.com) | Cannabis, Business & Tech Incubator & Collab Scaling Engine |
 
 ---
 
