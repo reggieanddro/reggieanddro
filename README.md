@@ -2,7 +2,7 @@
 
 # Jesse Niesen 🌿⚡
 <!-- YTD_START -->
-### $\color{#0ab123}{\textsf{62.4/day · 2,494 YTD (2026) | Building Liv Hanna S.I.}}$
+### $\color{#0ab123}{\textsf{62.4/day \cdot 2,497 YTD (2026) | Building Liv Hanna S.I.}}$
 <!-- YTD_END -->
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
 Rough & Ready, NorCal Native | Born-Again Texan</br>
@@ -22,31 +22,31 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 <!-- STATS_START -->
 ### 📊 February 2026 Live Stats (Solo, No CS Degree)
 
-> **🤖 Auto-Updated:** Sunday, February 09, 2026
+> **🤖 Auto-Updated:** Monday, February 09, 2026
 > **📅 Day 9 of 28**
- | **🔥 Peak Day:** 03 with 172 contributions
+ | **🔥 Peak Day:** 03 with 332 contributions
 
 | $\color{#0ab123}{\textsf{Metric}}$ | $\color{#0ab123}{\textsf{Value}}$ | $\color{#0ab123}{\textsf{vs Google L5 Engineer}}$ | $\color{#0ab123}{\textsf{Multiplier}}$ |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | $\color{#0ab123}{\textsf{1,253}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.3x}}$ |
-| **Commits** | $\color{#0ab123}{\textsf{1,253}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.3x}}$ |
-| **Daily Average** | $\color{#0ab123}{\textsf{139.2}}$ | $\color{#0ab123}{\textsf{2-4/day}}$ | $\color{#0ab123}{\textbf{34.8-69.6x}}$ |
-| **Days Active (rate)** | $\color{#0ab123}{\textsf{9/9}}$ | $\color{#0ab123}{\textsf{18-22/mo}}$ | $\color{#0ab123}{\textbf{1.5-1.8x}}$ |
-| **Projected Month** | $\color{#0ab123}{\textsf{\~3,897}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{48.7-97.4x}}$ |
+| **Total Contributions** | $\color{#0ab123}{\textsf{1,256}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.4x}}$ |
+| **Commits** | $\color{#0ab123}{\textsf{1,256}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.7-31.4x}}$ |
+| **Daily Average** | $\color{#0ab123}{\textsf{139.6}}$ | $\color{#0ab123}{\textsf{2-4/day}}$ | $\color{#0ab123}{\textbf{34.9-69.8x}}$ |
+| **Days Active (rate)** | $\color{#0ab123}{\textsf{9/9}}$ | $\color{#0ab123}{\textsf{18-22/mo}}$ | $\color{#0ab123}{\textbf{1.4-1.7x}}$ |
+| **Projected Month** | $\color{#0ab123}{\textsf{\~3,909}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{48.9-97.7x}}$ |
 
 <details>
 <summary>📈 Daily Breakdown (Click to expand)</summary>
 
 ```
-01: ████░░░░░░░░░░░░░░░░ 41
-02: ███████████████░░░░░ 132
-03: ████████████████████ 172
-04: ███████░░░░░░░░░░░░░ 62
-05: ███████░░░░░░░░░░░░░ 67
-06: ██████████████░░░░░░ 121
-07: █░░░░░░░░░░░░░░░░░░░ 13
-08: █░░░░░░░░░░░░░░░░░░░ 10
-09: ████████████████████ 635
+01: ████░░░░░░░░░░░░░░░░ 82
+02: ███████████████░░░░░ 265
+03: ████████████████████ 332
+04: ██████░░░░░░░░░░░░░░ 115
+05: ███████░░░░░░░░░░░░░ 132
+06: █████████████░░░░░░░ 218
+07: █░░░░░░░░░░░░░░░░░░░ 24
+08: ████░░░░░░░░░░░░░░░░ 69
+09: █░░░░░░░░░░░░░░░░░░░ 19
 ```
 
 </details>
