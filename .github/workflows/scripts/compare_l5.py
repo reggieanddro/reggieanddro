@@ -250,6 +250,19 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
                 f"| **{comp['metric']}** | {value} | {comp['benchmark']} | **{mult_str}** |"
             )
 
+    # Force Multiplier tagline (uses Daily Average multiplier, green + bold)
+    daily_comp = next(
+        (c for c in comparison["comparisons"] if c["metric"] == "Daily Average"),
+        None,
+    )
+    if daily_comp:
+        fm_mult = f"{daily_comp['multiplier_min']}-{daily_comp['multiplier_max']}x"
+        lines.extend([
+            "",
+            f"> **🤖 Force Multiplier:** ONE CEO + AI agents doing the work of"
+            f" {green_bold(fm_mult + ' Google L5 engineers')}",
+        ])
+
     # Daily breakdown (collapsible)
     daily = stats.get("daily_breakdown", [])
     if daily:
