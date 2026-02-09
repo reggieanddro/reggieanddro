@@ -172,17 +172,20 @@ class TestCompareL5(unittest.TestCase):
         self.assertEqual(mult_max, 0.0)
 
     def test_green_wrapper(self):
-        """Test green LaTeX color wrapper"""
+        """Test green LaTeX color wrapper with large bold sans-serif"""
         result = green("hello")
         self.assertIn("#0ab123", result)
         self.assertIn("textsf", result)
+        self.assertIn("textbf", result)
+        self.assertIn("large", result)
         self.assertIn("hello", result)
 
     def test_green_bold_wrapper(self):
-        """Test green bold LaTeX color wrapper"""
+        """Test green bold LaTeX color wrapper with large bold sans-serif"""
         result = green_bold("hello")
         self.assertIn("#0ab123", result)
         self.assertIn("textbf", result)
+        self.assertIn("large", result)
         self.assertIn("hello", result)
 
     def test_compare_to_l5(self):

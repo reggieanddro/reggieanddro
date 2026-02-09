@@ -75,16 +75,15 @@ L5_BENCHMARKS = {
 
 
 def green(text: str) -> str:
-    """Wrap text in green LaTeX color for GitHub markdown rendering."""
-    # Escape special LaTeX chars
+    """Wrap text in green large bold sans-serif LaTeX for GitHub markdown."""
     safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{GREEN}}}{{\textsf{{{safe}}}}}$"
+    return rf"$\color{{{GREEN}}}{{\large\textbf{{\textsf{{{safe}}}}}}}$"
 
 
 def green_bold(text: str) -> str:
-    """Wrap text in green bold LaTeX color for GitHub markdown rendering."""
+    """Wrap text in green large bold sans-serif LaTeX for GitHub markdown."""
     safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{GREEN}}}{{\textbf{{{safe}}}}}$"
+    return rf"$\color{{{GREEN}}}{{\large\textbf{{\textsf{{{safe}}}}}}}$"
 
 
 def calculate_multiplier(value: float, benchmark_min: int, benchmark_max: int) -> Tuple[float, float]:
