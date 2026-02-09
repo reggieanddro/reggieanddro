@@ -184,17 +184,26 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
 
 def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
     """
-    Generate the green YTD subtitle line for the profile header.
-
-    Returns a line like:
-    ### $\\color{#0ab123}{\\textsf{62.4/day · 2,494 YTD (2026) | Building Liv Hanna S.I.}}$
+    Generate the green YTD subtitle as display math (auto-centered on GitHub).
+    Uses $$...$$ so it renders outside HTML divs where $...$ fails.
     """
     ytd_avg = stats.get("ytd_daily_avg", 0)
     ytd_total = stats.get("ytd_total", 0)
     year = stats.get("year", 2026)
 
-    subtitle_text = f"{ytd_avg}/day \\cdot {ytd_total:,} YTD ({year}) | Building Liv Hanna S.I."
-    return rf"### $\color{{{GREEN}}}{{\textsf{{{subtitle_text}}}}}$"
+    # Format total with LaTeX grouping for comma: 2{,}494
+    total_str = f"{ytd_total:,}".replace(",", "{,}")
+
+    return (
+        r"$${\color{" + GREEN + r"}\Large\textsf{"
+        + f"{ytd_avg}/day"
+        + r" \enspace · \enspace "
+        + total_str
+        + r" \enspace YTD \enspace ("
+        + str(year)
+        + r") \enspace | \enspace Building \enspace Liv \enspace Hanna \enspace S.I.}}$$"
+    )
+
 
 
 def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -> str:

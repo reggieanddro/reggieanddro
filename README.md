@@ -1,9 +1,15 @@
 <div align="center">
 
 # Jesse Niesen 🌿⚡
+
+</div>
+
 <!-- YTD_START -->
-### $\color{#0ab123}{\textsf{62.4/day \cdot 2,497 YTD (2026) | Building Liv Hanna S.I.}}$
+$${\color{#0ab123}\Large\textsf{62.4/day \enspace · \enspace 2{,}497 \enspace YTD \enspace (2026) \enspace | \enspace Building \enspace Liv \enspace Hanna \enspace S.I.}}$$
 <!-- YTD_END -->
+
+<div align="center">
+
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
 Rough & Ready, NorCal Native | Born-Again Texan</br>
 MISSION: "Grow, Sell, Heal. DE-SCHEDULE NOW!"</br>
