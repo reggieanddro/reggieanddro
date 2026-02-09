@@ -5,7 +5,7 @@
 </div>
 
 <!-- YTD_START -->
-$${\color{#0ab123}\Large\textbf{\textsf{62.5\ Commits/Day\ ·\ 2{,}502\ YTD\ (2026)\ |\ Building\ Liv\ Hanna\ S.I.}}}$$
+$${\color{#0ab123}\Large\textbf{\textsf{62.5\ Commits/Day\ ·\ 2{,}502\ YTD\ (2026)\ |\ Building\ Liv\ Hana\ S.I.}}}$$
 <!-- YTD_END -->
 
 <div align="center">
