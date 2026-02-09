@@ -86,6 +86,21 @@ def green_bold(text: str) -> str:
     return rf"$\color{{{GREEN}}}{{\large\textbf{{\textsf{{{safe}}}}}}}$"
 
 
+SOFT_WHITE = "#E0E0E0"
+
+
+def soft(text: str) -> str:
+    """Wrap text in soft #E0E0E0 sans-serif LaTeX — easy on tired dev eyes."""
+    safe = str(text).replace("~", r"\~")
+    return rf"$\color{{{SOFT_WHITE}}}{{\textsf{{{safe}}}}}$"
+
+
+def soft_bold(text: str) -> str:
+    """Wrap text in soft #E0E0E0 bold sans-serif LaTeX."""
+    safe = str(text).replace("~", r"\~")
+    return rf"$\color{{{SOFT_WHITE}}}{{\textbf{{\textsf{{{safe}}}}}}}$"
+
+
 def calculate_multiplier(value: float, benchmark_min: int, benchmark_max: int) -> Tuple[float, float]:
     """Calculate multiplier range compared to benchmark."""
     if benchmark_max == 0 or benchmark_min == 0:
@@ -247,7 +262,7 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
             )
         else:
             lines.append(
-                f"| **{comp['metric']}** | {value} | {comp['benchmark']} | **{mult_str}** |"
+                f"| {soft_bold(comp['metric'])} | {soft(value)} | {soft(comp['benchmark'])} | {soft_bold(mult_str)} |"
             )
 
     # Force Multiplier tagline (uses Daily Average multiplier, green + bold)
