@@ -68,9 +68,9 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 
 Shipping autonomous AI-native commerce 👑🤖 | Pioneering 2026 SOTA frontier recursive learning 🌀🚀, self-improving systems 🔒⚙️ & cognitive voice orchestration 🧠🗣️🎼
 
-Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hanna!
+Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hana!
 
-Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
+Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ### January 2026 Stats (Solo, No CS Degree)
 
@@ -113,6 +113,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 ![Deepgram STT](https://img.shields.io/badge/Deepgram_STT-13EF93?style=flat-square&logoColor=white)
 ![ElevenLabs TTS](https://img.shields.io/badge/ElevenLabs_TTS-000000?style=flat-square&logoColor=white)
 ![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 
 ### Commerce & Communications
 ![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
@@ -121,6 +122,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 ![Authorize.net](https://img.shields.io/badge/Authorize.net-004B87?style=flat-square&logoColor=white)
 ![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)
 ![Lightspeed](https://img.shields.io/badge/Lightspeed-D72B2B?style=flat-square&logoColor=white)
+![Square](https://img.shields.io/badge/Square-006AFF?style=flat-square&logo=square&logoColor=white)
 
 **28 technologies** · Multi-model AI orchestration · Sub-500ms voice latency · Autonomous CI/CD · Zero-Docker serverless (GCS Buildpacks)
 
@@ -128,7 +130,7 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ## 🏗️ Architecture
 
-Proprietary multi-agent AI system · 20+ production subsystems · 120-point automated verification · Constitutional governance
+Proprietary multi-agent AI system · 20+ production subsystems · 100+ point automated verification · Constitutional governance
 
 ---
 
@@ -158,7 +160,7 @@ Proprietary multi-agent AI system · 20+ production subsystems · 120-point auto
 ### Governance & Security
 | System | Status | Impact |
 |--------|--------|--------|
-| **Automated Verification** | ✅ LIVE | 120-point zero-defect checks |
+| **Automated Verification** | ✅ LIVE | 100+ point zero-defect checks |
 | **Governance Audit Trail** | ✅ LIVE | Cryptographic provenance chain |
 | **Multi-Tenant Isolation** | ✅ LIVE | Fail-closed data siloing |
 | **Governance Framework** | ✅ LIVE | Autonomous compliance enforcement |

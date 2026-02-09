@@ -199,7 +199,7 @@ def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
         + total_str
         + r"\ YTD\ ("
         + str(year)
-        + r")\ |\ Building\ Liv\ Hanna\ S.I.}}}$$"
+        + r")\ |\ Building\ Liv\ Hana\ S.I.}}}$$"
     )
 
 
