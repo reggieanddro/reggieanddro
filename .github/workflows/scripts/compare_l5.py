@@ -195,12 +195,12 @@ def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
     total_str = f"{ytd_total:,}".replace(",", "{,}")
 
     return (
-        r"$${\color{" + GREEN + r"}\Large\textsf{"
-        + f"{ytd_avg}~Commits/Day~·~"
+        r"$${\color{" + GREEN + r"}\Large\textbf{\textsf{"
+        + f"{ytd_avg}" + r"\ Commits/Day\ ·\ "
         + total_str
-        + r"~YTD~("
+        + r"\ YTD\ ("
         + str(year)
-        + r")~|~Building~Liv~Hanna~S.I.}}$$"
+        + r")\ |\ Building\ Liv\ Hanna\ S.I.}}}$$"
     )
 
 
