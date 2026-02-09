@@ -72,7 +72,8 @@ def update_section(content: str, start_marker: str, end_marker: str,
         return content, False
 
     new_section = f"{start_marker}\n{new_content}\n{end_marker}"
-    updated = pattern.sub(new_section, content)
+    # Use lambda to prevent backslash interpretation in replacement string
+    updated = pattern.sub(lambda _: new_section, content)
     was_updated = updated != content
 
     if was_updated:
