@@ -196,12 +196,11 @@ def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
 
     return (
         r"$${\color{" + GREEN + r"}\Large\textsf{"
-        + f"{ytd_avg}/day"
-        + r" \enspace · \enspace "
+        + f"{ytd_avg}~Commits/Day~·~"
         + total_str
-        + r" \enspace YTD \enspace ("
+        + r"~YTD~("
         + str(year)
-        + r") \enspace | \enspace Building \enspace Liv \enspace Hanna \enspace S.I.}}$$"
+        + r")~|~Building~Liv~Hanna~S.I.}}$$"
     )
 
 
@@ -237,15 +236,20 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         "|--------|-------|----------------------|------------|"
     ])
 
-    # Green-colored data rows
+    # Data rows: green only for Daily Average, normal for others
     for comp in comparison["comparisons"]:
         value = comp["value"]
         if isinstance(value, (int, float)) and not isinstance(value, bool):
             value = f"{value:,}" if isinstance(value, int) else f"{value}"
         mult_str = f"{comp['multiplier_min']}-{comp['multiplier_max']}x"
-        lines.append(
-            f"| **{comp['metric']}** | {green(value)} | {green(comp['benchmark'])} | {green_bold(mult_str)} |"
-        )
+        if comp["metric"] == "Daily Average":
+            lines.append(
+                f"| **{comp['metric']}** | {green(value)} | {green(comp['benchmark'])} | {green_bold(mult_str)} |"
+            )
+        else:
+            lines.append(
+                f"| **{comp['metric']}** | {value} | {comp['benchmark']} | **{mult_str}** |"
+            )
 
     # Daily breakdown (collapsible)
     daily = stats.get("daily_breakdown", [])

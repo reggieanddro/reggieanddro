@@ -5,7 +5,7 @@
 </div>
 
 <!-- YTD_START -->
-$${\color{#0ab123}\Large\textsf{62.5/day \enspace · \enspace 2{,}502 \enspace YTD \enspace (2026) \enspace | \enspace Building \enspace Liv \enspace Hanna \enspace S.I.}}$$
+$${\color{#0ab123}\Large\textsf{62.5~Commits/Day~·~2{,}502~YTD~(2026)~|~Building~Liv~Hanna~S.I.}}$$
 <!-- YTD_END -->
 
 <div align="center">
@@ -34,11 +34,11 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 
 | $\color{#0ab123}{\textsf{Metric}}$ | $\color{#0ab123}{\textsf{Value}}$ | $\color{#0ab123}{\textsf{vs Google L5 Engineer}}$ | $\color{#0ab123}{\textsf{Multiplier}}$ |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | $\color{#0ab123}{\textsf{1,261}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.8-31.5x}}$ |
-| **Commits** | $\color{#0ab123}{\textsf{1,261}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{15.8-31.5x}}$ |
+| **Total Contributions** | 1,261 | 40-80/mo | **15.8-31.5x** |
+| **Commits** | 1,261 | 40-80/mo | **15.8-31.5x** |
 | **Daily Average** | $\color{#0ab123}{\textsf{140.1}}$ | $\color{#0ab123}{\textsf{2-4/day}}$ | $\color{#0ab123}{\textbf{35.0-70.0x}}$ |
-| **Days Active (rate)** | $\color{#0ab123}{\textsf{9/9}}$ | $\color{#0ab123}{\textsf{18-22/mo}}$ | $\color{#0ab123}{\textbf{1.4-1.7x}}$ |
-| **Projected Month** | $\color{#0ab123}{\textsf{\~3,923}}$ | $\color{#0ab123}{\textsf{40-80/mo}}$ | $\color{#0ab123}{\textbf{49.0-98.1x}}$ |
+| **Days Active (rate)** | 9/9 | 18-22/mo | **1.4-1.7x** |
+| **Projected Month** | ~3,923 | 40-80/mo | **49.0-98.1x** |
 
 <details>
 <summary>📈 Daily Breakdown (Click to expand)</summary>
@@ -76,11 +76,11 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 | $\color{#0ab123}{\textsf{Metric}}$ | $\color{#0ab123}{\textsf{Value}}$ | $\color{#0ab123}{\textsf{vs Google L5 Engineer}}$ |
 |--------|-------|----------------------|
-| **Commits** | $\color{#0ab123}{\textsf{1,128}}$ | $\color{#0ab123}{\textbf{14-28x}}$ (L5 avg: 40-80/mo) |
-| **Net Lines Shipped** | $\color{#0ab123}{\textsf{334,311}}$ | $\color{#0ab123}{\textbf{2,200x}}$ (L5 avg: 125-185/mo) |
-| **Production Deploys** | $\color{#0ab123}{\textsf{2,537}}$ | $\color{#0ab123}{\textbf{211x}}$ (L5 avg: 8-12/mo) |
-| **Files Changed** | $\color{#0ab123}{\textsf{4,912}}$ | $\color{#0ab123}{\textbf{49x}}$ (L5 avg: 50-100/mo) |
-| **Days Active** | $\color{#0ab123}{\textsf{24/31}}$ | 24/7 commit pattern |
+| **Commits** | 1,128 | **14-28x** (L5 avg: 40-80/mo) |
+| **Net Lines Shipped** | 334,311 | **2,200x** (L5 avg: 125-185/mo) |
+| **Production Deploys** | 2,537 | **211x** (L5 avg: 8-12/mo) |
+| **Files Changed** | 4,912 | **49x** (L5 avg: 50-100/mo) |
+| **Days Active** | 24/31 | 24/7 commit pattern |
 
 **Source:** Git log verified, Cloud Run revision count, [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 

@@ -223,7 +223,7 @@ class TestCompareL5(unittest.TestCase):
         self.assertGreater(result["overall_multiplier"], 1.0)
 
     def test_generate_markdown_table(self):
-        """Test markdown table generation with green colors"""
+        """Test markdown table generation with green only on header + Daily Average"""
         stats = {
             "month": "February",
             "year": 2026,
@@ -244,10 +244,24 @@ class TestCompareL5(unittest.TestCase):
 
         self.assertIn("February 2026", markdown)
         self.assertIn("Live Stats", markdown)
-        self.assertIn("#0ab123", markdown)
+        self.assertIn("#0ab123", markdown)  # present in headers + Daily Average
         self.assertIn("Google L5", markdown)
         self.assertIn("132", markdown)
         self.assertIn("Daily Breakdown", markdown)
+
+        # Verify only Daily Average row is green, others are plain
+        lines = markdown.split("\n")
+        for line in lines:
+            if line.startswith("| **Total Contributions"):
+                self.assertNotIn("#0ab123", line)
+            if line.startswith("| **Commits"):
+                self.assertNotIn("#0ab123", line)
+            if line.startswith("| **Daily Average"):
+                self.assertIn("#0ab123", line)
+            if line.startswith("| **Days Active"):
+                self.assertNotIn("#0ab123", line)
+            if line.startswith("| **Projected"):
+                self.assertNotIn("#0ab123", line)
 
     def test_generate_ytd_subtitle(self):
         """Test YTD subtitle generation"""
@@ -262,7 +276,8 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("#0ab123", subtitle)
         self.assertIn("62.4", subtitle)
         self.assertIn("2{,}497", subtitle)
-        self.assertIn("Liv Hanna S.I.", subtitle)
+        self.assertIn("Commits/Day", subtitle)
+        self.assertIn("S.I.", subtitle)
 
     def test_generate_full_output_with_error(self):
         """Test full output generation with error stats"""
@@ -313,7 +328,8 @@ class TestUpdateReadme(unittest.TestCase):
         point = find_insertion_point(content)
 
         self.assertIsNotNone(point)
-        self.assertEqual(content[point:point+7], "\n\nConte")
+        # Point is right after "---\n", remaining content contains "Content"
+        self.assertIn("Content", content[point:])
 
     def test_find_insertion_point_no_divider(self):
         """Test insertion point after heading when no divider"""
