@@ -66,7 +66,7 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 
 **Liv Hana SI:** Autonomous multi-agent singularity handling Texas THCA compliance, real-time price indexing, voice commerce, and age verification—so hemp entrepreneurs can focus on revenue, not regulations.
 
-Shipping Soveriegn Autonomous 👑🤖 Agentic Singularity Streams of Scaffolding 🌌🛠️ | Pioneering 2026 SOTA Frontier Recursive Learning, Self Improvement Systems 🌀🚀, Deterministic Verification Machines 🔒⚙️ & Cognitive Voice Orchestration 🧠🗣️🎼
+Shipping autonomous AI-native commerce 👑🤖 | Pioneering 2026 SOTA frontier recursive learning 🌀🚀, self-improving systems 🔒⚙️ & cognitive voice orchestration 🧠🗣️🎼
 
 Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hanna!
 
@@ -88,40 +88,51 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ## 🛠️ Stack (Self-Taught, Mission-Driven)
 
+### Languages & Frameworks
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+### Cloud & Infrastructure
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
 ![AlloyDB](https://img.shields.io/badge/AlloyDB-4285F4?style=flat-square&logo=postgresql&logoColor=white)
+![Cloud Storage](https://img.shields.io/badge/Cloud_Storage-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Secret Manager](https://img.shields.io/badge/Secret_Manager-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+### AI & Voice
+![Claude](https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)
+![Grok](https://img.shields.io/badge/Grok-000000?style=flat-square&logo=x&logoColor=white)
+![Deepgram STT](https://img.shields.io/badge/Deepgram_STT-13EF93?style=flat-square&logoColor=white)
+![ElevenLabs TTS](https://img.shields.io/badge/ElevenLabs_TTS-000000?style=flat-square&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+### Commerce & Communications
+![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
+![Klaviyo](https://img.shields.io/badge/Klaviyo-000000?style=flat-square&logoColor=white)
+![Ecwid](https://img.shields.io/badge/Ecwid-0D2C54?style=flat-square&logoColor=white)
+![Authorize.net](https://img.shields.io/badge/Authorize.net-004B87?style=flat-square&logoColor=white)
 ![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)
+![Lightspeed](https://img.shields.io/badge/Lightspeed-D72B2B?style=flat-square&logoColor=white)
 
-**AI Orchestration:** DSPy MIPROv2, LangGraph, Claude Opus 4.6, Gemini 3 Flash
-**Infrastructure:** Cloud Run (GCS Buildpacks, NO Docker), AlloyDB PostgreSQL, pgvector
-**Voice:** Deepgram STT, ElevenLabs TTS, <500ms latency
-**Commerce:** Shopify GraphQL, LightSpeed X-Series, Square
+**28 technologies** · Multi-model AI orchestration · Sub-500ms voice latency · Autonomous CI/CD · Zero-Docker serverless (GCS Buildpacks)
 
 ---
 
-## 🏗️ Architecture: 3-Mayor + 5-Polecat Autonomous Framework
+## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                       LIV HANA SINGULARITY                      │
-├─────────────────────────────────────────────────────────────────┤
-│  GOLDEN VOICE     │  MAYOR OF MAYORS  │     VERITAS            │
-│  (Voice Agent)    │  (Orchestrator)   │     (Constitutional)   │
-│  Gemini 3 Flash   │  Claude Opus 4.6  │     Guard              │
-├─────────────────────────────────────────────────────────────────┤
-│                    SPAWN ORCHESTRATOR                           │
-│  Stateful agent instances in AlloyDB                            │
-│  Token economics (25k cap), 4-phase deterministic boot          │
-├─────────────────────────────────────────────────────────────────┤
-│  5 POLECATS: Planner → Implementer → Security → Verifier → Release
-└─────────────────────────────────────────────────────────────────┘
-```
+Proprietary multi-agent AI system · 20+ production subsystems · 120-point automated verification · Constitutional governance
 
 ---
 
-## 🔥 Shipped Infrastructure (Migration #219 • v18.0.31 • 2026-02-09)
+## 🔥 Shipped Infrastructure (20+ Production Systems • 2026-02-09)
 
 ### Revenue & Commerce
 | System | Status | Impact |
@@ -129,37 +140,37 @@ Liv Hanna S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 | **Age Gate (21+)** | ✅ LIVE | DSHS License #690 compliant |
 | **Voice Commerce** | ✅ LIVE | <500ms latency, barge-in support |
 | **THCA Verification Holds** | ✅ LIVE | 72-hour compliance window |
-| **Revenue Heartbeat** | ✅ LIVE | READ-ONLY Authnet + Ecwid monitoring |
-| **Storefront SEO** | ✅ LIVE | robots.ts, sitemap.ts, ComplianceBar |
-| **Klaviyo GSM Wire** | ✅ WIRED | RPM-7 churn prevention unblocked |
+| **Revenue Monitoring** | ✅ LIVE | Real-time transaction pulse |
+| **Storefront SEO** | ✅ LIVE | Search indexability + compliance bar |
+| **Email Automation** | ✅ WIRED | Churn prevention pipeline |
 
 ### AI & Intelligence
 | System | Status | Impact |
 |--------|--------|--------|
-| **DSPy Learning Loop** | ✅ LIVE | 864 training examples, auto-optimization |
-| **LLM Council** | ✅ LIVE | 4-model voting (Karpathy pattern) |
-| **Spawn Orchestrator** | ✅ LIVE | Stateful agent blueprints in AlloyDB |
-| **Graph RAG** | ✅ LIVE | Knowledge graph (inventory + SWOT ingested) |
-| **DNA Profile Engine** | ✅ LIVE | 90-day backfill, purpose-driven personalization |
-| **Purpose-Drift Detector** | ✅ LIVE | Behavioral drift detection |
-| **Funnel Classifier** | ✅ LIVE | Stage-aware voice personalization |
+| **AI Learning Loop** | ✅ LIVE | Continuous auto-optimization |
+| **Multi-Model Orchestration** | ✅ LIVE | Multi-model voting + consensus |
+| **Agent Orchestration** | ✅ LIVE | Stateful AI agent management |
+| **Knowledge Graph** | ✅ LIVE | Inventory + business intelligence |
+| **Customer Intelligence** | ✅ LIVE | Purpose-driven personalization |
+| **Behavioral Analytics** | ✅ LIVE | Drift detection + journey tracking |
+| **Journey Personalization** | ✅ LIVE | Stage-aware voice interactions |
 
 ### Governance & Security
 | System | Status | Impact |
 |--------|--------|--------|
-| **RALPH (120 hooks)** | ✅ LIVE | Zero-defect verification engine |
-| **Council Audit Pipeline** | ✅ LIVE | Merkle-sealed provenance chain |
-| **Sovereign Context / Silo** | ✅ LIVE | Multi-tenant fail-closed isolation |
-| **Constitution v18** | ✅ LIVE | 30+ Directives, 12 Amendments |
+| **Automated Verification** | ✅ LIVE | 120-point zero-defect checks |
+| **Governance Audit Trail** | ✅ LIVE | Cryptographic provenance chain |
+| **Multi-Tenant Isolation** | ✅ LIVE | Fail-closed data siloing |
+| **Governance Framework** | ✅ LIVE | Autonomous compliance enforcement |
 | **Incident Learning** | ✅ LIVE | Automated post-incident capture |
 
 ### Infrastructure & DevOps
 | System | Status | Impact |
 |--------|--------|--------|
-| **Single Deploy Path** | ✅ LIVE | ONE deploy script (29 dead scripts purged) |
-| **GCP Auth Normalization** | ✅ LIVE | Raw JSON + base64 SA key handling |
-| **Twilio Recording Pipeline** | ✅ LIVE | MP3 → GCS → AlloyDB |
-| **Mirror Backup** | ✅ LIVE | Force-push exact replica |
+| **Single Deploy Path** | ✅ LIVE | ONE deploy script, zero-Docker |
+| **Auth Normalization** | ✅ LIVE | Multi-format credential handling |
+| **Call Recording Pipeline** | ✅ LIVE | Voice → Cloud Storage → Database |
+| **Mirror Backup** | ✅ LIVE | Automated exact replica |
 
 ---
 
