@@ -2,13 +2,9 @@
 
 # Jesse Niesen 🌿⚡
 
-</div>
-
 <!-- YTD_START -->
 $${\color{#0ab123}\normalsize\textbf{\textsf{63.3\ Commits/Day\ ·\ 2{,}531\ YTD\ (2026)\ |\ Building\ Liv\ Hana\ S.I.}}}$$
 <!-- YTD_END -->
-
-<div align="center">
 
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
 Rough & Ready, NorCal Native | Born-Again Texan</br>
