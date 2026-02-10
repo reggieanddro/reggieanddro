@@ -79,12 +79,16 @@ Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 | **Metric** | **Value** | **vs Google L5 Engineer** |
 |--------|-------|----------------------|
 | **Commits** | 1,128 | **14-28x** (L5 avg: 40-80/mo) |
-| **Net Lines Shipped** | 334,311 | **2,200x** (L5 avg: 125-185/mo) |
-| **Production Deploys** | 2,537 | **211x** (L5 avg: 8-12/mo) |
-| **Files Changed** | 4,912 | **49x** (L5 avg: 50-100/mo) |
 | **Days Active** | 24/31 | 24/7 commit pattern |
 
-**Source:** Git log verified, Cloud Run revision count, [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+> **Private Infrastructure Metrics** (proprietary codebase — available for verification under NDA)
+> - **334K+ net lines shipped** across 20+ production Cloud Run services
+> - **2,500+ production deploys** via autonomous CI/CD pipeline
+> - **4,900+ files changed** in full-stack monorepo (Node.js, Python, Next.js)
+
+**Source:** Commits via [GitHub GraphQL API](https://docs.github.com/graphql) • Infrastructure metrics from private production repo & GCP project • [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+
+> **Methodology:** GitHub metrics are auto-generated from the [GitHub GraphQL API](https://docs.github.com/graphql) via GitHub Actions ([view workflow](https://github.com/reggieanddro/reggieanddro/tree/main/.github/workflows)). Contribution graph is public and server-verified by GitHub.
 
 ---
 
