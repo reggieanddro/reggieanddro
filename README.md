@@ -220,10 +220,12 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 
 ## 📫 Connect
 
-- 🌐 **Sites:** [ReggieAndDro.com](http://reggieanddro.com) | [HighNoonCartoon.com](http://highnooncartoon.com)
+- 🌐 **Sites:** [ReggieAndDro.com](http://reggieanddro.com) | [HighNoonCartoon.com](http://highnooncartoon.com) | [OnePlantSolution.com](http://oneplantsolution.com) | [Herbitrage.com](http://herbitrage.com)
 - 📧 **Email:** [high@reggieanddro.com](mailto:high@reggieanddro.com)
 - 📍 **Location:** San Antonio, Texas
 - 🐦 **X:** [@reggieanddro](https://twitter.com/reggieanddro)
+- 🎬 **YT:** [@reggieanddro](https://youtube.com/@reggieanddro)
+- 📸 **IG:** [@reggieanddro](https://instagram.com/reggieanddro)
 
 ---
 
