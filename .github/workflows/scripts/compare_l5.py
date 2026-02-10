@@ -3,7 +3,7 @@
 Google L5 Benchmark Comparison - Daily README Auto-Update
 ==========================================================
 Compares GitHub contribution statistics against Google L5 engineer benchmarks.
-Outputs green-colored (#0ab123) markdown using LaTeX syntax for GitHub rendering.
+Outputs plain markdown tables for mobile-compatible GitHub rendering.
 
 Benchmarks Source: 2025 Worklytics Software Engineering Productivity Report
 https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores
@@ -31,10 +31,6 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger(__name__)
-
-# Green color for GitHub LaTeX rendering
-GREEN = "#0ab123"
-
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # GOOGLE L5 BENCHMARKS (Source: 2025 Worklytics)
@@ -72,33 +68,6 @@ L5_BENCHMARKS = {
         "description": "Net lines shipped per month"
     }
 }
-
-
-def green(text: str) -> str:
-    """Wrap text in green large bold sans-serif LaTeX for GitHub markdown."""
-    safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{GREEN}}}{{\large\textbf{{\textsf{{{safe}}}}}}}$"
-
-
-def green_bold(text: str) -> str:
-    """Wrap text in green large bold sans-serif LaTeX for GitHub markdown."""
-    safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{GREEN}}}{{\large\textbf{{\textsf{{{safe}}}}}}}$"
-
-
-SOFT_WHITE = "#E0E0E0"
-
-
-def soft(text: str) -> str:
-    """Wrap text in soft #E0E0E0 sans-serif LaTeX — easy on tired dev eyes."""
-    safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{SOFT_WHITE}}}{{\textsf{{{safe}}}}}$"
-
-
-def soft_bold(text: str) -> str:
-    """Wrap text in soft #E0E0E0 bold sans-serif LaTeX."""
-    safe = str(text).replace("~", r"\~")
-    return rf"$\color{{{SOFT_WHITE}}}{{\textbf{{\textsf{{{safe}}}}}}}$"
 
 
 def calculate_multiplier(value: float, benchmark_min: int, benchmark_max: int) -> Tuple[float, float]:
@@ -198,24 +167,16 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
 
 def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
     """
-    Generate the green YTD subtitle as display math (auto-centered on GitHub).
-    Uses $$...$$ so it renders outside HTML divs where $...$ fails.
+    Generate the YTD subtitle line.
+    Uses plain bold markdown for mobile compatibility.
     """
     ytd_avg = stats.get("ytd_daily_avg", 0)
     ytd_total = stats.get("ytd_total", 0)
     year = stats.get("year", 2026)
 
-    # Format total with LaTeX grouping for comma: 2{,}494
-    total_str = f"{ytd_total:,}".replace(",", "{,}")
+    total_str = f"{ytd_total:,}"
 
-    return (
-        r"$${\color{" + GREEN + r"}\Large\textbf{\textsf{"
-        + f"{ytd_avg}" + r"\ Commits/Day\ ·\ "
-        + total_str
-        + r"\ YTD\ ("
-        + str(year)
-        + r")\ |\ Building\ Liv\ Hana\ S.I.}}}$$"
-    )
+    return f"**{ytd_avg} Commits/Day · {total_str} YTD ({year}) | Building Liv Hana S.I.**"
 
 
 
@@ -243,29 +204,24 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         peak_day_num = peak.get("date", "").split("-")[-1] if peak.get("date") else "?"
         lines.append(f" | **🔥 Peak Day:** {peak_day_num} with {peak['count']} contributions")
 
-    # Green-colored header row
+    # Header row (plain markdown for mobile compatibility)
     lines.extend([
         "",
-        f"| {green('Metric')} | {green('Value')} | {green('vs Google L5 Engineer')} | {green('Multiplier')} |",
+        "| **Metric** | **Value** | **vs Google L5 Engineer** | **Multiplier** |",
         "|--------|-------|----------------------|------------|"
     ])
 
-    # Data rows: green only for Daily Average, normal for others
+    # Data rows (plain markdown bold for mobile compatibility)
     for comp in comparison["comparisons"]:
         value = comp["value"]
         if isinstance(value, (int, float)) and not isinstance(value, bool):
             value = f"{value:,}" if isinstance(value, int) else f"{value}"
         mult_str = f"{comp['multiplier_min']}-{comp['multiplier_max']}x"
-        if comp["metric"] == "Daily Average":
-            lines.append(
-                f"| **{comp['metric']}** | {green(value)} | {green(comp['benchmark'])} | {green_bold(mult_str)} |"
-            )
-        else:
-            lines.append(
-                f"| {soft_bold(comp['metric'])} | {soft(value)} | {soft(comp['benchmark'])} | {soft_bold(mult_str)} |"
-            )
+        lines.append(
+            f"| **{comp['metric']}** | {value} | {comp['benchmark']} | **{mult_str}** |"
+        )
 
-    # Force Multiplier tagline (uses Daily Average multiplier, green + bold)
+    # Force Multiplier tagline (uses Daily Average multiplier)
     daily_comp = next(
         (c for c in comparison["comparisons"] if c["metric"] == "Daily Average"),
         None,
@@ -275,7 +231,7 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         lines.extend([
             "",
             f"> **🤖 Force Multiplier:** ONE CEO + AI agents doing the work of"
-            f" {green_bold(fm_mult + ' Google L5 engineers')}",
+            f" **{fm_mult} Google L5 engineers**",
         ])
 
     # Daily breakdown (collapsible)

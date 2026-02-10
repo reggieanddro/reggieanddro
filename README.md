@@ -5,7 +5,7 @@
 </div>
 
 <!-- YTD_START -->
-$${\color{#0ab123}\Large\textbf{\textsf{63.3\ Commits/Day\ ·\ 2{,}531\ YTD\ (2026)\ |\ Building\ Liv\ Hana\ S.I.}}}$$
+**63.3 Commits/Day · 2,531 YTD (2026) | Building Liv Hana S.I.**
 <!-- YTD_END -->
 
 <div align="center">
@@ -32,15 +32,15 @@ CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
 > **📅 Day 9 of 28**
  | **🔥 Peak Day:** 03 with 332 contributions
 
-| $\color{#0ab123}{\large\textbf{\textsf{Metric}}}$ | $\color{#0ab123}{\large\textbf{\textsf{Value}}}$ | $\color{#0ab123}{\large\textbf{\textsf{vs Google L5 Engineer}}}$ | $\color{#0ab123}{\large\textbf{\textsf{Multiplier}}}$ |
+| **Metric** | **Value** | **vs Google L5 Engineer** | **Multiplier** |
 |--------|-------|----------------------|------------|
-| $\color{#E0E0E0}{\textbf{\textsf{Total Contributions}}}$ | $\color{#E0E0E0}{\textsf{1,290}}$ | $\color{#E0E0E0}{\textsf{40-80/mo}}$ | $\color{#E0E0E0}{\textbf{\textsf{16.1-32.2x}}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Commits}}}$ | $\color{#E0E0E0}{\textsf{1,290}}$ | $\color{#E0E0E0}{\textsf{40-80/mo}}$ | $\color{#E0E0E0}{\textbf{\textsf{16.1-32.2x}}}$ |
-| **Daily Average** | $\color{#0ab123}{\large\textbf{\textsf{143.3}}}$ | $\color{#0ab123}{\large\textbf{\textsf{2-4/day}}}$ | $\color{#0ab123}{\large\textbf{\textsf{35.8-71.7x}}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Days Active (rate)}}}$ | $\color{#E0E0E0}{\textsf{9/9}}$ | $\color{#E0E0E0}{\textsf{18-22/mo}}$ | $\color{#E0E0E0}{\textbf{\textsf{1.4-1.7x}}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Projected Month}}}$ | $\color{#E0E0E0}{\textsf{\~4,012}}$ | $\color{#E0E0E0}{\textsf{40-80/mo}}$ | $\color{#E0E0E0}{\textbf{\textsf{50.1-100.3x}}}$ |
+| **Total Contributions** | 1,290 | 40-80/mo | **16.1-32.2x** |
+| **Commits** | 1,290 | 40-80/mo | **16.1-32.2x** |
+| **Daily Average** | **143.3** | **2-4/day** | **35.8-71.7x** |
+| **Days Active (rate)** | 9/9 | 18-22/mo | **1.4-1.7x** |
+| **Projected Month** | ~4,012 | 40-80/mo | **50.1-100.3x** |
 
-> **🤖 Force Multiplier:** ONE CEO + AI agents doing the work of $\color{#0ab123}{\large\textbf{\textsf{35.8-71.7x Google L5 engineers}}}$
+> **🤖 Force Multiplier:** ONE CEO + AI agents doing the work of **35.8-71.7x Google L5 engineers**
 
 <details>
 <summary>📈 Daily Breakdown (Click to expand)</summary>
@@ -76,13 +76,13 @@ Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
 ### January 2026 Stats (Solo, No CS Degree)
 
-| $\color{#0ab123}{\large\textbf{\textsf{Metric}}}$ | $\color{#0ab123}{\large\textbf{\textsf{Value}}}$ | $\color{#0ab123}{\large\textbf{\textsf{vs Google L5 Engineer}}}$ |
+| **Metric** | **Value** | **vs Google L5 Engineer** |
 |--------|-------|----------------------|
-| $\color{#E0E0E0}{\textbf{\textsf{Commits}}}$ | $\color{#E0E0E0}{\textsf{1,128}}$ | $\color{#E0E0E0}{\textbf{\textsf{14-28x}}}$ $\color{#E0E0E0}{\textsf{(L5 avg: 40-80/mo)}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Net Lines Shipped}}}$ | $\color{#E0E0E0}{\textsf{334,311}}$ | $\color{#E0E0E0}{\textbf{\textsf{2,200x}}}$ $\color{#E0E0E0}{\textsf{(L5 avg: 125-185/mo)}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Production Deploys}}}$ | $\color{#E0E0E0}{\textsf{2,537}}$ | $\color{#E0E0E0}{\textbf{\textsf{211x}}}$ $\color{#E0E0E0}{\textsf{(L5 avg: 8-12/mo)}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Files Changed}}}$ | $\color{#E0E0E0}{\textsf{4,912}}$ | $\color{#E0E0E0}{\textbf{\textsf{49x}}}$ $\color{#E0E0E0}{\textsf{(L5 avg: 50-100/mo)}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Days Active}}}$ | $\color{#E0E0E0}{\textsf{24/31}}$ | $\color{#E0E0E0}{\textsf{24/7 commit pattern}}$ |
+| **Commits** | 1,128 | **14-28x** (L5 avg: 40-80/mo) |
+| **Net Lines Shipped** | 334,311 | **2,200x** (L5 avg: 125-185/mo) |
+| **Production Deploys** | 2,537 | **211x** (L5 avg: 8-12/mo) |
+| **Files Changed** | 4,912 | **49x** (L5 avg: 50-100/mo) |
+| **Days Active** | 24/31 | 24/7 commit pattern |
 
 **Source:** Git log verified, Cloud Run revision count, [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
@@ -187,7 +187,7 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 - 🌿 **Mission:** Descheduling Cannabis sativa L ASAP **Leading Self-Regulation Revolution**
 - 🧠 **Lessons:** Continuous Recursive HITL Super Learning (R&D every day, all day!)
 - ⚡ **Biology:** 24/7 grind (genetic + mind over matter outlier)
-- 🤖 **Force Multiplier:** ONE CEO + AI agents doing the work of $\color{#0ab123}{\large\textbf{\textsf{35.0-70.0x\ Google\ L5\ engineers}}}$
+- 🤖 **Force Multiplier:** ONE CEO + AI agents doing the work of **35.0-70.0x Google L5 engineers**
 
 **Philosophy:**
 > "I grind 24/7 so you don't have to—Liv Hana SI handles it all."
@@ -207,12 +207,12 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 
 ## 📈 Biological Stack Rank
 
-| $\color{#0ab123}{\large\textbf{\textsf{Dimension}}}$ | $\color{#0ab123}{\large\textbf{\textsf{My Output}}}$ | $\color{#0ab123}{\large\textbf{\textsf{Top 1\% Engineers}}}$ | $\color{#0ab123}{\large\textbf{\textsf{Google L5/L6}}}$ |
+| **Dimension** | **My Output** | **Top 1% Engineers** | **Google L5/L6** |
 |-----------|-----------|------------------|--------------|
-| $\color{#E0E0E0}{\textbf{\textsf{Hours/Week}}}$ | $\color{#E0E0E0}{\textsf{100-150 (24/7)}}$ | $\color{#E0E0E0}{\textsf{60-80}}$ | $\color{#E0E0E0}{\textsf{40-50}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Commits/Month}}}$ | $\color{#E0E0E0}{\textsf{1,128 (solo)}}$ | $\color{#E0E0E0}{\textsf{100-200 (teams)}}$ | $\color{#E0E0E0}{\textsf{40-80}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Deploy Velocity}}}$ | $\color{#E0E0E0}{\textsf{82/day}}$ | $\color{#E0E0E0}{\textsf{1-2/day}}$ | $\color{#E0E0E0}{\textsf{0.3-0.4/day}}$ |
-| $\color{#E0E0E0}{\textbf{\textsf{Code Review}}}$ | $\color{#E0E0E0}{\textsf{AI-assisted}}$ | $\color{#E0E0E0}{\textsf{Peer mandatory}}$ | $\color{#E0E0E0}{\textsf{Peer mandatory}}$ |
+| **Hours/Week** | 100-150 (24/7) | 60-80 | 40-50 |
+| **Commits/Month** | 1,128 (solo) | 100-200 (teams) | 40-80 |
+| **Deploy Velocity** | 82/day | 1-2/day | 0.3-0.4/day |
+| **Code Review** | AI-assisted | Peer mandatory | Peer mandatory |
 
 **Position:** Top 0.01% work capacity phenotype—solo DAILY shipping Tier 1 Dev Monthly Output...
 
@@ -229,10 +229,10 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 
 <div align="center">
 
-$\color{#F5F5F5}{\textbf{\textsf{🌿 Deschedule the plant. Automate the profit. Ship the singularity. ⚡}}}$
+**🌿 Deschedule the plant. Automate the profit. Ship the singularity. ⚡**
 
 ![Profile Views](https://komarev.com/ghpvc/?username=reggieanddro&color=brightgreen&style=flat-square&label=Profile+Views)
 
-$\color{#0ab123}{\Large\textbf{\textsf{People → Plant → Profit}}}$
+*People → Plant → Profit*
 
 </div>
