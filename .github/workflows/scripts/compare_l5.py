@@ -167,16 +167,24 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
 
 def generate_ytd_subtitle(stats: Dict[str, Any]) -> str:
     """
-    Generate the YTD subtitle line.
-    Uses plain bold markdown for mobile compatibility.
+    Generate the green YTD subtitle as display math (auto-centered on GitHub).
+    Uses $$...$$ display math with \\normalsize for slightly smaller than heading.
     """
     ytd_avg = stats.get("ytd_daily_avg", 0)
     ytd_total = stats.get("ytd_total", 0)
     year = stats.get("year", 2026)
 
-    total_str = f"{ytd_total:,}"
+    # Format total with LaTeX grouping for comma: 2{,}531
+    total_str = f"{ytd_total:,}".replace(",", "{,}")
 
-    return f"**{ytd_avg} Commits/Day · {total_str} YTD ({year}) | Building Liv Hana S.I.**"
+    return (
+        r"$${\color{#0ab123}\normalsize\textbf{\textsf{"
+        + f"{ytd_avg}" + r"\ Commits/Day\ ·\ "
+        + total_str
+        + r"\ YTD\ ("
+        + str(year)
+        + r")\ |\ Building\ Liv\ Hana\ S.I.}}}$$"
+    )
 
 
 
