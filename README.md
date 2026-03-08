@@ -69,6 +69,17 @@ Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hana!
 
 Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
+### February 2026 Stats (Solo, No CS Degree)
+
+| **Metric** | **Value** | **vs Google L5 Engineer** |
+|--------|-------|----------------------|
+| **Contributions** | 2,056 | **25.7-51.4x** (L5 avg: 40-80/mo) |
+| **Commits** | 649 | **8.1-16.2x** (L5 avg: 40-80/mo) |
+
+> **Private Infrastructure Metrics** (proprietary codebase — available for verification under NDA)
+> - **247K insertions shipped in February 2026**
+> - **Version evolution: v15.6 → v18.0.31.128**
+
 ### January 2026 Stats (Solo, No CS Degree)
 
 | **Metric** | **Value** | **vs Google L5 Engineer** |
@@ -84,6 +95,35 @@ Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 **Source:** Commits via [GitHub GraphQL API](https://docs.github.com/graphql) • Infrastructure metrics from private production repo & GCP project • [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
 > **Methodology:** GitHub metrics are auto-generated from the [GitHub GraphQL API](https://docs.github.com/graphql) via GitHub Actions ([view workflow](https://github.com/reggieanddro/reggieanddro/tree/main/.github/workflows)). Contribution graph is public and server-verified by GitHub.
+
+---
+
+## 📈 Output Comparison
+
+| **Dimension** | **My Output** | **Top 1% Engineers** | **Google L5/L6** |
+|-----------|-----------|------------------|--------------|
+| **Hours/Week** | 100-150 (24/7) | 60-80 | 40-50 |
+| **Commits/Month** | 1,128 (solo, GitHub-verified) | 100-200 (teams) | 40-80 |
+| **Deploy Cadence** | Multiple/day (Cloud Run) | 1-2/day | 0.3-0.4/day |
+| **Code Review** | AI-assisted (LLM Council) | Peer mandatory | Peer mandatory |
+
+Solo operator shipping at team-scale velocity — contribution graph is public, verify anytime.
+
+---
+
+## 📊 Why This Matters
+
+I'm not a traditional engineer—I'm an **entrepreneur who learned to code to survive**.
+
+**No CS degree. Never employed as dev. No team. Just:**
+- 🎖️ **Marine Corps Discipline** (Honor-Courage-Commitment, Semper Fi, OOH RAH!!)
+- 🌿 **Mission:** Descheduling Cannabis sativa L ASAP **Leading Self-Regulation Revolution**
+- 🧠 **Lessons:** Continuous Recursive HITL Super Learning (R&D every day, all day!)
+- ⚡ **Biology:** 24/7 grind (genetic + mind over matter outlier)
+- 🤖 **Force Multiplier:** ONE CEO + AI agents doing the work of **35.0-70.0x Google L5 engineers**
+
+**Philosophy:**
+> "I grind 24/7 so you don't have to—Liv Hana SI handles it all."
 
 ---
 
@@ -177,22 +217,6 @@ Proprietary multi-agent AI system · 20+ production subsystems · 100+ point aut
 
 ---
 
-## 📊 Why This Matters
-
-I'm not a traditional engineer—I'm an **entrepreneur who learned to code to survive**.
-
-**No CS degree. Never employed as dev. No team. Just:**
-- 🎖️ **Marine Corps Discipline** (Honor-Courage-Commitment, Semper Fi, OOH RAH!!)
-- 🌿 **Mission:** Descheduling Cannabis sativa L ASAP **Leading Self-Regulation Revolution**
-- 🧠 **Lessons:** Continuous Recursive HITL Super Learning (R&D every day, all day!)
-- ⚡ **Biology:** 24/7 grind (genetic + mind over matter outlier)
-- 🤖 **Force Multiplier:** ONE CEO + AI agents doing the work of **35.0-70.0x Google L5 engineers**
-
-**Philosophy:**
-> "I grind 24/7 so you don't have to—Liv Hana SI handles it all."
-
----
-
 ## 🚀 4-Business Layers (CEO, Founder, Owner of Each)
 
 | Company | Focus |
@@ -201,19 +225,6 @@ I'm not a traditional engineer—I'm an **entrepreneur who learned to code to su
 | [High Noon Cartoon](http://highnooncartoon.com) | Satire, Music, Media, Entertainment |
 | [One Plant Solution](http://oneplantsolution.com) | Education & Advocacy |
 | [Herbitrage](http://herbitrage.com) | Cannabis, Business & Tech Incubator & Collab Scaling Engine |
-
----
-
-## 📈 Output Comparison
-
-| **Dimension** | **My Output** | **Top 1% Engineers** | **Google L5/L6** |
-|-----------|-----------|------------------|--------------|
-| **Hours/Week** | 100-150 (24/7) | 60-80 | 40-50 |
-| **Commits/Month** | 1,128 (solo, GitHub-verified) | 100-200 (teams) | 40-80 |
-| **Deploy Cadence** | Multiple/day (Cloud Run) | 1-2/day | 0.3-0.4/day |
-| **Code Review** | AI-assisted (LLM Council) | Peer mandatory | Peer mandatory |
-
-Solo operator shipping at team-scale velocity — contribution graph is public, verify anytime.
 
 ---
 
