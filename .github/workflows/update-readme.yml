@@ -27,13 +27,16 @@
 # Version: 2.0.0 (Python modular architecture)
 # ═══════════════════════════════════════════════════════════════════════════════
 
-name: 📊 Update README Stats Daily (4:20 AM TX)
+name: 📊 Update README Stats (Every 2h + Push-Triggered)
 
 on:
   schedule:
-    # 4:20 AM Central Time = 10:20 UTC (CST, Nov-Mar)
-    # Note: During CDT (Mar-Nov), this runs at 5:20 AM local time
-    - cron: '20 10 * * *'
+    # Every 2 hours at :20 past the hour
+    - cron: '20 */2 * * *'
+
+  # Cross-repo dispatch from LivHana-SoT pushes
+  repository_dispatch:
+    types: [profile-update]
 
   # Allow manual triggering for testing
   workflow_dispatch:
@@ -167,8 +170,8 @@ jobs:
         run: |
           echo "🔄 Comparing stats to Google L5 benchmarks..."
 
-          # Run comparison and get full JSON output (includes markdown + ytd_subtitle)
-          FULL_OUTPUT=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py)
+          # Run comparison and get markdown output
+          MARKDOWN=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --markdown-only)
           EXIT_CODE=$?
 
           if [ $EXIT_CODE -ne 0 ]; then
@@ -177,41 +180,89 @@ jobs:
             exit 0
           fi
 
-          # Extract markdown table
-          MARKDOWN=$(echo "$FULL_OUTPUT" | python -c "import sys, json; print(json.load(sys.stdin)['markdown'])")
-
-          # Extract YTD subtitle
-          YTD_SUBTITLE=$(echo "$FULL_OUTPUT" | python -c "import sys, json; print(json.load(sys.stdin).get('ytd_subtitle', ''))")
-
-          # Store for next step
+          # Store markdown for next step
           echo "STATS_MARKDOWN<<EOF" >> $GITHUB_ENV
           echo "$MARKDOWN" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-          echo "YTD_SUBTITLE<<EOF" >> $GITHUB_ENV
-          echo "$YTD_SUBTITLE" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-          echo "✅ Markdown + YTD subtitle generated successfully"
+          echo "✅ Markdown generated successfully"
           echo "compare_error=false" >> $GITHUB_OUTPUT
 
       # ─────────────────────────────────────────────────────────────────────
-      # Update README
+      # Generate YTD Banner
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 🏆 Generate YTD Banner
+        id: ytd-banner
+        if: steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          echo "🔄 Generating YTD banner..."
+
+          YTD_MD=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --ytd-only)
+          EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "⚠️ YTD banner generation failed (non-fatal)"
+            echo "ytd_error=true" >> $GITHUB_OUTPUT
+          else
+            echo "YTD_MARKDOWN<<EOF" >> $GITHUB_ENV
+            echo "$YTD_MD" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+            echo "ytd_error=false" >> $GITHUB_OUTPUT
+            echo "✅ YTD banner generated"
+          fi
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Generate Archive Section
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 📁 Generate Archive Section
+        id: archive
+        if: steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          echo "🔄 Generating archive section..."
+
+          ARCHIVE_MD=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --archive-only)
+          EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "⚠️ Archive generation failed (non-fatal)"
+            echo "archive_error=true" >> $GITHUB_OUTPUT
+          else
+            echo "ARCHIVE_MARKDOWN<<EOF" >> $GITHUB_ENV
+            echo "$ARCHIVE_MD" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+            echo "archive_error=false" >> $GITHUB_OUTPUT
+            echo "✅ Archive section generated"
+          fi
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Update README (all sections in one pass)
       # ─────────────────────────────────────────────────────────────────────
       - name: 📝 Update README
         id: update-readme
         if: steps.compare.outputs.compare_error != 'true' && steps.fetch-stats.outputs.stats_error != 'true'
+        env:
+          YTD_MARKDOWN: ${{ env.YTD_MARKDOWN }}
+          ARCHIVE_MARKDOWN: ${{ env.ARCHIVE_MARKDOWN }}
         run: |
-          echo "🔄 Updating README.md..."
+          echo "🔄 Updating README.md (stats + YTD + archive)..."
 
           # Check if dry run
           DRY_RUN="${{ inputs.dry_run || 'false' }}"
 
+          # Build args
+          ARGS="--readme README.md"
+          if [ -n "$YTD_MARKDOWN" ]; then
+            ARGS="$ARGS --ytd-markdown \"$YTD_MARKDOWN\""
+          fi
+          if [ -n "$ARCHIVE_MARKDOWN" ]; then
+            ARGS="$ARGS --archive-markdown \"$ARCHIVE_MARKDOWN\""
+          fi
+
           if [ "$DRY_RUN" = "true" ]; then
             echo "🏃 DRY RUN - Not writing to file"
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --ytd-subtitle "$YTD_SUBTITLE" --dry-run
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py $ARGS --dry-run
           else
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --ytd-subtitle "$YTD_SUBTITLE"
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py $ARGS
           fi
 
           echo "✅ README update complete"
@@ -244,7 +295,7 @@ jobs:
           # Commit with descriptive message
           git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} contributions vs L5
 
-          Daily stats refresh at 4:20 AM Texas Time
+          Stats refresh (every 2h + push-triggered)
           Source: GitHub GraphQL API
           Benchmarks: 2025 Worklytics L5 Engineer"
 
@@ -267,7 +318,7 @@ jobs:
           echo "| Compare L5 | ${{ steps.compare.outputs.compare_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Total Contributions | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Schedule:** Daily at 4:20 AM Texas Time (10:20 UTC)" >> $GITHUB_STEP_SUMMARY
+          echo "**Schedule:** Every 2h + push-triggered from LivHana-SoT" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Benchmark Source:** [2025 Worklytics](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)" >> $GITHUB_STEP_SUMMARY
 

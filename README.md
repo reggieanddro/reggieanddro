@@ -6,6 +6,35 @@
 $${\color{#0ab123}\normalsize\textbf{\textsf{71.5\ Commits/Day\ ·\ 6{,}720\ YTD\ (2026)\ |\ Building\ Liv\ Hana\ S.I.}}}$$
 <!-- YTD_END -->
 
+<!-- SHOWCASE_START -->
+## April 2026: Building Under Fire
+
+> While Texas moved to ban THCA and AI models faced unprecedented disruption,
+> we shipped harder. Autonomous agents don't sleep — neither does the mission.
+
+### The Crisis
+- **TX THCA Ban** — State legislation targeting our entire product category overnight
+- **AI Model Disruption** — Anthropic Mythos/Capybara shakeup, Claude Code CVEs, nation-state threats
+- **Industry Under Attack** — Hemp operators scrambling, competitors folding
+
+### What We Shipped (Autonomously)
+- **ReggieAndDro.com Full Makeover** — Production site rebuilt and deployed via CI/CD
+- **THCaSanAntonio.com** — Crisis pivot domain, live and serving customers
+- **13,347-Member Email Automation** — Autonomous agent swarm composing, validating, and sending campaigns to full customer base with zero human intervention
+- **6-Service Cloud Run Deploy** — Autonomous CI/CD pipeline: git push → build → deploy → verify → health check, no human in the loop
+- **LLM Council (5-Model Direct API)** — Claude, GPT, Codex, Gemini, Grok deliberating architecture decisions autonomously
+- **RALPH Verification System** — 142 hooks, 90%+ compliance score, self-regulating codebase
+- **Voice Commerce** — Sub-500ms Gemini Live cascade, real-time voice ordering
+
+### The Stack (Solo, No Team)
+`Cloud Run` · `AlloyDB` · `Next.js` · `Node.js` · `Python/DSPy` · `5-Model LLM Council` · `Autonomous Agent Swarm` · `CI/CD Zero-Touch Deploy`
+
+> **TPOP** (Texas Process of Proceeds) — When regulators attack your industry,
+> you don't shut down. You build the infrastructure to outlast them.
+>
+> **One CEO. Zero employees. AI-native from day one.**
+<!-- SHOWCASE_END -->
+
 "All Cattle, No Hat—threw it into the Unicorn Race"</br>
 Rough & Ready, NorCal Native | Born-Again Texan</br>
 MISSION: "Grow, Sell, Heal. DE-SCHEDULE NOW!"</br>
@@ -65,32 +94,11 @@ Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hana!
 
 Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
 
-### February 2026 Stats (Solo, No CS Degree)
+<!-- ARCHIVE_START -->
+<!-- Auto-generated previous month archive — updated every 2 hours -->
+<!-- ARCHIVE_END -->
 
-| **Metric** | **Value** | **vs Google L5 Engineer** |
-|--------|-------|----------------------|
-| **Contributions** | 2,056 | **25.7-51.4x** (L5 avg: 40-80/mo) |
-| **Commits** | 649 | **8.1-16.2x** (L5 avg: 40-80/mo) |
-
-> **Private Infrastructure Metrics** (proprietary codebase — available for verification under NDA)
-> - **247K insertions shipped in February 2026**
-> - **Version evolution: v15.6 → v18.0.31.128**
-
-### January 2026 Stats (Solo, No CS Degree)
-
-| **Metric** | **Value** | **vs Google L5 Engineer** |
-|--------|-------|----------------------|
-| **Commits** | 1,128 | **14-28x** (L5 avg: 40-80/mo) |
-| **Days Active** | 24/31 | 24/7 commit pattern |
-
-> **Private Infrastructure Metrics** (proprietary codebase — available for verification under NDA)
-> - **334K+ net lines shipped** across 20+ production Cloud Run services
-> - **2,500+ production deploys** via autonomous CI/CD pipeline
-> - **4,900+ files changed** in full-stack monorepo (Node.js, Python, Next.js)
-
-**Source:** Commits via [GitHub GraphQL API](https://docs.github.com/graphql) • Infrastructure metrics from private production repo & GCP project • [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
-
-> **Methodology:** GitHub metrics are auto-generated from the [GitHub GraphQL API](https://docs.github.com/graphql) via GitHub Actions ([view workflow](https://github.com/reggieanddro/reggieanddro/tree/main/.github/workflows)). Contribution graph is public and server-verified by GitHub.
+> **Methodology:** GitHub metrics are auto-generated from the [GitHub GraphQL API](https://docs.github.com/graphql) via GitHub Actions ([view workflow](https://github.com/reggieanddro/reggieanddro/tree/main/.github/workflows)). Contribution graph is public and server-verified by GitHub. Stats refresh every 2 hours + on every push to the main codebase.
 
 ---
 
