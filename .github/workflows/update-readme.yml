@@ -241,6 +241,7 @@ jobs:
         id: update-readme
         if: steps.compare.outputs.compare_error != 'true' && steps.fetch-stats.outputs.stats_error != 'true'
         env:
+          STATS_MARKDOWN: ${{ env.STATS_MARKDOWN }}
           YTD_MARKDOWN: ${{ env.YTD_MARKDOWN }}
           ARCHIVE_MARKDOWN: ${{ env.ARCHIVE_MARKDOWN }}
         run: |
@@ -249,20 +250,12 @@ jobs:
           # Check if dry run
           DRY_RUN="${{ inputs.dry_run || 'false' }}"
 
-          # Build args
-          ARGS="--readme README.md"
-          if [ -n "$YTD_MARKDOWN" ]; then
-            ARGS="$ARGS --ytd-markdown \"$YTD_MARKDOWN\""
-          fi
-          if [ -n "$ARCHIVE_MARKDOWN" ]; then
-            ARGS="$ARGS --archive-markdown \"$ARCHIVE_MARKDOWN\""
-          fi
-
+          # Pass all markdown via env vars (multiline-safe), not CLI args
           if [ "$DRY_RUN" = "true" ]; then
             echo "🏃 DRY RUN - Not writing to file"
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py $ARGS --dry-run
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md --dry-run
           else
-            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py $ARGS
+            echo "$STATS_MARKDOWN" | python .github/workflows/scripts/update_readme.py --readme README.md
           fi
 
           echo "✅ README update complete"
