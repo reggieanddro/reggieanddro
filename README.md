@@ -32,9 +32,6 @@
 ### The Stack (Solo, No Team)
 `Cloud Run` · `AlloyDB` · `Next.js` · `Node.js` · `Python/DSPy` · `5-Model LLM Council` · `Autonomous Agent Swarm` · `CI/CD Zero-Touch Deploy`
 
-> **TPOP** (Texas Process of Proceeds) — When regulators attack your industry,
-> you don't shut down. You build the infrastructure to outlast them.
->
 > **One CEO. Zero employees. AI-native from day one.**
 <!-- SHOWCASE_END -->
 
