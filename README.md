@@ -1,38 +1,29 @@
-<div align="center">
+# Jesse Niesen
 
-![Jesse Niesen](https://img.shields.io/badge/Jesse_Niesen-000000?style=for-the-badge&logoColor=white)
-![CEO & Sole Founder](https://img.shields.io/badge/CEO_%26_Sole_Founder-22FF00?style=for-the-badge&logoColor=000000)
-![US Marine Corps Veteran](https://img.shields.io/badge/US_Marine_Corps_Veteran-000000?style=for-the-badge&logoColor=22FF00)
+**CEO & Sole Founder, Reggie & Dro LLC** | US Marine Corps Veteran | San Antonio, TX
 
-### Reggie & Dro LLC | San Antonio, TX
+Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated industries. Autonomous compliance verification, multi-model AI council, real-time voice orchestration. Solo-built on GCP Cloud Run, AlloyDB, and direct provider APIs.
 
-Building **[Liv Hana](https://livhana.ai)** — a strategic intelligence platform that ships autonomous compliance, multi-model AI verification, and real-time voice orchestration for regulated industries.
-
-[![API Docs](https://img.shields.io/badge/API_Docs-LivHana.ai-22FF00?style=flat-square&labelColor=000000)](https://livhana.ai)
-[![Contact](https://img.shields.io/badge/Contact-high%40reggieanddro.com-22FF00?style=flat-square&labelColor=000000)](mailto:high@reggieanddro.com)
-[![Site](https://img.shields.io/badge/Site-JesseNiesen.com-22FF00?style=flat-square&labelColor=000000)](https://jesseniesen.com)
-
-</div>
+[API & Pricing](https://livhana.ai) | [high@reggieanddro.com](mailto:high@reggieanddro.com) | [JesseNiesen.com](https://jesseniesen.com)
 
 ---
 
 <!-- STATS_START -->
-### 📊 April 2026 Live Stats (Solo, No CS Degree)
+### April 2026 — Solo, No CS Degree
 
-> **🤖 Auto-Updated:** Sunday, April 05, 2026 at 10:47 PM CT
-> **📅 Day 6 of 30**
- | **🔥 Peak Day:** 05 with 476 contributions
+> Auto-Updated: Sunday, April 05, 2026 at 10:47 PM CT
+> Day 6 of 30 | Peak Day: 05 with 476 contributions
 
 | Metric | Value | vs Google L5 Engineer | Multiplier |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | 1,149 | 40-80/mo | **14.4-28.7x** |
-| **Commits** | 1,146 | 40-80/mo | **14.3-28.6x** |
-| **Daily Average** | 191.5 | 2-4/day | **47.9-95.8x** |
-| **Days Active (rate)** | 6/6 | 18-22/mo | **1.4-1.7x** |
-| **Projected Month** | ~5,745 | 40-80/mo | **71.8-143.6x** |
+| Total Contributions | 1,149 | 40-80/mo | 14.4-28.7x |
+| Commits | 1,146 | 40-80/mo | 14.3-28.6x |
+| Daily Average | 191.5 | 2-4/day | 47.9-95.8x |
+| Days Active (rate) | 6/6 | 18-22/mo | 1.4-1.7x |
+| Projected Month | ~5,745 | 40-80/mo | 71.8-143.6x |
 
 <details>
-<summary>📈 Daily Breakdown (Click to expand)</summary>
+<summary>Daily Breakdown</summary>
 
 ```
 01: ███████░░░░░░░░░░░░░ 183
@@ -45,33 +36,22 @@ Building **[Liv Hana](https://livhana.ai)** — a strategic intelligence platfor
 
 </details>
 
-🔥 **Current Streak:** 15 consecutive days with contributions
-📈 **MoM Trend:** +109.6% vs March (2,741 actual → ~5,745 projected)
+Current Streak: 15 consecutive days | MoM Trend: +109.6% vs March
 
-**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+Source: [GitHub GraphQL API](https://docs.github.com/graphql) | [2025 Worklytics Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
 <!-- STATS_END -->
-
-
-## What is Liv Hana SI?
-
-Liv Hana is a cloud-native strategic intelligence platform built on GCP Cloud Run, AlloyDB (PostgreSQL + pgvector), and a 5-model LLM Council. It provides deterministic compliance verification, probabilistic AI reasoning, and sub-500ms voice synthesis — all through clean REST APIs.
-
-**Architecture:** 9 production Cloud Run services, 839+ database tables, 557 migrations, 142-point automated verification (RALPH), zero-Docker serverless deploys via GCS Buildpacks.
-
-**Built solo. No team. No CS degree. Marine discipline + AI-native from day one.**
 
 ---
 
 ## API Products
 
-### RALPH CaaS — Compliance-as-a-Service
+### RALPH CaaS — Compliance Verification
 
-> 50-state hemp regulatory compliance verification API
+50-state hemp regulatory compliance. COA validation, THC threshold enforcement, age-gate (21+ fail-closed), DSHS license tracking. 142-hook automated verification pipeline.
 
 ```
 POST /api/v1/compliance/verify
-Content-Type: application/json
 
 {
   "product_id": "sku-001",
@@ -80,24 +60,12 @@ Content-Type: application/json
 }
 ```
 
-- Real-time verification against state-by-state hemp regulations
-- COA (Certificate of Analysis) validation and THC threshold enforcement
-- Age-gate integration (21+ fail-closed enforcement)
-- DSHS license compliance tracking
-- 142-hook automated verification pipeline
-
-![Compliance](https://img.shields.io/badge/50--State_Coverage-22FF00?style=flat-square&labelColor=000000)
-![Fail-Closed](https://img.shields.io/badge/Fail--Closed_Architecture-22FF00?style=flat-square&labelColor=000000)
-
----
-
 ### LLM Council + Agent Gateway
 
-> Multi-model AI verification and orchestration API
+5-seat multi-model council (Claude, GPT, Codex, Gemini, Grok) — direct provider APIs, no middleware. Consensus voting, configurable quorum, Thompson sampling for model routing, constitutional governance with cryptographic audit trail.
 
 ```
 POST /api/v1/council/agent-review
-Content-Type: application/json
 
 {
   "task": "verify-deployment",
@@ -106,24 +74,12 @@ Content-Type: application/json
 }
 ```
 
-- 5-seat council: Claude, GPT, Codex, Gemini, Grok — direct API, no middleware
-- Consensus voting with configurable quorum thresholds
-- Agent orchestration with stateful task management
-- Thompson sampling for optimal model routing
-- Constitutional governance with cryptographic audit trail
-
-![5-Model Council](https://img.shields.io/badge/5--Model_Council-22FF00?style=flat-square&labelColor=000000)
-![Direct API](https://img.shields.io/badge/Direct_Provider_APIs-22FF00?style=flat-square&labelColor=000000)
-
----
-
 ### Voice AI Orchestration
 
-> Real-time voice synthesis and conversation API
+Sub-500ms voice latency with barge-in. Multi-tier cascade with automatic failover (Gemini Live > Gemini Flash > Claude). Deepgram STT + ElevenLabs TTS. WebSocket streaming for continuous conversation.
 
 ```
 POST /api/v1/voice/session
-Content-Type: application/json
 
 {
   "mode": "commerce",
@@ -131,15 +87,6 @@ Content-Type: application/json
   "cascade": ["gemini-live", "gemini-flash", "claude-sonnet"]
 }
 ```
-
-- Sub-500ms end-to-end voice latency with barge-in support
-- Multi-tier model cascade with automatic failover
-- Real-time STT/TTS pipeline (Deepgram + ElevenLabs)
-- Voice-driven commerce workflows
-- WebSocket streaming for continuous conversation
-
-![Sub-500ms Latency](https://img.shields.io/badge/Sub--500ms_Latency-22FF00?style=flat-square&labelColor=000000)
-![WebSocket](https://img.shields.io/badge/WebSocket_Streaming-22FF00?style=flat-square&labelColor=000000)
 
 ---
 
@@ -152,26 +99,22 @@ RUNTIME    Node.js · TypeScript · Next.js · Python · FastAPI · DSPy
 AI         Claude · GPT · Codex · Gemini · Grok (direct API)
 VOICE      Gemini Live · Deepgram STT · ElevenLabs TTS
 COMMERCE   LightSpeed · Authorize.net · Klaviyo · Twilio
-SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff (age verification)
+SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff
 ```
-
----
 
 ## Output
 
 | Metric | Value |
 |--------|-------|
-| **Commits (2026 YTD)** | 4,931+ |
-| **Cloud Run Services** | 9 production |
-| **Database Tables** | 839+ |
-| **Migrations Shipped** | 557 |
-| **RALPH Hooks** | 142 passing, 0 failing |
-| **Cloud Schedulers** | 117+ |
-| **Customers** | 13,347 |
+| Commits (2026 YTD) | 4,931+ |
+| Cloud Run Services | 9 production |
+| Database Tables | 839+ |
+| Migrations Shipped | 557 |
+| RALPH Hooks | 142 passing, 0 failing |
+| Cloud Schedulers | 117+ |
+| Customers | 13,347 |
 
----
-
-## 4 Lines of Business
+## Lines of Business
 
 | Entity | Domain |
 |--------|--------|
@@ -182,21 +125,6 @@ SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff (age verification
 
 ---
 
-## Connect
-
-| | |
-|---|---|
-| **API & Docs** | [LivHana.ai](https://livhana.ai) |
-| **Email** | [high@reggieanddro.com](mailto:high@reggieanddro.com) |
-| **Web** | [JesseNiesen.com](https://jesseniesen.com) |
-| **Location** | San Antonio, Texas |
-
----
-
-<div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=reggieanddro&color=brightgreen&style=flat-square&label=views)
+[API & Pricing](https://livhana.ai) | [high@reggieanddro.com](mailto:high@reggieanddro.com) | [JesseNiesen.com](https://jesseniesen.com) | San Antonio, TX
 
 *Self-taught. Mission-driven. Shipping autonomously.*
-
-</div>
