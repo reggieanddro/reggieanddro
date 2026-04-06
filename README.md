@@ -4,7 +4,7 @@
 
 Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated industries. Autonomous compliance verification, multi-model AI council, real-time voice orchestration. Solo-built on GCP Cloud Run, AlloyDB, and direct provider APIs.
 
-[API & Pricing](https://livhana.ai) | [high@reggieanddro.com](mailto:high@reggieanddro.com) | [JesseNiesen.com](https://jesseniesen.com)
+[API & Pricing](https://livhana.ai) | [Talk to Jesse AI](https://jesseniesen.com)
 
 ---
 
@@ -125,6 +125,6 @@ SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff
 
 ---
 
-[API & Pricing](https://livhana.ai) | [high@reggieanddro.com](mailto:high@reggieanddro.com) | [JesseNiesen.com](https://jesseniesen.com) | San Antonio, TX
+[API & Pricing](https://livhana.ai) | [Talk to Jesse AI](https://jesseniesen.com) | San Antonio, TX
 
 *Self-taught. Mission-driven. Shipping autonomously.*
