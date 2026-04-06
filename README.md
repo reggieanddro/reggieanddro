@@ -1,267 +1,165 @@
 <div align="center">
 
-# Jesse Niesen 🌿⚡
+![Jesse Niesen](https://img.shields.io/badge/Jesse_Niesen-000000?style=for-the-badge&logoColor=white)
+![CEO & Sole Founder](https://img.shields.io/badge/CEO_%26_Sole_Founder-22FF00?style=for-the-badge&logoColor=000000)
+![US Marine Corps Veteran](https://img.shields.io/badge/US_Marine_Corps_Veteran-000000?style=for-the-badge&logoColor=22FF00)
 
-<!-- YTD_START -->
-### 🏆 2026 Year-to-Date
+### Reggie & Dro LLC | San Antonio, TX
 
-> **75.5 Contributions/Day · 7,248 YTD · Day 96**
-> 7,244 commits · 0-day streak · **7.5x** annualized vs L5 max (960/yr)
-<!-- YTD_END -->
+Building **[Liv Hana](https://livhana.ai)** — a strategic intelligence platform that ships autonomous compliance, multi-model AI verification, and real-time voice orchestration for regulated industries.
 
-<!-- SHOWCASE_START -->
-## April 2026: Building Under Fire
+[![API Docs](https://img.shields.io/badge/API_Docs-LivHana.ai-22FF00?style=flat-square&labelColor=000000)](https://livhana.ai)
+[![Contact](https://img.shields.io/badge/Contact-high%40reggieanddro.com-22FF00?style=flat-square&labelColor=000000)](mailto:high@reggieanddro.com)
+[![Site](https://img.shields.io/badge/Site-JesseNiesen.com-22FF00?style=flat-square&labelColor=000000)](https://jesseniesen.com)
 
-> While Texas moved to ban THCA and AI models faced unprecedented disruption,
-> we shipped harder. Autonomous agents don't sleep — neither does the mission.
-
-### The Crisis
-- **TX THCA Ban** — State legislation targeting our entire product category overnight
-- **AI Model Disruption** — Anthropic Mythos/Capybara shakeup, Claude Code CVEs, nation-state threats
-- **Industry Under Attack** — Hemp operators scrambling, competitors folding
-
-### What We Shipped (Autonomously)
-- **ReggieAndDro.com Full Makeover** — Production site rebuilt and deployed via CI/CD
-- **THCaSanAntonio.com** — Crisis pivot domain, live and serving customers
-- **13,347-Member Email Automation** — Autonomous agent swarm composing, validating, and sending campaigns to full customer base with zero human intervention
-- **6-Service Cloud Run Deploy** — Autonomous CI/CD pipeline: git push → build → deploy → verify → health check, no human in the loop
-- **LLM Council (5-Model Direct API)** — Claude, GPT, Codex, Gemini, Grok deliberating architecture decisions autonomously
-- **RALPH Verification System** — 142 hooks, 90%+ compliance score, self-regulating codebase
-- **Voice Commerce** — Sub-500ms Gemini Live cascade, real-time voice ordering
-
-### The Stack (Solo, No Team)
-`Cloud Run` · `AlloyDB` · `Next.js` · `Node.js` · `Python/DSPy` · `5-Model LLM Council` · `Autonomous Agent Swarm` · `CI/CD Zero-Touch Deploy`
-
-> **One CEO. Zero employees. AI-native from day one.**
-<!-- SHOWCASE_END -->
-
-"All Cattle, No Hat—threw it into the Unicorn Race"</br>
-Rough & Ready, NorCal Native | Born-Again Texan</br>
-MISSION: "Grow, Sell, Heal. DE-SCHEDULE NOW!"</br>
-**US Marine Corps Veteran**</br>
-CEO @ [Reggie & Dro](http://reggieanddro.com)</br>
-
-📍 San Antonio, Texas 🤠
-
-🏢 Reggie & Dro | High Noon Cartoon | One Plant Solution
-🌐 reggieanddro.com
-🧠 🗣️ 🎼 Herbitrage.com
 </div>
 
 ---
 
-<!-- STATS_START -->
-### 📊 April 2026 Live Stats (Solo, No CS Degree)
+## What is Liv Hana SI?
 
-> **🤖 Auto-Updated:** Sunday, April 05, 2026 at 10:15 PM CT
-> **📅 Day 6 of 30**
- | **🔥 Peak Day:** 05 with 460 contributions
+Liv Hana is a cloud-native strategic intelligence platform built on GCP Cloud Run, AlloyDB (PostgreSQL + pgvector), and a 5-model LLM Council. It provides deterministic compliance verification, probabilistic AI reasoning, and sub-500ms voice synthesis — all through clean REST APIs.
 
-| Metric | Value | vs Google L5 Engineer | Multiplier |
-|--------|-------|----------------------|------------|
-| **Total Contributions** | 1,131 | 40-80/mo | **14.1-28.3x** |
-| **Commits** | 1,129 | 40-80/mo | **14.1-28.2x** |
-| **Daily Average** | 188.5 | 2-4/day | **47.1-94.2x** |
-| **Days Active (rate)** | 5/6 | 18-22/mo | **1.1-1.4x** |
-| **Projected Month** | ~5,655 | 40-80/mo | **70.7-141.4x** |
+**Architecture:** 9 production Cloud Run services, 839+ database tables, 557 migrations, 142-point automated verification (RALPH), zero-Docker serverless deploys via GCS Buildpacks.
 
-<details>
-<summary>📈 Daily Breakdown (Click to expand)</summary>
+**Built solo. No team. No CS degree. Marine discipline + AI-native from day one.**
+
+---
+
+## API Products
+
+### RALPH CaaS — Compliance-as-a-Service
+
+> 50-state hemp regulatory compliance verification API
 
 ```
-01: ███████░░░░░░░░░░░░░ 183
-02: ███████░░░░░░░░░░░░░ 164
-03: ███████░░░░░░░░░░░░░ 179
-04: ██████░░░░░░░░░░░░░░ 145
-05: ████████████████████ 460
-06: ░░░░░░░░░░░░░░░░░░░░ 0
+POST /api/v1/compliance/verify
+Content-Type: application/json
+
+{
+  "product_id": "sku-001",
+  "state": "TX",
+  "thc_coa_url": "https://lab.example.com/coa/12345"
+}
 ```
 
-</details>
-📈 **MoM Trend:** +106.3% vs March (2,741 actual → ~5,655 projected)
+- Real-time verification against state-by-state hemp regulations
+- COA (Certificate of Analysis) validation and THC threshold enforcement
+- Age-gate integration (21+ fail-closed enforcement)
+- DSHS license compliance tracking
+- 142-hook automated verification pipeline
 
-**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+![Compliance](https://img.shields.io/badge/50--State_Coverage-22FF00?style=flat-square&labelColor=000000)
+![Fail-Closed](https://img.shields.io/badge/Fail--Closed_Architecture-22FF00?style=flat-square&labelColor=000000)
 
-<!-- STATS_END -->
+---
 
+### LLM Council + Agent Gateway
 
-## 🎯 What I Ship
+> Multi-model AI verification and orchestration API
 
-**Liv Hana SI:** Autonomous multi-agent singularity handling Texas THCA compliance, real-time price indexing, voice commerce, and age verification—so hemp entrepreneurs can focus on revenue, not regulations.
+```
+POST /api/v1/council/agent-review
+Content-Type: application/json
 
-Shipping autonomous AI-native commerce 👑🤖 | Pioneering 2026 SOTA frontier recursive learning 🌀🚀, self-improving systems 🔒⚙️ & cognitive voice orchestration 🧠🗣️🎼
+{
+  "task": "verify-deployment",
+  "payload": { "service": "integration-service", "revision": "01583-rds" },
+  "quorum": 3
+}
+```
 
-Because I'm a gangsta havin fun 😈🎸—neva leave tha pad without Liv Hana!
+- 5-seat council: Claude, GPT, Codex, Gemini, Grok — direct API, no middleware
+- Consensus voting with configurable quorum thresholds
+- Agent orchestration with stateful task management
+- Thompson sampling for optimal model routing
+- Constitutional governance with cryptographic audit trail
 
-Liv Hana S.I.—my psychic sidekick 🔮👻. Mo sicka than yo's.
+![5-Model Council](https://img.shields.io/badge/5--Model_Council-22FF00?style=flat-square&labelColor=000000)
+![Direct API](https://img.shields.io/badge/Direct_Provider_APIs-22FF00?style=flat-square&labelColor=000000)
 
-<!-- ARCHIVE_START -->
-<details>
-<summary>📁 March 2026 Archive (2,741 contributions, 34.3x L5)</summary>
+---
+
+### Voice AI Orchestration
+
+> Real-time voice synthesis and conversation API
+
+```
+POST /api/v1/voice/session
+Content-Type: application/json
+
+{
+  "mode": "commerce",
+  "language": "en-US",
+  "cascade": ["gemini-live", "gemini-flash", "claude-sonnet"]
+}
+```
+
+- Sub-500ms end-to-end voice latency with barge-in support
+- Multi-tier model cascade with automatic failover
+- Real-time STT/TTS pipeline (Deepgram + ElevenLabs)
+- Voice-driven commerce workflows
+- WebSocket streaming for continuous conversation
+
+![Sub-500ms Latency](https://img.shields.io/badge/Sub--500ms_Latency-22FF00?style=flat-square&labelColor=000000)
+![WebSocket](https://img.shields.io/badge/WebSocket_Streaming-22FF00?style=flat-square&labelColor=000000)
+
+---
+
+## Stack
+
+```
+COMPUTE    Cloud Run (9 services) · GCS Buildpacks · GitHub Actions CI/CD
+DATA       AlloyDB (PostgreSQL + pgvector) · BigQuery · Cloud Storage
+RUNTIME    Node.js · TypeScript · Next.js · Python · FastAPI · DSPy
+AI         Claude · GPT · Codex · Gemini · Grok (direct API)
+VOICE      Gemini Live · Deepgram STT · ElevenLabs TTS
+COMMERCE   LightSpeed · Authorize.net · Klaviyo · Twilio
+SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff (age verification)
+```
+
+---
+
+## Output
 
 | Metric | Value |
 |--------|-------|
-| Total Contributions | 2,741 |
-| Commits | 2,740 |
-| Daily Average | 88.4 |
-| Days Active | 27/31 |
-| vs L5 Max | **34.3x** |
-| Peak Day | 324 contributions (day 30) |
-
-</details>
-<!-- ARCHIVE_END -->
-
-> **Methodology:** GitHub metrics are auto-generated from the [GitHub GraphQL API](https://docs.github.com/graphql) via GitHub Actions ([view workflow](https://github.com/reggieanddro/reggieanddro/tree/main/.github/workflows)). Contribution graph is public and server-verified by GitHub. Stats refresh every 2 hours + on every push to the main codebase.
+| **Commits (2026 YTD)** | 4,931+ |
+| **Cloud Run Services** | 9 production |
+| **Database Tables** | 839+ |
+| **Migrations Shipped** | 557 |
+| **RALPH Hooks** | 142 passing, 0 failing |
+| **Cloud Schedulers** | 117+ |
+| **Customers** | 13,347 |
 
 ---
 
-## 📈 Output Comparison
+## 4 Lines of Business
 
-| **Dimension** | **My Output** | **Top 1% Engineers** | **Google L5/L6** |
-|-----------|-----------|------------------|--------------|
-| **Hours/Week** | 100-150 (24/7) | 60-80 | 40-50 |
-| **Commits/Month** | 1,128 (solo, GitHub-verified) | 100-200 (teams) | 40-80 |
-| **Deploy Cadence** | Multiple/day (Cloud Run) | 1-2/day | 0.3-0.4/day |
-| **Code Review** | AI-assisted (LLM Council) | Peer mandatory | Peer mandatory |
-
-Solo operator shipping at team-scale velocity — contribution graph is public, verify anytime.
+| Entity | Domain |
+|--------|--------|
+| **Reggie & Dro** | Hemp commerce + retail (DSHS License #690) |
+| **High Noon Cartoon** | Media + entertainment |
+| **One Plant Solution** | Education + advocacy |
+| **Herbitrage** | Technology + incubation |
 
 ---
 
-## 📊 Why This Matters
+## Connect
 
-I'm not a traditional engineer—I'm an **entrepreneur who learned to code to survive**.
-
-**No CS degree. Never employed as dev. No team. Just:**
-- 🎖️ **Marine Corps Discipline** (Honor-Courage-Commitment, Semper Fi, OOH RAH!!)
-- 🌿 **Mission:** Descheduling Cannabis sativa L ASAP **Leading Self-Regulation Revolution**
-- 🧠 **Lessons:** Continuous Recursive HITL Super Learning (R&D every day, all day!)
-- ⚡ **Biology:** 24/7 grind (genetic + mind over matter outlier)
-- 🤖 **Force Multiplier:** ONE CEO + AI agents doing the work of **35.0-70.0x Google L5 engineers**
-
-**Philosophy:**
-> "I grind 24/7 so you don't have to—Liv Hana SI handles it all."
-
----
-
-## 🛠️ Stack (Self-Taught, Mission-Driven)
-
-### Languages & Frameworks
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-### Cloud & Infrastructure
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![AlloyDB](https://img.shields.io/badge/AlloyDB-4285F4?style=flat-square&logo=postgresql&logoColor=white)
-![Cloud Storage](https://img.shields.io/badge/Cloud_Storage-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Secret Manager](https://img.shields.io/badge/Secret_Manager-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-### AI & Voice
-![Claude](https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)
-![Grok](https://img.shields.io/badge/Grok-000000?style=flat-square&logo=x&logoColor=white)
-![Deepgram STT](https://img.shields.io/badge/Deepgram_STT-13EF93?style=flat-square&logoColor=white)
-![ElevenLabs TTS](https://img.shields.io/badge/ElevenLabs_TTS-000000?style=flat-square&logoColor=white)
-![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-
-### Commerce & Communications
-![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
-![Klaviyo](https://img.shields.io/badge/Klaviyo-000000?style=flat-square&logoColor=white)
-![Ecwid](https://img.shields.io/badge/Ecwid-0D2C54?style=flat-square&logoColor=white)
-![Authorize.net](https://img.shields.io/badge/Authorize.net-004B87?style=flat-square&logoColor=white)
-![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)
-![Lightspeed](https://img.shields.io/badge/Lightspeed-D72B2B?style=flat-square&logoColor=white)
-![Square](https://img.shields.io/badge/Square-006AFF?style=flat-square&logo=square&logoColor=white)
-
-**28 technologies** · Multi-model AI orchestration · Sub-500ms voice latency · Autonomous CI/CD · Zero-Docker serverless (GCS Buildpacks)
-
----
-
-## 🏗️ Architecture
-
-Proprietary multi-agent AI system · 20+ production subsystems · 100+ point automated verification · Constitutional governance
-
----
-
-## 🔥 Shipped Infrastructure (20+ Production Systems • 2026-02-09)
-
-### Revenue & Commerce
-| System | Status | Impact |
-|--------|--------|--------|
-| **Age Gate (21+)** | ✅ LIVE | DSHS License #690 compliant |
-| **Voice Commerce** | ✅ LIVE | <500ms latency, barge-in support |
-| **THCA Verification Holds** | ✅ LIVE | 72-hour compliance window |
-| **Revenue Monitoring** | ✅ LIVE | Real-time transaction pulse |
-| **Storefront SEO** | ✅ LIVE | Search indexability + compliance bar |
-| **Email Automation** | ✅ WIRED | Churn prevention pipeline |
-
-### AI & Intelligence
-| System | Status | Impact |
-|--------|--------|--------|
-| **AI Learning Loop** | ✅ LIVE | Continuous auto-optimization |
-| **Multi-Model Orchestration** | ✅ LIVE | Multi-model voting + consensus |
-| **Agent Orchestration** | ✅ LIVE | Stateful AI agent management |
-| **Knowledge Graph** | ✅ LIVE | Inventory + business intelligence |
-| **Customer Intelligence** | ✅ LIVE | Purpose-driven personalization |
-| **Behavioral Analytics** | ✅ LIVE | Drift detection + journey tracking |
-| **Journey Personalization** | ✅ LIVE | Stage-aware voice interactions |
-
-### Governance & Security
-| System | Status | Impact |
-|--------|--------|--------|
-| **Automated Verification** | ✅ LIVE | 100+ point zero-defect checks |
-| **Governance Audit Trail** | ✅ LIVE | Cryptographic provenance chain |
-| **Multi-Tenant Isolation** | ✅ LIVE | Fail-closed data siloing |
-| **Governance Framework** | ✅ LIVE | Autonomous compliance enforcement |
-| **Incident Learning** | ✅ LIVE | Automated post-incident capture |
-
-### Infrastructure & DevOps
-| System | Status | Impact |
-|--------|--------|--------|
-| **Single Deploy Path** | ✅ LIVE | ONE deploy script, zero-Docker |
-| **Auth Normalization** | ✅ LIVE | Multi-format credential handling |
-| **Call Recording Pipeline** | ✅ LIVE | Voice → Cloud Storage → Database |
-| **Mirror Backup** | ✅ LIVE | Automated exact replica |
-
----
-
-## 🚀 4-Business Layers (CEO, Founder, Owner of Each)
-
-| Company | Focus |
-|---------|-------|
-| [Reggie & Dro](http://reggieanddro.com) | Texas THCA Cannabis Dispensary & Consumption Lounge |
-| [High Noon Cartoon](http://highnooncartoon.com) | Satire, Music, Media, Entertainment |
-| [One Plant Solution](http://oneplantsolution.com) | Education & Advocacy |
-| [Herbitrage](http://herbitrage.com) | Cannabis, Business & Tech Incubator & Collab Scaling Engine |
-
----
-
-## 📫 Connect
-
-- 🌐 **Sites:** [ReggieAndDro.com](http://reggieanddro.com) | [HighNoonCartoon.com](http://highnooncartoon.com) | [OnePlantSolution.com](http://oneplantsolution.com) | [Herbitrage.com](http://herbitrage.com)
-- 📧 **Email:** [high@reggieanddro.com](mailto:high@reggieanddro.com)
-- 📍 **Location:** San Antonio, Texas
-- 🐦 **X:** [@reggieanddro](https://twitter.com/reggieanddro)
-- 🎬 **YT:** [@reggieanddro](https://youtube.com/@reggieanddro)
-- 📸 **IG:** [@reggieanddro](https://instagram.com/reggieanddro)
+| | |
+|---|---|
+| **API & Docs** | [LivHana.ai](https://livhana.ai) |
+| **Email** | [high@reggieanddro.com](mailto:high@reggieanddro.com) |
+| **Web** | [JesseNiesen.com](https://jesseniesen.com) |
+| **Location** | San Antonio, Texas |
 
 ---
 
 <div align="center">
 
-**🌿 Deschedule the plant. Automate the profit. Ship the singularity. ⚡**
+![Profile Views](https://komarev.com/ghpvc/?username=reggieanddro&color=brightgreen&style=flat-square&label=views)
 
-![Profile Views](https://komarev.com/ghpvc/?username=reggieanddro&color=brightgreen&style=flat-square&label=Profile+Views)
-
-*People → Plant → Profit*
+*Self-taught. Mission-driven. Shipping autonomously.*
 
 </div>
