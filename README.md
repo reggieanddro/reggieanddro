@@ -17,8 +17,8 @@ Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated
 
 | Metric | Value | vs Google L5 Engineer | Multiplier |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | 2,854 | 40-80/mo | **35.7-71.3x** |
-| **Commits** | 2,851 | 40-80/mo | **35.6-71.3x** |
+| **Total Contributions** | 2,855 | 40-80/mo | **35.7-71.4x** |
+| **Commits** | 2,852 | 40-80/mo | **35.6-71.3x** |
 | **Daily Average** | 114.2 | 2-4/day | **28.6-57.1x** |
 | **Days Active (rate)** | 24/25 | 18-22/mo | **1.3-1.6x** |
 | **Projected Month** | ~3,426 | 40-80/mo | **42.8-85.7x** |
@@ -51,7 +51,7 @@ Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated
 22: █░░░░░░░░░░░░░░░░░░░ 26
 23: ███░░░░░░░░░░░░░░░░░ 83
 24: ███░░░░░░░░░░░░░░░░░ 93
-25: ░░░░░░░░░░░░░░░░░░░░ 22
+25: ░░░░░░░░░░░░░░░░░░░░ 23
 ```
 
 </details>
