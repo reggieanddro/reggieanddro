@@ -286,11 +286,11 @@ jobs:
           TOTAL="${{ steps.fetch-stats.outputs.total }}"
 
           # Commit with descriptive message
-          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} contributions vs L5
+          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} GitHub activity events
 
           Stats refresh (every 2h + push-triggered)
           Source: GitHub GraphQL API
-          Benchmarks: 2025 Worklytics L5 Engineer"
+          Benchmark context: 2025 Worklytics activity ranges; not productivity equivalence"
 
           # Push changes
           git push
