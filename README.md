@@ -61,7 +61,7 @@ Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated
 </details>
 
 🔥 **Current Streak:** 19 consecutive days with contributions
-📈 **MoM Trend:** +21.6% vs March (2,741 actual → ~3,333 projected)
+📈 **Projected MoM Activity Trend:** +21.6% vs March (2,741 actual → ~3,333 projected)
 
 **Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 

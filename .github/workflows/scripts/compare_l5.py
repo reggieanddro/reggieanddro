@@ -276,7 +276,7 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
             mom_pct = round(((projected - prev_total) / prev_total) * 100, 1)
             trend = "📈" if mom_pct > 0 else "📉"
             sign = "+" if mom_pct > 0 else ""
-            lines.append(f"{trend} **MoM Trend:** {sign}{mom_pct}% vs {prev_name} ({prev_total:,} actual → ~{projected:,} projected)")
+            lines.append(f"{trend} **Projected MoM Activity Trend:** {sign}{mom_pct}% vs {prev_name} ({prev_total:,} actual → ~{projected:,} projected)")
 
     # Source
     lines.extend([

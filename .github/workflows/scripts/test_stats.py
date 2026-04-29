@@ -384,7 +384,7 @@ class TestCompareL5(unittest.TestCase):
         comparison = compare_to_l5(SAMPLE_STATS)
         markdown = generate_markdown_table(SAMPLE_STATS, comparison)
 
-        self.assertIn("MoM Trend", markdown)
+        self.assertIn("Projected MoM Activity Trend", markdown)
         self.assertIn("March", markdown)
 
     def test_generate_markdown_table_ct_timezone(self):
