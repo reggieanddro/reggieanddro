@@ -219,7 +219,16 @@ def fetch_github_stats(token: str, username: str) -> Dict[str, Any]:
 
     # Calculate derived metrics
     total_contributions = calendar["totalContributions"]
-    commits = contrib["totalCommitContributions"] + contrib["restrictedContributionsCount"]
+    restricted_events = contrib["restrictedContributionsCount"]
+    visible_typed_events = (
+        contrib["totalCommitContributions"]
+        + contrib["totalPullRequestContributions"]
+        + contrib["totalIssueContributions"]
+        + contrib["totalPullRequestReviewContributions"]
+    )
+    # GitHub exposes private work as "restricted contributions" without type.
+    # Do not label this as commits: it is verified activity, not deployable commit count.
+    private_included_events = contrib["totalCommitContributions"] + restricted_events
     daily_avg = round(total_contributions / max(day_of_month, 1), 1)
     projected_month = round(daily_avg * days_in_month)
 
@@ -230,7 +239,10 @@ def fetch_github_stats(token: str, username: str) -> Dict[str, Any]:
         "day_of_month": day_of_month,
         "days_in_month": days_in_month,
         "total_contributions": total_contributions,
-        "commits": commits,
+        "commits": private_included_events,
+        "private_included_events": private_included_events,
+        "restricted_contributions": restricted_events,
+        "visible_typed_events": visible_typed_events,
         "pull_requests": contrib["totalPullRequestContributions"],
         "issues": contrib["totalIssueContributions"],
         "reviews": contrib["totalPullRequestReviewContributions"],
@@ -243,7 +255,11 @@ def fetch_github_stats(token: str, username: str) -> Dict[str, Any]:
         "fetched_at": datetime.now(timezone.utc).isoformat()
     }
 
-    logger.info(f"Stats fetched: {total_contributions} contributions, {commits} commits")
+    logger.info(
+        "Stats fetched: %s contribution events, %s private/restricted events",
+        total_contributions,
+        private_included_events,
+    )
 
     return stats
 

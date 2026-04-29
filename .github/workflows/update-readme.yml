@@ -150,12 +150,12 @@ jobs:
 
           # Extract key metrics for logging
           TOTAL=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('total_contributions', 0))")
-          COMMITS=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('commits', 0))")
+          PRIVATE_EVENTS=$(echo "$STATS" | python -c "import sys, json; data=json.load(sys.stdin); print(data.get('private_included_events', data.get('commits', 0)))")
           DAILY=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('daily_avg', 0))")
 
           echo "📈 Stats fetched:"
-          echo "   Total Contributions: $TOTAL"
-          echo "   Commits: $COMMITS"
+          echo "   GitHub Contribution Events: $TOTAL"
+          echo "   Private/Restricted Events: $PRIVATE_EVENTS"
           echo "   Daily Average: $DAILY"
 
           echo "stats_error=false" >> $GITHUB_OUTPUT
@@ -309,7 +309,7 @@ jobs:
           echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
           echo "| Fetch Stats | ${{ steps.fetch-stats.outputs.stats_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Compare L5 | ${{ steps.compare.outputs.compare_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Total Contributions | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| GitHub Contribution Events | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Schedule:** Every 2h + push-triggered from LivHana-SoT" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY

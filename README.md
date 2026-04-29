@@ -4,24 +4,24 @@
 
 Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated industries. Autonomous compliance verification, multi-model AI council, real-time voice orchestration. Solo-built on GCP Cloud Run, AlloyDB, and direct provider APIs.
 
-[API & Pricing](https://livhana.ai) | [Talk to Jesse AI](https://jesseniesen.com)
+[API & Pricing](https://livhana.ai) | [Liv Hana SI](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com)
 
 ---
 
 <!-- STATS_START -->
 ### 📊 April 2026 Live Stats (Solo, No CS Degree)
 
-> **🤖 Auto-Updated:** Wednesday, April 29, 2026 at 7:54 AM CT
+> **🤖 Auto-Updated:** Wednesday, April 29, 2026 at 8:01 AM CT
 > **📅 Day 29 of 30**
- | **🔥 Peak Day:** 05 with 518 contributions
+ | **🔥 Peak Day:** 05 with 520 contributions
 
-| Metric | Value | vs Google L5 Engineer | Multiplier |
+| Metric | Value | Activity benchmark | Ratio |
 |--------|-------|----------------------|------------|
-| **Total Contributions** | 3,220 | 40-80/mo | **40.2-80.5x** |
-| **Commits** | 3,217 | 40-80/mo | **40.2-80.4x** |
-| **Daily Average** | 111.0 | 2-4/day | **27.8-55.5x** |
+| **GitHub Contribution Events** | 3,221 | 40-80/mo activity benchmark | **40.3-80.5x** |
+| **Private/Restricted Events** | 3,218 | GitHub does not expose event type | context only |
+| **Daily Average** | 111.1 | 2-4/day | **27.8-55.5x** |
 | **Days Active (rate)** | 28/29 | 18-22/mo | **1.3-1.6x** |
-| **Projected Month** | ~3,330 | 40-80/mo | **41.6-83.2x** |
+| **Projected Month** | ~3,333 | 40-80/mo | **41.7-83.3x** |
 
 <details>
 <summary>📈 Daily Breakdown (Click to expand)</summary>
@@ -31,8 +31,8 @@ Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated
 02: ██████░░░░░░░░░░░░░░ 164
 03: ██████░░░░░░░░░░░░░░ 179
 04: █████░░░░░░░░░░░░░░░ 145
-05: ████████████████████ 518
-06: ██████░░░░░░░░░░░░░░ 171
+05: ████████████████████ 520
+06: ██████░░░░░░░░░░░░░░ 169
 07: ████░░░░░░░░░░░░░░░░ 125
 08: ███░░░░░░░░░░░░░░░░░ 100
 09: █████░░░░░░░░░░░░░░░ 154
@@ -55,16 +55,17 @@ Building [Liv Hana](https://livhana.ai) — strategic intelligence for regulated
 26: ░░░░░░░░░░░░░░░░░░░░ 5
 27: ██░░░░░░░░░░░░░░░░░░ 63
 28: ██░░░░░░░░░░░░░░░░░░ 58
-29: ██░░░░░░░░░░░░░░░░░░ 63
+29: ██░░░░░░░░░░░░░░░░░░ 64
 ```
 
 </details>
 
 🔥 **Current Streak:** 19 consecutive days with contributions
-📈 **MoM Trend:** +21.5% vs March (2,741 actual → ~3,330 projected)
+📈 **MoM Trend:** +21.6% vs March (2,741 actual → ~3,333 projected)
 
 **Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
+_Truth note: GitHub contribution events include private/restricted activity. They are activity signals, not deployable commit counts or productivity equivalence claims._
 <!-- STATS_END -->
 
 ---
@@ -101,7 +102,7 @@ POST /api/v1/council/agent-review
 
 ### Voice AI Orchestration
 
-Sub-500ms voice latency with barge-in. Multi-tier cascade with automatic failover (Gemini Live > Gemini Flash > Claude). Deepgram STT + ElevenLabs TTS. WebSocket streaming for continuous conversation.
+Sub-500ms voice latency with barge-in. Multi-tier cascade with automatic failover across low-latency voice, flash, and reasoning lanes. Deepgram STT + ElevenLabs TTS. WebSocket streaming for continuous conversation.
 
 ```
 POST /api/v1/voice/session
@@ -109,7 +110,7 @@ POST /api/v1/voice/session
 {
   "mode": "commerce",
   "language": "en-US",
-  "cascade": ["gemini-live", "gemini-flash", "claude-sonnet"]
+  "cascade": ["voice-primary", "flash-fallback", "reasoning-fallback"]
 }
 ```
 
@@ -131,11 +132,11 @@ SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff
 
 | Metric | Value |
 |--------|-------|
-| Commits (2026 YTD) | 4,931+ |
+| Public GitHub Stats | Auto-updated above from GitHub GraphQL |
 | Cloud Run Services | 9 production |
-| Database Tables | 839+ |
-| Migrations Shipped | 557 |
-| RALPH Hooks | 142 passing, 0 failing |
+| Database Tables | Internal SRF-verified; changes frequently |
+| Migrations Shipped | SRF-tracked; changes frequently |
+| RALPH Hooks | Run-specific verification framework |
 | Cloud Schedulers | 117+ |
 | Customers | 13,347 |
 
@@ -150,6 +151,6 @@ SECURITY   Auth0 · Secret Manager · Cloudflare WAF · Veriff
 
 ---
 
-[API & Pricing](https://livhana.ai) | [Talk to Jesse AI](https://jesseniesen.com) | San Antonio, TX
+[API & Pricing](https://livhana.ai) | [Liv Hana SI](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com) | San Antonio, TX
 
 *Self-taught. Mission-driven. Shipping autonomously.*

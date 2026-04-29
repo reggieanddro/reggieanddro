@@ -109,35 +109,35 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
 
     # Total contributions vs commits benchmark (most comparable)
     total = stats.get("total_contributions", 0)
-    commits = stats.get("commits", 0)
+    private_included_events = stats.get("private_included_events", stats.get("commits", 0))
     daily_avg = stats.get("daily_avg", 0)
     days_active = stats.get("days_active", 0)
     prs = stats.get("pull_requests", 0)
     day_of_month = stats.get("day_of_month", 1)
     projected = stats.get("projected_month", 0)
 
-    # Commits comparison
+    # Contribution activity comparison. This is an activity-rhythm comparison,
+    # not a productivity equivalence claim and not a deployable commit count.
     commit_mult = calculate_multiplier(total, L5_BENCHMARKS["commits_per_month"]["min"],
                                         L5_BENCHMARKS["commits_per_month"]["max"])
     comparisons.append({
-        "metric": "Total Contributions",
+        "metric": "GitHub Contribution Events",
         "value": total,
-        "benchmark": f"{L5_BENCHMARKS['commits_per_month']['min']}-{L5_BENCHMARKS['commits_per_month']['max']}/mo",
+        "benchmark": f"{L5_BENCHMARKS['commits_per_month']['min']}-{L5_BENCHMARKS['commits_per_month']['max']}/mo activity benchmark",
         "multiplier_min": commit_mult[0],
         "multiplier_max": commit_mult[1],
         "status": "above" if commit_mult[0] >= 1.0 else "below"
     })
 
-    # Commits only
-    commit_only_mult = calculate_multiplier(commits, L5_BENCHMARKS["commits_per_month"]["min"],
-                                             L5_BENCHMARKS["commits_per_month"]["max"])
+    # Private/restricted GitHub events are not typed by GitHub. Keep them visible
+    # for transparency, but never compare them as "commits".
     comparisons.append({
-        "metric": "Commits",
-        "value": commits,
-        "benchmark": f"{L5_BENCHMARKS['commits_per_month']['min']}-{L5_BENCHMARKS['commits_per_month']['max']}/mo",
-        "multiplier_min": commit_only_mult[0],
-        "multiplier_max": commit_only_mult[1],
-        "status": "above" if commit_only_mult[0] >= 1.0 else "below"
+        "metric": "Private/Restricted Events",
+        "value": private_included_events,
+        "benchmark": "GitHub does not expose event type",
+        "multiplier_min": None,
+        "multiplier_max": None,
+        "status": "context"
     })
 
     # Daily average
@@ -178,7 +178,8 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
     })
 
     # Overall assessment
-    avg_multiplier = sum(c["multiplier_min"] for c in comparisons) / len(comparisons)
+    multiplier_rows = [c for c in comparisons if c["multiplier_min"] is not None]
+    avg_multiplier = sum(c["multiplier_min"] for c in multiplier_rows) / len(multiplier_rows)
     overall_status = "above" if avg_multiplier >= 1.0 else "below"
 
     return {
@@ -224,14 +225,17 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         peak_day_num = peak.get("date", "").split("-")[-1] if peak.get("date") else "?"
         lines.append(f" | **🔥 Peak Day:** {peak_day_num} with {peak['count']} contributions")
 
-    lines.extend(["", "| Metric | Value | vs Google L5 Engineer | Multiplier |",
+    lines.extend(["", "| Metric | Value | Activity benchmark | Ratio |",
                   "|--------|-------|----------------------|------------|"])
 
     for comp in comparison["comparisons"]:
         value = comp["value"]
         if isinstance(value, (int, float)) and not isinstance(value, bool):
             value = f"{value:,}" if isinstance(value, int) else f"{value}"
-        mult_str = f"**{comp['multiplier_min']}-{comp['multiplier_max']}x**"
+        if comp["multiplier_min"] is None:
+            mult_str = "context only"
+        else:
+            mult_str = f"**{comp['multiplier_min']}-{comp['multiplier_max']}x**"
         lines.append(f"| **{comp['metric']}** | {value} | {comp['benchmark']} | {mult_str} |")
 
     # Daily breakdown (collapsible)
@@ -277,7 +281,9 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
     # Source
     lines.extend([
         "",
-        f"**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [{comparison['benchmark_source']}]({comparison['benchmark_url']})"
+        f"**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [{comparison['benchmark_source']}]({comparison['benchmark_url']})",
+        "",
+        "_Truth note: GitHub contribution events include private/restricted activity. They are activity signals, not deployable commit counts or productivity equivalence claims._"
     ])
 
     return "\n".join(lines)
@@ -308,7 +314,7 @@ def generate_ytd_banner(stats: Dict[str, Any]) -> str:
         f"### 🏆 {year} Year-to-Date",
         "",
         f"> **{ytd_daily_avg} Contributions/Day · {ytd_total:,} YTD · Day {day_of_year}**",
-        f"> {ytd_commits:,} commits · {ytd_streak}-day streak · **{ytd_mult}x** annualized vs L5 max ({l5_yearly_max:,}/yr)",
+        f"> {ytd_commits:,} private/restricted events · {ytd_streak}-day streak · **{ytd_mult}x** annualized activity ratio vs L5 max ({l5_yearly_max:,}/yr)",
     ]
 
     return "\n".join(lines)
@@ -352,7 +358,7 @@ def generate_archive_section(stats: Dict[str, Any]) -> str:
         f"| Metric | Value |",
         f"|--------|-------|",
         f"| Total Contributions | {prev_total:,} |",
-        f"| Commits | {prev_commits:,} |",
+        f"| Private/Restricted Events | {prev_commits:,} |",
         f"| Daily Average | {prev_daily} |",
         f"| Days Active | {prev_active}/{prev_days} |",
         f"| vs L5 Max | **{mult}x** |",

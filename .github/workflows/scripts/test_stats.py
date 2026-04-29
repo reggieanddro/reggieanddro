@@ -367,7 +367,7 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("April 2026", markdown)
         self.assertIn("Live Stats", markdown)
         self.assertIn("| Metric |", markdown)
-        self.assertIn("Google L5", markdown)
+        self.assertIn("Worklytics", markdown)
         self.assertIn("210", markdown)  # peak day
         self.assertIn("Daily Breakdown", markdown)
 
@@ -416,7 +416,7 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("13,500", banner)  # YTD total
         self.assertIn("Day 95", banner)
         self.assertIn("45-day streak", banner)
-        self.assertIn("annualized vs L5", banner)
+        self.assertIn("annualized activity ratio vs L5", banner)
 
     def test_generate_ytd_banner_no_data(self):
         """Test YTD banner with minimal data"""
