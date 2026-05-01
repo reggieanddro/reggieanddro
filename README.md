@@ -9,22 +9,36 @@ I build Liv Hana: autonomous strategic intelligence for regulated industries whe
 ---
 
 <!-- STATS_START -->
-### May 2026 Live Stats (Solo, No CS Degree)
+### 📊 May 2026 Live Stats (Solo, No CS Degree)
 
-> **Auto-Updated:** Friday, May 01, 2026 at 9:39 AM CT
-> **Day 1 of 31**
+> **🤖 Auto-Updated:** Friday, May 01, 2026 at 10:50 AM CT
+> **📅 Day 1 of 31**
+ | **🔥 Peak Day:** 01 with 2 contributions
 
 | Metric | Value | Activity benchmark | Ratio |
-|--------|-------|--------------------|-------|
-| GitHub profile-attributed events | 0 | 40-80/mo profile-attribution benchmark | 0.0-0.0x |
-| Private/restricted profile events | 0 | GitHub does not expose event type | context only |
-| Daily average | 0.0 | 2-4/day | 0.0-0.0x |
-| Days active | 0/1 | 18-22/mo | 0.0-0.0x |
-| Projected month | ~0 | 40-80/mo | 0.0-0.0x |
+|--------|-------|----------------------|------------|
+| **GitHub Profile-Attributed Events** | 2 | 40-80/mo profile-attribution benchmark | **0.0-0.1x** |
+| **Private/Restricted Profile Events** | 2 | GitHub does not expose event type | context only |
+| **Daily Average** | 2.0 | 2-4/day | **0.5-1.0x** |
+| **Days Active (rate)** | 1/1 | 18-22/mo | **1.4-1.7x** |
+| **Projected Month** | ~62 | 40-80/mo | **0.8-1.6x** |
 
-_Truth note: May has just opened. The profile keeps the live month separate from the closed-month proof ledger below so a day-one zero cannot erase the body of work._
+<details>
+<summary>📈 Daily Breakdown (Click to expand)</summary>
 
-**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) and [Worklytics engineering productivity benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores).
+```
+01: ████████████████████ 2
+```
+
+</details>
+
+🔥 **Current Streak:** 1 consecutive days with contributions
+📉 **Projected MoM Activity Trend:** -98.1% vs April (3,235 actual → ~62 projected)
+
+**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
+
+_Truth note: GitHub profile-attributed events include private/restricted activity. They are profile graph signals, not deployable commit counts, complete operating-work ledgers, or productivity equivalence claims. Bot/alternate-author commits can be real work while showing as zero on the personal contribution calendar._
+
 <!-- STATS_END -->
 
 ---
