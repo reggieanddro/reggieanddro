@@ -25,6 +25,7 @@ import argparse
 import logging
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+from collections import defaultdict
 from typing import Dict, Any, List, Tuple
 
 # Configure logging
@@ -376,6 +377,175 @@ def generate_archive_section(stats: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _format_int(value: Any) -> str:
+    try:
+        return f"{int(value):,}"
+    except (TypeError, ValueError):
+        return "0"
+
+
+def _daily_bar(count: int, max_count: int) -> str:
+    if max_count <= 0:
+        return "░" * 20
+    bar_len = int((count / max_count) * 20)
+    return "█" * bar_len + "░" * (20 - bar_len)
+
+
+def generate_all_months_ledger(stats: Dict[str, Any]) -> str:
+    """
+    Generate permanent all-month stats ledger with profile and operational lanes.
+
+    The profile lane is GitHub contribution-calendar attribution. The operational
+    lane is real default-branch repo commit activity from configured repositories.
+    """
+    months = stats.get("all_months") or []
+    operational = stats.get("operational_activity") or {}
+    op_months = {
+        row.get("month_key"): row
+        for row in operational.get("months", [])
+        if row.get("month_key")
+    }
+    ct_tz = ZoneInfo("America/Chicago")
+    now_ct = datetime.now(ct_tz)
+    updated = now_ct.strftime("%A, %B %d, %Y at %-I:%M %p CT")
+
+    if not months:
+        return "\n".join([
+            "## Current & Historical Stats Ledger",
+            "",
+            f"**Auto-updated:** {updated}",
+            "",
+            "All-month GitHub profile stats are temporarily unavailable. The live-month section above remains the fallback source.",
+        ])
+
+    by_year: Dict[int, List[Dict[str, Any]]] = defaultdict(list)
+    for row in months:
+        by_year[int(row["year"])].append(row)
+
+    total_profile = sum(int(row.get("profile_events", 0)) for row in months)
+    total_private = sum(int(row.get("private_restricted_events", 0)) for row in months)
+    total_operational = sum(int(row.get("commits", 0)) for row in op_months.values())
+    total_bot_agent = sum(int(row.get("bot_or_agent_commits", 0)) for row in op_months.values())
+    coverage_start = months[0]["month_key"]
+    coverage_end = months[-1]["month_key"]
+    repos = ", ".join(operational.get("repos", [])) or "not configured"
+    op_error_count = int(operational.get("error_count", 0) or 0)
+
+    lines = [
+        "## Current & Historical Stats Ledger",
+        "",
+        f"**Auto-updated:** {updated}",
+        f"**Coverage:** {coverage_start} through {coverage_end}",
+        "",
+        "| Lane | Count | What it means |",
+        "|------|-------|---------------|",
+        f"| GitHub profile-attributed events | {_format_int(total_profile)} | What GitHub credits to `@{stats.get('username', 'reggieanddro')}` under contribution-calendar rules |",
+        f"| Private/restricted profile events | {_format_int(total_private)} | GitHub-verified private/restricted profile events without public type disclosure |",
+        f"| Operational repo commits | {_format_int(total_operational)} | Real default-branch commits across configured repos, regardless of whether GitHub credits the personal graph |",
+        f"| Bot/agent operational commits | {_format_int(total_bot_agent)} | Operational commits by bots or agent author identities |",
+        "",
+        f"**Operational repos:** {repos}. Source: {operational.get('source', 'GitHub REST commits API')}.",
+    ]
+
+    if op_error_count:
+        lines.append(f"**Operational caveat:** {op_error_count} repo-month fetches were unavailable, usually because the workflow token cannot read a private repo. Configure `PROFILE_PAT`/`OPERATIONAL_GITHUB_TOKEN` to close this gap.")
+
+    year_rows = []
+    for year in sorted(by_year):
+        rows = by_year[year]
+        profile_sum = sum(int(row.get("profile_events", 0)) for row in rows)
+        private_sum = sum(int(row.get("private_restricted_events", 0)) for row in rows)
+        active_sum = sum(int(row.get("days_active", 0)) for row in rows)
+        op_sum = sum(int(op_months.get(row["month_key"], {}).get("commits", 0)) for row in rows)
+        agent_sum = sum(int(op_months.get(row["month_key"], {}).get("bot_or_agent_commits", 0)) for row in rows)
+        year_rows.append(f"| {year} | {_format_int(profile_sum)} | {_format_int(private_sum)} | {active_sum} | {_format_int(op_sum)} | {_format_int(agent_sum)} |")
+
+    lines.extend([
+        "",
+        "| Year | Profile-attributed events | Private/restricted profile events | Active profile days | Operational commits | Bot/agent commits |",
+        "|------|---------------------------|-----------------------------------|---------------------|---------------------|------------------|",
+        *year_rows,
+        "",
+    ])
+
+    for year in sorted(by_year, reverse=True):
+        rows = sorted(by_year[year], key=lambda item: item["month_number"])
+        profile_sum = sum(int(row.get("profile_events", 0)) for row in rows)
+        op_sum = sum(int(op_months.get(row["month_key"], {}).get("commits", 0)) for row in rows)
+        lines.extend([
+            "<details>",
+            f"<summary><strong>{year}</strong> — {_format_int(profile_sum)} profile events · {_format_int(op_sum)} operational commits</summary>",
+            "",
+            "| Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |",
+            "|-------|----------------|--------------------|-------------|---------------------|------------------|",
+        ])
+        for row in rows:
+            op = op_months.get(row["month_key"], {})
+            lines.append(
+                f"| {row['month']} | {_format_int(row.get('profile_events', 0))} | "
+                f"{_format_int(row.get('private_restricted_events', 0))} | "
+                f"{row.get('days_active', 0)}/{row.get('days_elapsed', row.get('days_in_month', 0))} | "
+                f"{_format_int(op.get('commits', 0))} | {_format_int(op.get('bot_or_agent_commits', 0))} |"
+            )
+        lines.extend(["", "</details>", ""])
+
+    lines.append("### Monthly Drop-Down Receipts")
+    lines.append("")
+
+    for row in sorted(months, key=lambda item: item["month_key"], reverse=True):
+        op = op_months.get(row["month_key"], {})
+        daily = row.get("daily_breakdown") or []
+        max_count = max((int(day.get("count", 0)) for day in daily), default=0)
+        repo_rows = []
+        for repo in op.get("repos", []):
+            if repo.get("error"):
+                repo_rows.append(f"| `{repo.get('repo')}` | unavailable | {repo.get('error')} |")
+            else:
+                top_authors = ", ".join(
+                    f"{author['name']} ({author['commits']})"
+                    for author in repo.get("top_authors", [])[:3]
+                ) or "none"
+                repo_rows.append(f"| `{repo.get('repo')}` | {_format_int(repo.get('commits', 0))} | {top_authors} |")
+
+        lines.extend([
+            "<details>",
+            f"<summary><strong>{row['month']} {row['year']}</strong> — "
+            f"{_format_int(row.get('profile_events', 0))} profile events · "
+            f"{_format_int(op.get('commits', 0))} operational commits</summary>",
+            "",
+            "| Metric | Value |",
+            "|--------|-------|",
+            f"| GitHub profile-attributed events | {_format_int(row.get('profile_events', 0))} |",
+            f"| Private/restricted profile events | {_format_int(row.get('private_restricted_events', 0))} |",
+            f"| Public typed profile events | {_format_int(row.get('public_typed_events', 0))} |",
+            f"| Profile active days | {row.get('days_active', 0)}/{row.get('days_elapsed', row.get('days_in_month', 0))} |",
+            f"| Profile daily average | {row.get('daily_avg', 0)} |",
+            f"| Operational repo commits | {_format_int(op.get('commits', 0))} |",
+            f"| Bot/agent operational commits | {_format_int(op.get('bot_or_agent_commits', 0))} |",
+            "",
+            "| Operational repo | Commits | Top authors |",
+            "|------------------|---------|-------------|",
+            *(repo_rows or ["| unavailable | 0 | no configured repo data |"]),
+            "",
+        ])
+
+        if daily:
+            lines.extend([
+                "| Day | Profile activity bar | Events |",
+                "|-----|----------------------|--------|",
+            ])
+            for day in daily:
+                count = int(day.get("count", 0))
+                day_num = str(day.get("date", "")).split("-")[-1]
+                lines.append(f"| {day_num} | {_daily_bar(count, max_count)} | {_format_int(count)} |")
+            lines.append("")
+
+        lines.extend(["</details>", ""])
+
+    lines.append("_Truth note: profile-attributed events are GitHub contribution-calendar signals. Operational commits are real default-branch repo commits. Both are useful; neither alone is the full truth._")
+    return "\n".join(lines)
+
+
 def generate_full_output(stats: Dict[str, Any]) -> Dict[str, Any]:
     """
     Generate full output including comparison and markdown.
@@ -419,6 +589,8 @@ def main() -> int:
                         help="Output only the YTD banner markdown")
     parser.add_argument("--archive-only", action="store_true",
                         help="Output only the archive section markdown")
+    parser.add_argument("--ledger-only", action="store_true",
+                        help="Output only the all-month stats ledger markdown")
     args = parser.parse_args()
 
     try:
@@ -435,6 +607,8 @@ def main() -> int:
 
         if args.ytd_only:
             print(generate_ytd_banner(stats))
+        elif args.ledger_only:
+            print(generate_all_months_ledger(stats))
         elif args.archive_only:
             print(generate_archive_section(stats))
         elif args.markdown_only:

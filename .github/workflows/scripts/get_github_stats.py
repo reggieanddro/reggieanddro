@@ -21,11 +21,14 @@ Version: 1.0.0
 import os
 import sys
 import json
+import calendar
 import logging
 from datetime import datetime, timezone, timedelta
-from typing import Dict, Any, Optional
+from collections import Counter
+from typing import Dict, Any, Optional, List
 import urllib.request
 import urllib.error
+import urllib.parse
 
 # Configure logging
 logging.basicConfig(
@@ -37,7 +40,13 @@ logger = logging.getLogger(__name__)
 
 # Constants
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
+GITHUB_REST_URL = "https://api.github.com"
 DEFAULT_USERNAME = "reggieanddro"
+DEFAULT_STATS_START_YEAR = 2025
+DEFAULT_OPERATIONAL_REPOS = [
+    "RND-Technology/LivHana-SoT",
+    "reggieanddro/reggieanddro",
+]
 
 
 def get_month_date_range() -> tuple[str, str, int, int]:
@@ -99,6 +108,49 @@ def get_previous_month_date_range() -> tuple[str, str, str, int]:
     days_in_prev = (first_of_current - prev_month_start).days
     month_name = prev_month_start.strftime("%B")
     return (prev_month_start.isoformat(), first_of_current.isoformat(), month_name, days_in_prev)
+
+
+def get_stats_start_year() -> int:
+    """Return configured first year for historical stats."""
+    raw = os.environ.get("STATS_START_YEAR", str(DEFAULT_STATS_START_YEAR)).strip()
+    try:
+        year = int(raw)
+    except ValueError:
+        logger.warning("Invalid STATS_START_YEAR=%r; using %s", raw, DEFAULT_STATS_START_YEAR)
+        year = DEFAULT_STATS_START_YEAR
+    return max(2008, min(year, datetime.now(timezone.utc).year))
+
+
+def iter_month_ranges(start_year: Optional[int] = None) -> List[Dict[str, Any]]:
+    """Return month ranges from January of start_year through now."""
+    now = datetime.now(timezone.utc)
+    start_year = start_year or get_stats_start_year()
+    ranges = []
+    for year in range(start_year, now.year + 1):
+        last_month = now.month if year == now.year else 12
+        for month in range(1, last_month + 1):
+            start = datetime(year, month, 1, tzinfo=timezone.utc)
+            if year == now.year and month == now.month:
+                end = now
+                days_elapsed = now.day
+            else:
+                if month == 12:
+                    end = datetime(year + 1, 1, 1, tzinfo=timezone.utc)
+                else:
+                    end = datetime(year, month + 1, 1, tzinfo=timezone.utc)
+                days_elapsed = calendar.monthrange(year, month)[1]
+            ranges.append({
+                "year": year,
+                "month": month,
+                "month_name": start.strftime("%B"),
+                "month_key": f"{year}-{month:02d}",
+                "start": start.isoformat(),
+                "end": end.isoformat(),
+                "days_in_month": calendar.monthrange(year, month)[1],
+                "days_elapsed": days_elapsed,
+                "is_current_month": year == now.year and month == now.month,
+            })
+    return ranges
 
 
 def build_graphql_query(username: str, from_date: str, to_date: str) -> str:
@@ -400,6 +452,237 @@ def fetch_previous_month_stats(token: str, username: str) -> Dict[str, Any]:
     }
 
 
+def _graphql_contributions(token: str, username: str, start: str, end: str) -> Dict[str, Any]:
+    """Fetch a contributionCollection window from GitHub GraphQL."""
+    query = build_graphql_query(username, start, end)
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "User-Agent": "readme-stats-bot/3.0"
+    }
+    data = json.dumps({"query": query}).encode("utf-8")
+    request = urllib.request.Request(
+        GITHUB_GRAPHQL_URL, data=data, headers=headers, method="POST"
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        result = json.loads(response.read().decode("utf-8"))
+    if "errors" in result:
+        raise ValueError(f"GraphQL error: {result['errors'][0].get('message', 'Unknown')}")
+    user = result.get("data", {}).get("user")
+    if not user:
+        raise ValueError(f"User '{username}' not found")
+    return user["contributionsCollection"]
+
+
+def _profile_month_from_collection(month_meta: Dict[str, Any], contrib: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize one GraphQL contributionCollection response into a month row."""
+    calendar_data = contrib["contributionCalendar"]
+    daily_breakdown = []
+    days_active = 0
+    peak_day = {"date": "", "count": 0}
+    target_month = month_meta["month"]
+
+    for week in calendar_data["weeks"]:
+        for day in week["contributionDays"]:
+            day_month = int(day["date"].split("-")[1])
+            if day_month != target_month:
+                continue
+            daily_breakdown.append({
+                "date": day["date"],
+                "count": day["contributionCount"]
+            })
+            if day["contributionCount"] > 0:
+                days_active += 1
+            if day["contributionCount"] > peak_day["count"]:
+                peak_day = {"date": day["date"], "count": day["contributionCount"]}
+
+    total = calendar_data["totalContributions"]
+    restricted = contrib["restrictedContributionsCount"]
+    typed = (
+        contrib["totalCommitContributions"]
+        + contrib["totalPullRequestContributions"]
+        + contrib["totalIssueContributions"]
+        + contrib["totalPullRequestReviewContributions"]
+    )
+
+    return {
+        "month_key": month_meta["month_key"],
+        "month": month_meta["month_name"],
+        "month_number": month_meta["month"],
+        "year": month_meta["year"],
+        "days_in_month": month_meta["days_in_month"],
+        "days_elapsed": month_meta["days_elapsed"],
+        "is_current_month": month_meta["is_current_month"],
+        "profile_events": total,
+        "private_restricted_events": restricted,
+        "public_typed_events": typed,
+        "commit_events": contrib["totalCommitContributions"],
+        "pull_request_events": contrib["totalPullRequestContributions"],
+        "issue_events": contrib["totalIssueContributions"],
+        "review_events": contrib["totalPullRequestReviewContributions"],
+        "days_active": days_active,
+        "daily_avg": round(total / max(month_meta["days_elapsed"], 1), 1),
+        "projected_month": round((total / max(month_meta["days_elapsed"], 1)) * month_meta["days_in_month"]),
+        "peak_day": peak_day,
+        "daily_breakdown": daily_breakdown,
+    }
+
+
+def fetch_all_month_profile_stats(token: str, username: str) -> List[Dict[str, Any]]:
+    """Fetch profile-attributed stats for every month in the configured range."""
+    months = []
+    for month_meta in iter_month_ranges():
+        logger.info("Fetching profile month %s", month_meta["month_key"])
+        contrib = _graphql_contributions(token, username, month_meta["start"], month_meta["end"])
+        months.append(_profile_month_from_collection(month_meta, contrib))
+    return months
+
+
+def get_operational_repos() -> List[str]:
+    """Return comma-delimited operational repos to count as real repo activity."""
+    raw = os.environ.get("OPERATIONAL_REPOS", "").strip()
+    if not raw:
+        return DEFAULT_OPERATIONAL_REPOS
+    repos = [repo.strip() for repo in raw.split(",") if repo.strip()]
+    return repos or DEFAULT_OPERATIONAL_REPOS
+
+
+def _parse_next_link(link_header: Optional[str]) -> Optional[str]:
+    if not link_header:
+        return None
+    for part in link_header.split(","):
+        section = part.strip()
+        if 'rel="next"' not in section:
+            continue
+        if section.startswith("<") and ">" in section:
+            return section[1:section.index(">")]
+    return None
+
+
+def _github_rest_get(token: str, url: str) -> tuple[list, Optional[str]]:
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "readme-operational-stats/1.0",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    request = urllib.request.Request(url, headers=headers, method="GET")
+    with urllib.request.urlopen(request, timeout=30) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+        return payload, _parse_next_link(response.headers.get("Link"))
+
+
+def _count_repo_commits_for_month(token: str, repo: str, month_meta: Dict[str, Any]) -> Dict[str, Any]:
+    """Count default-branch commits for a repo in a month via GitHub REST."""
+    params = urllib.parse.urlencode({
+        "since": month_meta["start"],
+        "until": month_meta["end"],
+        "per_page": 100,
+    })
+    url = f"{GITHUB_REST_URL}/repos/{repo}/commits?{params}"
+    commits = 0
+    bot_or_agent_commits = 0
+    author_counts: Counter[str] = Counter()
+    author_agent_trailers = 0
+
+    try:
+        while url:
+            payload, next_url = _github_rest_get(token, url)
+            for item in payload:
+                commits += 1
+                commit = item.get("commit") or {}
+                author = commit.get("author") or {}
+                github_author = item.get("author") or {}
+                name = author.get("name") or github_author.get("login") or "unknown"
+                email = author.get("email") or ""
+                login = github_author.get("login") or ""
+                message = commit.get("message") or ""
+                author_counts[name] += 1
+
+                lowered = f"{name} {email} {login}".lower()
+                is_bot = "[bot]" in lowered or "bot" in lowered or "github-actions" in lowered
+                is_agent = "author-agent:" in message.lower() or "anthropic" in lowered or name.lower() in {"claude", "cursor"}
+                if is_bot or is_agent:
+                    bot_or_agent_commits += 1
+                if "author-agent:" in message.lower():
+                    author_agent_trailers += 1
+            url = next_url
+    except urllib.error.HTTPError as e:
+        return {
+            "repo": repo,
+            "commits": 0,
+            "bot_or_agent_commits": 0,
+            "author_agent_trailers": 0,
+            "top_authors": [],
+            "error": f"HTTP {e.code}",
+        }
+    except Exception as e:
+        return {
+            "repo": repo,
+            "commits": 0,
+            "bot_or_agent_commits": 0,
+            "author_agent_trailers": 0,
+            "top_authors": [],
+            "error": str(e),
+        }
+
+    return {
+        "repo": repo,
+        "commits": commits,
+        "bot_or_agent_commits": bot_or_agent_commits,
+        "author_agent_trailers": author_agent_trailers,
+        "top_authors": [{"name": name, "commits": count} for name, count in author_counts.most_common(5)],
+    }
+
+
+def fetch_operational_activity(token: str) -> Dict[str, Any]:
+    """Fetch real default-branch repo activity by month across configured repos."""
+    repos = get_operational_repos()
+    months = []
+    totals = {
+        "commits": 0,
+        "bot_or_agent_commits": 0,
+        "author_agent_trailers": 0,
+    }
+    errors = []
+
+    for month_meta in iter_month_ranges():
+        repo_rows = []
+        month_totals = {
+            "month_key": month_meta["month_key"],
+            "month": month_meta["month_name"],
+            "month_number": month_meta["month"],
+            "year": month_meta["year"],
+            "commits": 0,
+            "bot_or_agent_commits": 0,
+            "author_agent_trailers": 0,
+            "repos": [],
+        }
+        for repo in repos:
+            row = _count_repo_commits_for_month(token, repo, month_meta)
+            repo_rows.append(row)
+            if row.get("error"):
+                errors.append({"month_key": month_meta["month_key"], "repo": repo, "error": row["error"]})
+                continue
+            month_totals["commits"] += row["commits"]
+            month_totals["bot_or_agent_commits"] += row["bot_or_agent_commits"]
+            month_totals["author_agent_trailers"] += row["author_agent_trailers"]
+
+        month_totals["repos"] = repo_rows
+        for key in totals:
+            totals[key] += month_totals[key]
+        months.append(month_totals)
+
+    return {
+        "source": "GitHub REST commits API, default branch per repo",
+        "repos": repos,
+        "months": months,
+        "totals": totals,
+        "errors": errors[:25],
+        "error_count": len(errors),
+    }
+
+
 def main() -> int:
     """
     Main entry point for the script.
@@ -435,6 +718,22 @@ def main() -> int:
             stats.update(prev)
         except Exception as e:
             logger.warning(f"Previous month fetch failed (non-fatal): {e}")
+
+        # Fetch all-month profile-attributed stats for permanent ledger.
+        try:
+            stats["all_months"] = fetch_all_month_profile_stats(token, username)
+        except Exception as e:
+            logger.warning(f"All-month profile stats fetch failed (non-fatal): {e}")
+            stats["all_months_error"] = str(e)
+
+        # Fetch operational repo activity. Use a broader PAT when configured,
+        # because the default profile-repo GITHUB_TOKEN cannot read private SoT repos.
+        try:
+            operational_token = os.environ.get("OPERATIONAL_GITHUB_TOKEN") or token
+            stats["operational_activity"] = fetch_operational_activity(operational_token)
+        except Exception as e:
+            logger.warning(f"Operational activity fetch failed (non-fatal): {e}")
+            stats["operational_activity_error"] = str(e)
 
         print(json.dumps(stats, indent=2))
         return 0

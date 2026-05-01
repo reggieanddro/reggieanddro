@@ -11,7 +11,7 @@ I build Liv Hana: autonomous strategic intelligence for regulated industries whe
 <!-- STATS_START -->
 ### 📊 May 2026 Live Stats (Solo, No CS Degree)
 
-> **🤖 Auto-Updated:** Friday, May 01, 2026 at 10:50 AM CT
+> **🤖 Auto-Updated:** Friday, May 01, 2026 at 11:12 AM CT
 > **📅 Day 1 of 31**
  | **🔥 Peak Day:** 01 with 2 contributions
 
@@ -38,42 +38,274 @@ I build Liv Hana: autonomous strategic intelligence for regulated industries whe
 **Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [2025 Worklytics Software Engineering Productivity Benchmarks](https://www.worklytics.co/resources/software-engineering-productivity-benchmarks-2025-good-scores)
 
 _Truth note: GitHub profile-attributed events include private/restricted activity. They are profile graph signals, not deployable commit counts, complete operating-work ledgers, or productivity equivalence claims. Bot/alternate-author commits can be real work while showing as zero on the personal contribution calendar._
-
 <!-- STATS_END -->
 
 ---
 
-## 2026 Closed-Month Proof Ledger
+<!-- LEDGER_START -->
+## Current & Historical Stats Ledger
 
-**January through April 2026:** 9,681 GitHub profile-attributed activity events, including 9,657 private/restricted events that GitHub verifies but does not expose by commit type. These are profile-attribution signals, not inflated public-commit claims. The closed-month history stays here permanently so an automated live-month refresh cannot wipe the story.
+**Auto-updated:** Friday, May 01, 2026 at 11:12 AM CT
+**Coverage:** 2025-01 through 2026-05
 
-**4/30 fallacy scan:** GitHub GraphQL reports 0 contribution-calendar events for `@reggieanddro` on April 30, but that does **not** mean zero operating work. A CT-day audit found 5 LivHana-SoT commits authored as `Claude <noreply@anthropic.com>` plus 16 profile automation commits authored as `github-actions[bot]`. Those commits are real repo activity, but they do not credit Jesse's personal contribution graph under GitHub's attribution rules.
+| Lane | Count | What it means |
+|------|-------|---------------|
+| GitHub profile-attributed events | 10,046 | What GitHub credits to `@reggieanddro` under contribution-calendar rules |
+| Private/restricted profile events | 10,016 | GitHub-verified private/restricted profile events without public type disclosure |
+| Operational repo commits | 7,805 | Real default-branch commits across configured repos, regardless of whether GitHub credits the personal graph |
+| Bot/agent operational commits | 2,288 | Operational commits by bots or agent author identities |
+
+**Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro. Source: GitHub REST commits API, default branch per repo.
+
+| Year | Profile-attributed events | Private/restricted profile events | Active profile days | Operational commits | Bot/agent commits |
+|------|---------------------------|-----------------------------------|---------------------|---------------------|------------------|
+| 2025 | 361 | 359 | 35 | 680 | 0 |
+| 2026 | 9,685 | 9,657 | 101 | 7,125 | 2,288 |
 
 <details>
-<summary><strong>January 2026</strong> — 1,323 profile-attributed GitHub events · 19/31 active days · 16.5-33.1x vs 40-80/mo benchmark</summary>
+<summary><strong>2026</strong> — 9,685 profile events · 7,125 operational commits</summary>
+
+| Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |
+|-------|----------------|--------------------|-------------|---------------------|------------------|
+| January | 1,323 | 1,307 | 19/31 | 1,158 | 5 |
+| February | 2,384 | 2,383 | 27/28 | 1,244 | 63 |
+| March | 2,741 | 2,740 | 26/31 | 1,314 | 135 |
+| April | 3,235 | 3,227 | 28/30 | 3,394 | 2,070 |
+| May | 2 | 0 | 1/1 | 15 | 15 |
+
+</details>
+
+<details>
+<summary><strong>2025</strong> — 361 profile events · 680 operational commits</summary>
+
+| Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |
+|-------|----------------|--------------------|-------------|---------------------|------------------|
+| January | 0 | 0 | 0/31 | 0 | 0 |
+| February | 2 | 0 | 1/28 | 0 | 0 |
+| March | 0 | 0 | 0/31 | 0 | 0 |
+| April | 0 | 0 | 0/30 | 0 | 0 |
+| May | 0 | 0 | 0/31 | 0 | 0 |
+| June | 0 | 0 | 0/30 | 0 | 0 |
+| July | 0 | 0 | 0/31 | 0 | 0 |
+| August | 0 | 0 | 0/31 | 0 | 0 |
+| September | 174 | 174 | 12/30 | 81 | 0 |
+| October | 58 | 58 | 8/31 | 265 | 0 |
+| November | 42 | 42 | 6/30 | 149 | 0 |
+| December | 85 | 85 | 8/31 | 185 | 0 |
+
+</details>
+
+### Monthly Drop-Down Receipts
+
+<details>
+<summary><strong>May 2026</strong> — 2 profile events · 15 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 2 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 2 |
+| Profile active days | 1/1 |
+| Profile daily average | 2.0 |
+| Operational repo commits | 15 |
+| Bot/agent operational commits | 15 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 2 | Claude (2) |
+| `reggieanddro/reggieanddro` | 13 | Liv Hana Stats Bot 🤖 (11), Jesse Niesen (2) |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ████████████████████ | 2 |
+
+</details>
+
+<details>
+<summary><strong>April 2026</strong> — 3,235 profile events · 3,394 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 3,235 |
+| Private/restricted profile events | 3,227 |
+| Public typed profile events | 7 |
+| Profile active days | 28/30 |
+| Profile daily average | 107.8 |
+| Operational repo commits | 3,394 |
+| Bot/agent operational commits | 2,070 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 2,117 | Jesse Niesen (1525), ReggieAndDro.com (276), Claude (182) |
+| `reggieanddro/reggieanddro` | 1,277 | Liv Hana Stats Bot 🤖 (1266), reggieanddro (8), Jesse Niesen (3) |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ███████░░░░░░░░░░░░░ | 183 |
+| 02 | ██████░░░░░░░░░░░░░░ | 164 |
+| 03 | ██████░░░░░░░░░░░░░░ | 179 |
+| 04 | █████░░░░░░░░░░░░░░░ | 145 |
+| 05 | ████████████████████ | 520 |
+| 06 | ██████░░░░░░░░░░░░░░ | 169 |
+| 07 | ████░░░░░░░░░░░░░░░░ | 125 |
+| 08 | ███░░░░░░░░░░░░░░░░░ | 100 |
+| 09 | █████░░░░░░░░░░░░░░░ | 154 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
+| 12 | ██░░░░░░░░░░░░░░░░░░ | 73 |
+| 13 | ████░░░░░░░░░░░░░░░░ | 114 |
+| 14 | ███░░░░░░░░░░░░░░░░░ | 80 |
+| 15 | ██░░░░░░░░░░░░░░░░░░ | 58 |
+| 16 | █░░░░░░░░░░░░░░░░░░░ | 41 |
+| 17 | █████░░░░░░░░░░░░░░░ | 145 |
+| 18 | ██░░░░░░░░░░░░░░░░░░ | 53 |
+| 19 | ████░░░░░░░░░░░░░░░░ | 118 |
+| 20 | ███████░░░░░░░░░░░░░ | 199 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 3 |
+| 22 | █░░░░░░░░░░░░░░░░░░░ | 26 |
+| 23 | ███░░░░░░░░░░░░░░░░░ | 83 |
+| 24 | ███░░░░░░░░░░░░░░░░░ | 93 |
+| 25 | ███████░░░░░░░░░░░░░ | 199 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 5 |
+| 27 | ██░░░░░░░░░░░░░░░░░░ | 63 |
+| 28 | ██░░░░░░░░░░░░░░░░░░ | 58 |
+| 29 | ██░░░░░░░░░░░░░░░░░░ | 76 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>March 2026</strong> — 2,741 profile events · 1,314 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 2,741 |
+| Private/restricted profile events | 2,740 |
+| Public typed profile events | 1 |
+| Profile active days | 26/31 |
+| Profile daily average | 88.4 |
+| Operational repo commits | 1,314 |
+| Bot/agent operational commits | 135 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 1,282 | Jesse Niesen (1111), ReggieAndDro.com (63), Claude (33) |
+| `reggieanddro/reggieanddro` | 32 | Liv Hana Stats Bot 🤖 (31), reggieanddro (1) |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ████░░░░░░░░░░░░░░░░ | 66 |
+| 02 | ████░░░░░░░░░░░░░░░░ | 73 |
+| 03 | ███░░░░░░░░░░░░░░░░░ | 64 |
+| 04 | ██░░░░░░░░░░░░░░░░░░ | 39 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
+| 06 | ██░░░░░░░░░░░░░░░░░░ | 42 |
+| 07 | ████░░░░░░░░░░░░░░░░ | 69 |
+| 08 | ██████░░░░░░░░░░░░░░ | 100 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ██████████░░░░░░░░░░ | 167 |
+| 11 | █████████░░░░░░░░░░░ | 158 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | █░░░░░░░░░░░░░░░░░░░ | 17 |
+| 15 | ██████░░░░░░░░░░░░░░ | 113 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | █░░░░░░░░░░░░░░░░░░░ | 24 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 14 |
+| 20 | ██░░░░░░░░░░░░░░░░░░ | 44 |
+| 21 | ███████████████░░░░░ | 251 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ██░░░░░░░░░░░░░░░░░░ | 40 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 2 |
+| 25 | ███████░░░░░░░░░░░░░ | 129 |
+| 26 | ███████████████████░ | 317 |
+| 27 | ████████░░░░░░░░░░░░ | 144 |
+| 28 | ████████████░░░░░░░░ | 203 |
+| 29 | ████░░░░░░░░░░░░░░░░ | 74 |
+| 30 | ████████████████████ | 324 |
+| 31 | ████░░░░░░░░░░░░░░░░ | 70 |
+
+</details>
+
+<details>
+<summary><strong>February 2026</strong> — 2,384 profile events · 1,244 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 2,384 |
+| Private/restricted profile events | 2,383 |
+| Public typed profile events | 1 |
+| Profile active days | 27/28 |
+| Profile daily average | 85.1 |
+| Operational repo commits | 1,244 |
+| Bot/agent operational commits | 63 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 1,183 | Jesse Niesen (1101), ReggieAndDro.com (33), Liv Hana Stats Bot 🤖 (25) |
+| `reggieanddro/reggieanddro` | 61 | Liv Hana Stats Bot 🤖 (27), reggieanddro (18), ReggieAndDro.com (16) |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ████░░░░░░░░░░░░░░░░ | 82 |
+| 02 | ███████████████░░░░░ | 265 |
+| 03 | ████████████████████ | 332 |
+| 04 | ██████░░░░░░░░░░░░░░ | 115 |
+| 05 | ███████░░░░░░░░░░░░░ | 132 |
+| 06 | █████████████░░░░░░░ | 218 |
+| 07 | █░░░░░░░░░░░░░░░░░░░ | 24 |
+| 08 | ████░░░░░░░░░░░░░░░░ | 69 |
+| 09 | ███░░░░░░░░░░░░░░░░░ | 57 |
+| 10 | ████░░░░░░░░░░░░░░░░ | 68 |
+| 11 | ██░░░░░░░░░░░░░░░░░░ | 44 |
+| 12 | █░░░░░░░░░░░░░░░░░░░ | 20 |
+| 13 | ████░░░░░░░░░░░░░░░░ | 74 |
+| 14 | ███░░░░░░░░░░░░░░░░░ | 62 |
+| 15 | ███████████████░░░░░ | 253 |
+| 16 | █████████░░░░░░░░░░░ | 150 |
+| 17 | █████░░░░░░░░░░░░░░░ | 91 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 16 |
+| 19 | ████░░░░░░░░░░░░░░░░ | 71 |
+| 20 | ██░░░░░░░░░░░░░░░░░░ | 46 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 16 |
+| 22 | ███░░░░░░░░░░░░░░░░░ | 50 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 4 |
+| 24 | █░░░░░░░░░░░░░░░░░░░ | 18 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 6 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 2 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | █░░░░░░░░░░░░░░░░░░░ | 33 |
+
+</details>
+
+<details>
+<summary><strong>January 2026</strong> — 1,323 profile events · 1,158 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
 | GitHub profile-attributed events | 1,323 |
-| Private/restricted events | 1,307 |
-| Public typed events | 15 |
-| Daily average | 42.7 |
-| Peak day | 281 on Jan 26 |
-| Activity ratio vs 40-80/mo benchmark | 16.5-33.1x |
+| Private/restricted profile events | 1,307 |
+| Public typed profile events | 15 |
+| Profile active days | 19/31 |
+| Profile daily average | 42.7 |
+| Operational repo commits | 1,158 |
+| Bot/agent operational commits | 5 |
 
-- Historic profile proof: 1,128 repo-verified commits
-- 334K+ net lines shipped across 20+ production Cloud Run systems
-- 4,900+ files changed in the private full-stack monorepo
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 1,157 | reggieanddro (591), Jesse Niesen (517), ReggieAndDro.com (42) |
+| `reggieanddro/reggieanddro` | 1 | reggieanddro (1) |
 
-| Day | Activity bar | Events |
-|-----|--------------|--------|
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
 | 01 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
 | 02 | ░░░░░░░░░░░░░░░░░░░░ | 4 |
-| 03 | █░░░░░░░░░░░░░░░░░░░ | 12 |
-| 04 | █████░░░░░░░░░░░░░░░ | 65 |
-| 05 | █░░░░░░░░░░░░░░░░░░░ | 11 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 12 |
+| 04 | ████░░░░░░░░░░░░░░░░ | 65 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 11 |
 | 06 | █░░░░░░░░░░░░░░░░░░░ | 16 |
-| 07 | █░░░░░░░░░░░░░░░░░░░ | 12 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 12 |
 | 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
@@ -82,7 +314,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 15 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
-| 16 | █░░░░░░░░░░░░░░░░░░░ | 8 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 8 |
 | 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 18 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
 | 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
@@ -91,7 +323,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 23 | ░░░░░░░░░░░░░░░░░░░░ | 3 |
 | 24 | ███████░░░░░░░░░░░░░ | 104 |
-| 25 | ██████░░░░░░░░░░░░░░ | 83 |
+| 25 | █████░░░░░░░░░░░░░░░ | 83 |
 | 26 | ████████████████████ | 281 |
 | 27 | █░░░░░░░░░░░░░░░░░░░ | 18 |
 | 28 | ███████░░░░░░░░░░░░░ | 102 |
@@ -102,159 +334,651 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>February 2026</strong> — 2,384 profile-attributed GitHub events · 27/28 active days · 29.8-59.6x vs 40-80/mo benchmark</summary>
+<summary><strong>December 2025</strong> — 85 profile events · 185 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub profile-attributed events | 2,384 |
-| Private/restricted events | 2,383 |
-| Public typed events | 1 |
-| Daily average | 85.1 |
-| Peak day | 332 on Feb 03 |
-| Activity ratio vs 40-80/mo benchmark | 29.8-59.6x |
+| GitHub profile-attributed events | 85 |
+| Private/restricted profile events | 85 |
+| Public typed profile events | 0 |
+| Profile active days | 8/31 |
+| Profile daily average | 2.7 |
+| Operational repo commits | 185 |
+| Bot/agent operational commits | 0 |
 
-- Historic profile proof: 649 repo-verified commits
-- 247K insertions shipped
-- Version evolution: v15.6 to v18.0.31.128
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 185 | reggieanddro (156), ReggieAndDro.com (24), Copilot (5) |
+| `reggieanddro/reggieanddro` | 0 | none |
 
-| Day | Activity bar | Events |
-|-----|--------------|--------|
-| 01 | █████░░░░░░░░░░░░░░░ | 82 |
-| 02 | ████████████████░░░░ | 265 |
-| 03 | ████████████████████ | 332 |
-| 04 | ███████░░░░░░░░░░░░░ | 115 |
-| 05 | ████████░░░░░░░░░░░░ | 132 |
-| 06 | █████████████░░░░░░░ | 218 |
-| 07 | █░░░░░░░░░░░░░░░░░░░ | 24 |
-| 08 | ████░░░░░░░░░░░░░░░░ | 69 |
-| 09 | ███░░░░░░░░░░░░░░░░░ | 57 |
-| 10 | ████░░░░░░░░░░░░░░░░ | 68 |
-| 11 | ███░░░░░░░░░░░░░░░░░ | 44 |
-| 12 | █░░░░░░░░░░░░░░░░░░░ | 20 |
-| 13 | ████░░░░░░░░░░░░░░░░ | 74 |
-| 14 | ████░░░░░░░░░░░░░░░░ | 62 |
-| 15 | ███████████████░░░░░ | 253 |
-| 16 | █████████░░░░░░░░░░░ | 150 |
-| 17 | █████░░░░░░░░░░░░░░░ | 91 |
-| 18 | █░░░░░░░░░░░░░░░░░░░ | 16 |
-| 19 | ████░░░░░░░░░░░░░░░░ | 71 |
-| 20 | ███░░░░░░░░░░░░░░░░░ | 46 |
-| 21 | █░░░░░░░░░░░░░░░░░░░ | 16 |
-| 22 | ███░░░░░░░░░░░░░░░░░ | 50 |
-| 23 | ░░░░░░░░░░░░░░░░░░░░ | 4 |
-| 24 | █░░░░░░░░░░░░░░░░░░░ | 18 |
-| 25 | ░░░░░░░░░░░░░░░░░░░░ | 6 |
-| 26 | ░░░░░░░░░░░░░░░░░░░░ | 2 |
-| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 28 | ██░░░░░░░░░░░░░░░░░░ | 33 |
-
-</details>
-
-<details>
-<summary><strong>March 2026</strong> — 2,741 profile-attributed GitHub events · 26/31 active days · 34.3-68.5x vs 40-80/mo benchmark</summary>
-
-| Metric | Value |
-|--------|-------|
-| GitHub profile-attributed events | 2,741 |
-| Private/restricted events | 2,740 |
-| Public typed events | 1 |
-| Daily average | 88.4 |
-| Peak day | 324 on Mar 30 |
-| Activity ratio vs 40-80/mo benchmark | 34.3-68.5x |
-
-- Month closed at 2,741 GitHub profile-attributed events
-- 26 active days
-- April baseline used this month as the MoM comparator
-
-| Day | Activity bar | Events |
-|-----|--------------|--------|
-| 01 | ████░░░░░░░░░░░░░░░░ | 66 |
-| 02 | █████░░░░░░░░░░░░░░░ | 73 |
-| 03 | ████░░░░░░░░░░░░░░░░ | 64 |
-| 04 | ██░░░░░░░░░░░░░░░░░░ | 39 |
-| 05 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
-| 06 | ███░░░░░░░░░░░░░░░░░ | 42 |
-| 07 | ████░░░░░░░░░░░░░░░░ | 69 |
-| 08 | ██████░░░░░░░░░░░░░░ | 100 |
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 10 | ██████████░░░░░░░░░░ | 167 |
-| 11 | ██████████░░░░░░░░░░ | 158 |
-| 12 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
+| 10 | ██░░░░░░░░░░░░░░░░░░ | 6 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 14 | █░░░░░░░░░░░░░░░░░░░ | 17 |
-| 15 | ███████░░░░░░░░░░░░░ | 113 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 17 | █░░░░░░░░░░░░░░░░░░░ | 24 |
-| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 19 | █░░░░░░░░░░░░░░░░░░░ | 14 |
-| 20 | ███░░░░░░░░░░░░░░░░░ | 44 |
-| 21 | ███████████████░░░░░ | 251 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 23 | ██░░░░░░░░░░░░░░░░░░ | 40 |
-| 24 | ░░░░░░░░░░░░░░░░░░░░ | 2 |
-| 25 | ████████░░░░░░░░░░░░ | 129 |
-| 26 | ████████████████████ | 317 |
-| 27 | █████████░░░░░░░░░░░ | 144 |
-| 28 | █████████████░░░░░░░ | 203 |
-| 29 | █████░░░░░░░░░░░░░░░ | 74 |
-| 30 | ████████████████████ | 324 |
-| 31 | ████░░░░░░░░░░░░░░░░ | 70 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | █░░░░░░░░░░░░░░░░░░░ | 3 |
+| 25 | ████████████████████ | 49 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 1 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ████░░░░░░░░░░░░░░░░ | 12 |
+| 30 | ████░░░░░░░░░░░░░░░░ | 11 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 
 </details>
 
 <details>
-<summary><strong>April 2026</strong> — 3,233 profile-attributed GitHub events · 28/30 active days · 40.4-80.8x vs 40-80/mo benchmark</summary>
+<summary><strong>November 2025</strong> — 42 profile events · 149 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub profile-attributed events | 3,233 |
-| Private/restricted events | 3,227 |
-| Public typed events | 5 |
-| Daily average | 107.8 |
-| Peak day | 520 on Apr 05 |
-| Activity ratio vs 40-80/mo benchmark | 40.4-80.8x |
+| GitHub profile-attributed events | 42 |
+| Private/restricted profile events | 42 |
+| Public typed profile events | 0 |
+| Profile active days | 6/30 |
+| Profile daily average | 1.4 |
+| Operational repo commits | 149 |
+| Bot/agent operational commits | 0 |
 
-- Month closed at 3,233 GitHub profile-attributed events
-- Projected MoM activity trend finished +18.0% vs March
-- April crisis-build profile section restored below
-- April 30 was operationally active: 21 repo commits observed across LivHana-SoT and profile automation, but 0 were credited to `@reggieanddro` by GitHub's contribution calendar because of author/bot attribution.
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 149 | reggieanddro (143), ReggieAndDro.com (6) |
+| `reggieanddro/reggieanddro` | 0 | none |
 
-| Day | Activity bar | Events |
-|-----|--------------|--------|
-| 01 | ███████░░░░░░░░░░░░░ | 183 |
-| 02 | ██████░░░░░░░░░░░░░░ | 164 |
-| 03 | ███████░░░░░░░░░░░░░ | 179 |
-| 04 | ██████░░░░░░░░░░░░░░ | 145 |
-| 05 | ████████████████████ | 520 |
-| 06 | ██████░░░░░░░░░░░░░░ | 169 |
-| 07 | █████░░░░░░░░░░░░░░░ | 125 |
-| 08 | ████░░░░░░░░░░░░░░░░ | 100 |
-| 09 | ██████░░░░░░░░░░░░░░ | 154 |
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | █████░░░░░░░░░░░░░░░ | 4 |
+| 02 | ██████████████░░░░░░ | 10 |
+| 03 | ████████████░░░░░░░░ | 9 |
+| 04 | ████████████████████ | 14 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 11 | ░░░░░░░░░░░░░░░░░░░░ | 7 |
-| 12 | ███░░░░░░░░░░░░░░░░░ | 73 |
-| 13 | ████░░░░░░░░░░░░░░░░ | 114 |
-| 14 | ███░░░░░░░░░░░░░░░░░ | 80 |
-| 15 | ██░░░░░░░░░░░░░░░░░░ | 58 |
-| 16 | ██░░░░░░░░░░░░░░░░░░ | 41 |
-| 17 | ██████░░░░░░░░░░░░░░ | 145 |
-| 18 | ██░░░░░░░░░░░░░░░░░░ | 53 |
-| 19 | █████░░░░░░░░░░░░░░░ | 118 |
-| 20 | ████████░░░░░░░░░░░░ | 199 |
-| 21 | ░░░░░░░░░░░░░░░░░░░░ | 3 |
-| 22 | █░░░░░░░░░░░░░░░░░░░ | 26 |
-| 23 | ███░░░░░░░░░░░░░░░░░ | 83 |
-| 24 | ████░░░░░░░░░░░░░░░░ | 93 |
-| 25 | ████████░░░░░░░░░░░░ | 199 |
-| 26 | ░░░░░░░░░░░░░░░░░░░░ | 5 |
-| 27 | ██░░░░░░░░░░░░░░░░░░ | 63 |
-| 28 | ██░░░░░░░░░░░░░░░░░░ | 58 |
-| 29 | ███░░░░░░░░░░░░░░░░░ | 76 |
+| 11 | ██░░░░░░░░░░░░░░░░░░ | 2 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ████░░░░░░░░░░░░░░░░ | 3 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 
 </details>
 
+<details>
+<summary><strong>October 2025</strong> — 58 profile events · 265 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 58 |
+| Private/restricted profile events | 58 |
+| Public typed profile events | 0 |
+| Profile active days | 8/31 |
+| Profile daily average | 1.9 |
+| Operational repo commits | 265 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 265 | reggieanddro (249), ReggieAndDro.com (16) |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ████████████░░░░░░░░ | 9 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ████░░░░░░░░░░░░░░░░ | 3 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | █░░░░░░░░░░░░░░░░░░░ | 1 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | █░░░░░░░░░░░░░░░░░░░ | 1 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | █░░░░░░░░░░░░░░░░░░░ | 1 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ████████████████████ | 15 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ████████████████░░░░ | 12 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ████████████████░░░░ | 12 |
+
+</details>
+
+<details>
+<summary><strong>September 2025</strong> — 174 profile events · 81 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 174 |
+| Private/restricted profile events | 174 |
+| Public typed profile events | 0 |
+| Profile active days | 12/30 |
+| Profile daily average | 5.8 |
+| Operational repo commits | 81 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 81 | ReggieAndDro.com (41), reggieanddro (38), Jesse Niesen (2) |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | █░░░░░░░░░░░░░░░░░░░ | 3 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ███████░░░░░░░░░░░░░ | 21 |
+| 13 | ███████░░░░░░░░░░░░░ | 22 |
+| 14 | ████████████████████ | 59 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ██░░░░░░░░░░░░░░░░░░ | 8 |
+| 17 | ██░░░░░░░░░░░░░░░░░░ | 8 |
+| 18 | ████████░░░░░░░░░░░░ | 25 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | █░░░░░░░░░░░░░░░░░░░ | 3 |
+| 21 | █░░░░░░░░░░░░░░░░░░░ | 3 |
+| 22 | ███░░░░░░░░░░░░░░░░░ | 10 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | █░░░░░░░░░░░░░░░░░░░ | 4 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ██░░░░░░░░░░░░░░░░░░ | 8 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>August 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/31 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>July 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/31 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>June 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/30 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>May 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/31 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>April 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/30 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>March 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/31 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>February 2025</strong> — 2 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 2 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 1/28 |
+| Profile daily average | 0.1 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ████████████████████ | 2 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+<details>
+<summary><strong>January 2025</strong> — 0 profile events · 0 operational commits</summary>
+
+| Metric | Value |
+|--------|-------|
+| GitHub profile-attributed events | 0 |
+| Private/restricted profile events | 0 |
+| Public typed profile events | 0 |
+| Profile active days | 0/31 |
+| Profile daily average | 0.0 |
+| Operational repo commits | 0 |
+| Bot/agent operational commits | 0 |
+
+| Operational repo | Commits | Top authors |
+|------------------|---------|-------------|
+| `RND-Technology/LivHana-SoT` | 0 | none |
+| `reggieanddro/reggieanddro` | 0 | none |
+
+| Day | Profile activity bar | Events |
+|-----|----------------------|--------|
+| 01 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 02 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 03 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 04 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 05 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 06 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 07 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 08 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 09 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 10 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 11 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 12 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 13 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 14 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 16 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 17 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 18 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 20 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 21 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 22 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 23 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 24 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 25 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 26 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 27 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 28 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 29 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 30 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+| 31 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
+
+</details>
+
+_Truth note: profile-attributed events are GitHub contribution-calendar signals. Operational commits are real default-branch repo commits. Both are useful; neither alone is the full truth._
+<!-- LEDGER_END -->
+
 ---
+
 
 ## April 2026: Building Under Fire
 

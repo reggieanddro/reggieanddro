@@ -60,6 +60,13 @@ ARCHIVE_MARKER_PATTERN = re.compile(
     re.DOTALL
 )
 
+LEDGER_START_MARKER = "<!-- LEDGER_START -->"
+LEDGER_END_MARKER = "<!-- LEDGER_END -->"
+LEDGER_MARKER_PATTERN = re.compile(
+    rf"{re.escape(LEDGER_START_MARKER)}.*?{re.escape(LEDGER_END_MARKER)}",
+    re.DOTALL
+)
+
 
 def read_readme(path: str) -> str:
     """
@@ -226,6 +233,14 @@ def update_archive_content(readme_content: str, archive_markdown: str) -> Tuple[
     )
 
 
+def update_ledger_content(readme_content: str, ledger_markdown: str) -> Tuple[str, bool]:
+    """Update all-month ledger section between LEDGER markers."""
+    return update_section_content(
+        readme_content, ledger_markdown,
+        LEDGER_START_MARKER, LEDGER_END_MARKER, LEDGER_MARKER_PATTERN
+    )
+
+
 def main() -> int:
     """
     Main entry point for the script.
@@ -242,6 +257,8 @@ def main() -> int:
                         help="YTD banner markdown to insert")
     parser.add_argument("--archive-markdown", type=str,
                         help="Archive section markdown to insert")
+    parser.add_argument("--ledger-markdown", type=str,
+                        help="All-month stats ledger markdown to insert")
     parser.add_argument("--dry-run", action="store_true",
                         help="Print result without writing file")
     args = parser.parse_args()
@@ -263,8 +280,11 @@ def main() -> int:
         # Get archive markdown
         archive_markdown = args.archive_markdown or os.environ.get("ARCHIVE_MARKDOWN")
 
-        if not markdown and not ytd_markdown and not archive_markdown:
-            logger.error("No markdown provided. Use --markdown, --ytd-markdown, --archive-markdown, stdin, or env vars")
+        # Get all-month ledger markdown
+        ledger_markdown = args.ledger_markdown or os.environ.get("LEDGER_MARKDOWN")
+
+        if not markdown and not ytd_markdown and not archive_markdown and not ledger_markdown:
+            logger.error("No markdown provided. Use --markdown, --ytd-markdown, --archive-markdown, --ledger-markdown, stdin, or env vars")
             return 1
 
         # Read current README
@@ -296,6 +316,13 @@ def main() -> int:
             if was_updated:
                 any_updated = True
                 logger.info("Archive section updated")
+
+        # Update all-month ledger section
+        if ledger_markdown:
+            readme_content, was_updated = update_ledger_content(readme_content, ledger_markdown)
+            if was_updated:
+                any_updated = True
+                logger.info("Ledger section updated")
 
         if args.dry_run:
             print("=== DRY RUN - Would write: ===")

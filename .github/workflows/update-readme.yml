@@ -128,7 +128,8 @@ jobs:
       - name: 📊 Fetch GitHub Stats
         id: fetch-stats
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_PAT || github.token }}
+          OPERATIONAL_GITHUB_TOKEN: ${{ secrets.PROFILE_PAT || github.token }}
           GITHUB_USERNAME: ${{ env.GITHUB_USERNAME }}
         run: |
           echo "🔄 Fetching GitHub stats for $GITHUB_USERNAME..."
@@ -154,12 +155,16 @@ jobs:
           DAILY=$(echo "$STATS" | python -c "import sys, json; print(json.load(sys.stdin).get('daily_avg', 0))")
 
           echo "📈 Stats fetched:"
-          echo "   GitHub Contribution Events: $TOTAL"
+          OPERATIONAL=$(echo "$STATS" | python -c "import sys, json; data=json.load(sys.stdin); print(data.get('operational_activity', {}).get('totals', {}).get('commits', 0))")
+
+          echo "   GitHub Profile-Attributed Events: $TOTAL"
           echo "   Private/Restricted Events: $PRIVATE_EVENTS"
+          echo "   Operational Repo Commits: $OPERATIONAL"
           echo "   Daily Average: $DAILY"
 
           echo "stats_error=false" >> $GITHUB_OUTPUT
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "operational=$OPERATIONAL" >> $GITHUB_OUTPUT
 
       # ─────────────────────────────────────────────────────────────────────
       # Compare to L5 Benchmarks & Generate Markdown
@@ -187,6 +192,29 @@ jobs:
 
           echo "✅ Markdown generated successfully"
           echo "compare_error=false" >> $GITHUB_OUTPUT
+
+      # ─────────────────────────────────────────────────────────────────────
+      # Generate All-Month Ledger
+      # ─────────────────────────────────────────────────────────────────────
+      - name: 🏭 Generate All-Month Ledger
+        id: ledger
+        if: steps.fetch-stats.outputs.stats_error != 'true'
+        run: |
+          echo "🔄 Generating all-month profile + operational ledger..."
+
+          LEDGER_MD=$(echo "$GITHUB_STATS" | python .github/workflows/scripts/compare_l5.py --ledger-only)
+          EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "⚠️ Ledger generation failed (non-fatal)"
+            echo "ledger_error=true" >> $GITHUB_OUTPUT
+          else
+            echo "LEDGER_MARKDOWN<<EOF" >> $GITHUB_ENV
+            echo "$LEDGER_MD" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+            echo "ledger_error=false" >> $GITHUB_OUTPUT
+            echo "✅ All-month ledger generated"
+          fi
 
       # ─────────────────────────────────────────────────────────────────────
       # Generate YTD Banner
@@ -244,8 +272,9 @@ jobs:
           STATS_MARKDOWN: ${{ env.STATS_MARKDOWN }}
           YTD_MARKDOWN: ${{ env.YTD_MARKDOWN }}
           ARCHIVE_MARKDOWN: ${{ env.ARCHIVE_MARKDOWN }}
+          LEDGER_MARKDOWN: ${{ env.LEDGER_MARKDOWN }}
         run: |
-          echo "🔄 Updating README.md (stats + YTD + archive)..."
+          echo "🔄 Updating README.md (stats + YTD + archive + all-month ledger)..."
 
           # Check if dry run
           DRY_RUN="${{ inputs.dry_run || 'false' }}"
@@ -286,10 +315,10 @@ jobs:
           TOTAL="${{ steps.fetch-stats.outputs.total }}"
 
           # Commit with descriptive message
-          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} GitHub activity events
+          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} profile events / ${{ steps.fetch-stats.outputs.operational }} operational commits
 
           Stats refresh (every 2h + push-triggered)
-          Source: GitHub GraphQL API
+          Source: GitHub GraphQL API + GitHub REST commits API
           Benchmark context: 2025 Worklytics activity ranges; not productivity equivalence"
 
           # Push changes
@@ -309,7 +338,8 @@ jobs:
           echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
           echo "| Fetch Stats | ${{ steps.fetch-stats.outputs.stats_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Compare L5 | ${{ steps.compare.outputs.compare_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| GitHub Contribution Events | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| GitHub Profile-Attributed Events | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Operational Repo Commits | ${{ steps.fetch-stats.outputs.operational || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Schedule:** Every 2h + push-triggered from LivHana-SoT" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY

@@ -36,6 +36,7 @@ from compare_l5 import (
     generate_full_output,
     generate_ytd_banner,
     generate_archive_section,
+    generate_all_months_ledger,
     L5_BENCHMARKS,
 )
 from update_readme import (
@@ -44,6 +45,7 @@ from update_readme import (
     update_readme_content,
     update_ytd_content,
     update_archive_content,
+    update_ledger_content,
     update_section_content,
     START_MARKER,
     END_MARKER,
@@ -53,6 +55,9 @@ from update_readme import (
     ARCHIVE_START_MARKER,
     ARCHIVE_END_MARKER,
     ARCHIVE_MARKER_PATTERN,
+    LEDGER_START_MARKER,
+    LEDGER_END_MARKER,
+    LEDGER_MARKER_PATTERN,
 )
 
 
@@ -100,6 +105,80 @@ SAMPLE_STATS = {
     "prev_month_days_active": 31,
     "prev_month_days_in_month": 31,
     "prev_month_peak_day": {"date": "2026-03-15", "count": 250},
+    "all_months": [
+        {
+            "month_key": "2026-03",
+            "month": "March",
+            "month_number": 3,
+            "year": 2026,
+            "days_in_month": 31,
+            "days_elapsed": 31,
+            "is_current_month": False,
+            "profile_events": 4200,
+            "private_restricted_events": 3800,
+            "public_typed_events": 400,
+            "days_active": 31,
+            "daily_avg": 135.5,
+            "peak_day": {"date": "2026-03-15", "count": 250},
+            "daily_breakdown": [
+                {"date": "2026-03-01", "count": 100},
+                {"date": "2026-03-02", "count": 0},
+            ],
+        },
+        {
+            "month_key": "2026-04",
+            "month": "April",
+            "month_number": 4,
+            "year": 2026,
+            "days_in_month": 30,
+            "days_elapsed": 5,
+            "is_current_month": True,
+            "profile_events": 750,
+            "private_restricted_events": 680,
+            "public_typed_events": 70,
+            "days_active": 5,
+            "daily_avg": 150.0,
+            "peak_day": {"date": "2026-04-03", "count": 210},
+            "daily_breakdown": [
+                {"date": "2026-04-01", "count": 120},
+                {"date": "2026-04-02", "count": 145},
+            ],
+        },
+    ],
+    "operational_activity": {
+        "source": "GitHub REST commits API, default branch per repo",
+        "repos": ["RND-Technology/LivHana-SoT", "reggieanddro/reggieanddro"],
+        "totals": {"commits": 42, "bot_or_agent_commits": 31, "author_agent_trailers": 12},
+        "error_count": 0,
+        "errors": [],
+        "months": [
+            {
+                "month_key": "2026-03",
+                "month": "March",
+                "month_number": 3,
+                "year": 2026,
+                "commits": 10,
+                "bot_or_agent_commits": 7,
+                "author_agent_trailers": 4,
+                "repos": [
+                    {"repo": "RND-Technology/LivHana-SoT", "commits": 10, "bot_or_agent_commits": 7, "author_agent_trailers": 4, "top_authors": [{"name": "Claude", "commits": 7}]}
+                ],
+            },
+            {
+                "month_key": "2026-04",
+                "month": "April",
+                "month_number": 4,
+                "year": 2026,
+                "commits": 32,
+                "bot_or_agent_commits": 24,
+                "author_agent_trailers": 8,
+                "repos": [
+                    {"repo": "RND-Technology/LivHana-SoT", "commits": 20, "bot_or_agent_commits": 16, "author_agent_trailers": 8, "top_authors": [{"name": "Claude", "commits": 16}]},
+                    {"repo": "reggieanddro/reggieanddro", "commits": 12, "bot_or_agent_commits": 8, "author_agent_trailers": 0, "top_authors": [{"name": "Liv Hana Stats Bot 🤖", "commits": 8}]},
+                ],
+            },
+        ],
+    },
 }
 
 MOCK_GRAPHQL_RESPONSE = {
@@ -461,6 +540,19 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("February 2026", archive)
         self.assertIn("3,000", archive)
 
+    def test_generate_all_months_ledger(self):
+        """Test all-month ledger includes profile and operational lanes."""
+        ledger = generate_all_months_ledger(SAMPLE_STATS)
+
+        self.assertIn("Current & Historical Stats Ledger", ledger)
+        self.assertIn("GitHub profile-attributed events", ledger)
+        self.assertIn("Operational repo commits", ledger)
+        self.assertIn("March 2026", ledger)
+        self.assertIn("April 2026", ledger)
+        self.assertIn("RND-Technology/LivHana-SoT", ledger)
+        self.assertIn("reggieanddro/reggieanddro", ledger)
+        self.assertIn("42", ledger)
+
 
 class TestUpdateReadme(unittest.TestCase):
     """Tests for update_readme.py"""
@@ -608,6 +700,28 @@ Old archive
 
         self.assertFalse(was_updated)
 
+    def test_update_ledger_content(self):
+        """Test all-month ledger section update"""
+        original = f"""# README
+
+{LEDGER_START_MARKER}
+Old ledger
+{LEDGER_END_MARKER}
+"""
+        updated, was_updated = update_ledger_content(original, "New all-month ledger")
+
+        self.assertTrue(was_updated)
+        self.assertIn("New all-month ledger", updated)
+        self.assertNotIn("Old ledger", updated)
+
+    def test_update_ledger_content_no_markers(self):
+        """Test ledger update skips when markers not present"""
+        original = "# README\n\nNo markers"
+        updated, was_updated = update_ledger_content(original, "Ledger content")
+
+        self.assertFalse(was_updated)
+        self.assertEqual(updated, original)
+
     def test_multiple_section_updates(self):
         """Test updating all sections in sequence"""
         original = f"""# README
@@ -623,6 +737,10 @@ Old stats
 {ARCHIVE_START_MARKER}
 Old archive
 {ARCHIVE_END_MARKER}
+
+{LEDGER_START_MARKER}
+Old ledger
+{LEDGER_END_MARKER}
 """
         # Update stats
         content, _ = update_readme_content(original, "New stats")
@@ -630,13 +748,17 @@ Old archive
         content, _ = update_ytd_content(content, "New YTD")
         # Update archive
         content, _ = update_archive_content(content, "New archive")
+        # Update ledger
+        content, _ = update_ledger_content(content, "New ledger")
 
         self.assertIn("New stats", content)
         self.assertIn("New YTD", content)
         self.assertIn("New archive", content)
+        self.assertIn("New ledger", content)
         self.assertNotIn("Old stats", content)
         self.assertNotIn("Old YTD", content)
         self.assertNotIn("Old archive", content)
+        self.assertNotIn("Old ledger", content)
 
 
 class TestL5Benchmarks(unittest.TestCase):
