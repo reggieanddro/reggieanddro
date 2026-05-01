@@ -116,14 +116,15 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
     day_of_month = stats.get("day_of_month", 1)
     projected = stats.get("projected_month", 0)
 
-    # Contribution activity comparison. This is an activity-rhythm comparison,
-    # not a productivity equivalence claim and not a deployable commit count.
+    # GitHub contribution calendar attribution comparison. This is an
+    # activity-rhythm comparison for the profile graph, not a productivity
+    # equivalence claim and not a complete operating-work ledger.
     commit_mult = calculate_multiplier(total, L5_BENCHMARKS["commits_per_month"]["min"],
                                         L5_BENCHMARKS["commits_per_month"]["max"])
     comparisons.append({
-        "metric": "GitHub Contribution Events",
+        "metric": "GitHub Profile-Attributed Events",
         "value": total,
-        "benchmark": f"{L5_BENCHMARKS['commits_per_month']['min']}-{L5_BENCHMARKS['commits_per_month']['max']}/mo activity benchmark",
+        "benchmark": f"{L5_BENCHMARKS['commits_per_month']['min']}-{L5_BENCHMARKS['commits_per_month']['max']}/mo profile-attribution benchmark",
         "multiplier_min": commit_mult[0],
         "multiplier_max": commit_mult[1],
         "status": "above" if commit_mult[0] >= 1.0 else "below"
@@ -132,7 +133,7 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
     # Private/restricted GitHub events are not typed by GitHub. Keep them visible
     # for transparency, but never compare them as "commits".
     comparisons.append({
-        "metric": "Private/Restricted Events",
+        "metric": "Private/Restricted Profile Events",
         "value": private_included_events,
         "benchmark": "GitHub does not expose event type",
         "multiplier_min": None,
@@ -283,7 +284,7 @@ def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -
         "",
         f"**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [{comparison['benchmark_source']}]({comparison['benchmark_url']})",
         "",
-        "_Truth note: GitHub contribution events include private/restricted activity. They are activity signals, not deployable commit counts or productivity equivalence claims._"
+        "_Truth note: GitHub profile-attributed events include private/restricted activity. They are profile graph signals, not deployable commit counts, complete operating-work ledgers, or productivity equivalence claims. Bot/alternate-author commits can be real work while showing as zero on the personal contribution calendar._"
     ])
 
     return "\n".join(lines)
@@ -313,8 +314,8 @@ def generate_ytd_banner(stats: Dict[str, Any]) -> str:
     lines = [
         f"### 🏆 {year} Year-to-Date",
         "",
-        f"> **{ytd_daily_avg} Contributions/Day · {ytd_total:,} YTD · Day {day_of_year}**",
-        f"> {ytd_commits:,} private/restricted events · {ytd_streak}-day streak · **{ytd_mult}x** annualized activity ratio vs L5 max ({l5_yearly_max:,}/yr)",
+        f"> **{ytd_daily_avg} Profile-Attributed Events/Day · {ytd_total:,} YTD · Day {day_of_year}**",
+        f"> {ytd_commits:,} private/restricted profile events · {ytd_streak}-day streak · **{ytd_mult}x** annualized profile-attribution ratio vs L5 max ({l5_yearly_max:,}/yr)",
     ]
 
     return "\n".join(lines)
@@ -357,8 +358,8 @@ def generate_archive_section(stats: Dict[str, Any]) -> str:
         "",
         f"| Metric | Value |",
         f"|--------|-------|",
-        f"| Total Contributions | {prev_total:,} |",
-        f"| Private/Restricted Events | {prev_commits:,} |",
+        f"| GitHub Profile-Attributed Events | {prev_total:,} |",
+        f"| Private/Restricted Profile Events | {prev_commits:,} |",
         f"| Daily Average | {prev_daily} |",
         f"| Days Active | {prev_active}/{prev_days} |",
         f"| vs L5 Max | **{mult}x** |",

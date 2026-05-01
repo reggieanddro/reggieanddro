@@ -416,7 +416,7 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("13,500", banner)  # YTD total
         self.assertIn("Day 95", banner)
         self.assertIn("45-day streak", banner)
-        self.assertIn("annualized activity ratio vs L5", banner)
+        self.assertIn("annualized profile-attribution ratio vs L5", banner)
 
     def test_generate_ytd_banner_no_data(self):
         """Test YTD banner with minimal data"""

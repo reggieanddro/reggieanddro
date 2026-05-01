@@ -16,8 +16,8 @@ I build Liv Hana: autonomous strategic intelligence for regulated industries whe
 
 | Metric | Value | Activity benchmark | Ratio |
 |--------|-------|--------------------|-------|
-| GitHub activity events | 0 | 40-80/mo activity benchmark | 0.0-0.0x |
-| Private/restricted events | 0 | GitHub does not expose event type | context only |
+| GitHub profile-attributed events | 0 | 40-80/mo profile-attribution benchmark | 0.0-0.0x |
+| Private/restricted profile events | 0 | GitHub does not expose event type | context only |
 | Daily average | 0.0 | 2-4/day | 0.0-0.0x |
 | Days active | 0/1 | 18-22/mo | 0.0-0.0x |
 | Projected month | ~0 | 40-80/mo | 0.0-0.0x |
@@ -31,14 +31,16 @@ _Truth note: May has just opened. The profile keeps the live month separate from
 
 ## 2026 Closed-Month Proof Ledger
 
-**January through April 2026:** 9,681 GitHub activity events, including 9,657 private/restricted events that GitHub verifies but does not expose by commit type. These are activity signals, not inflated public-commit claims. The closed-month history stays here permanently so an automated live-month refresh cannot wipe the story.
+**January through April 2026:** 9,681 GitHub profile-attributed activity events, including 9,657 private/restricted events that GitHub verifies but does not expose by commit type. These are profile-attribution signals, not inflated public-commit claims. The closed-month history stays here permanently so an automated live-month refresh cannot wipe the story.
+
+**4/30 fallacy scan:** GitHub GraphQL reports 0 contribution-calendar events for `@reggieanddro` on April 30, but that does **not** mean zero operating work. A CT-day audit found 5 LivHana-SoT commits authored as `Claude <noreply@anthropic.com>` plus 16 profile automation commits authored as `github-actions[bot]`. Those commits are real repo activity, but they do not credit Jesse's personal contribution graph under GitHub's attribution rules.
 
 <details>
-<summary><strong>January 2026</strong> — 1,323 GitHub activity events · 19/31 active days · 16.5-33.1x vs 40-80/mo benchmark</summary>
+<summary><strong>January 2026</strong> — 1,323 profile-attributed GitHub events · 19/31 active days · 16.5-33.1x vs 40-80/mo benchmark</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub activity events | 1,323 |
+| GitHub profile-attributed events | 1,323 |
 | Private/restricted events | 1,307 |
 | Public typed events | 15 |
 | Daily average | 42.7 |
@@ -86,11 +88,11 @@ _Truth note: May has just opened. The profile keeps the live month separate from
 </details>
 
 <details>
-<summary><strong>February 2026</strong> — 2,384 GitHub activity events · 27/28 active days · 29.8-59.6x vs 40-80/mo benchmark</summary>
+<summary><strong>February 2026</strong> — 2,384 profile-attributed GitHub events · 27/28 active days · 29.8-59.6x vs 40-80/mo benchmark</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub activity events | 2,384 |
+| GitHub profile-attributed events | 2,384 |
 | Private/restricted events | 2,383 |
 | Public typed events | 1 |
 | Daily average | 85.1 |
@@ -135,18 +137,18 @@ _Truth note: May has just opened. The profile keeps the live month separate from
 </details>
 
 <details>
-<summary><strong>March 2026</strong> — 2,741 GitHub activity events · 26/31 active days · 34.3-68.5x vs 40-80/mo benchmark</summary>
+<summary><strong>March 2026</strong> — 2,741 profile-attributed GitHub events · 26/31 active days · 34.3-68.5x vs 40-80/mo benchmark</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub activity events | 2,741 |
+| GitHub profile-attributed events | 2,741 |
 | Private/restricted events | 2,740 |
 | Public typed events | 1 |
 | Daily average | 88.4 |
 | Peak day | 324 on Mar 30 |
 | Activity ratio vs 40-80/mo benchmark | 34.3-68.5x |
 
-- Month closed at 2,741 GitHub activity events
+- Month closed at 2,741 GitHub profile-attributed events
 - 26 active days
 - April baseline used this month as the MoM comparator
 
@@ -187,20 +189,21 @@ _Truth note: May has just opened. The profile keeps the live month separate from
 </details>
 
 <details>
-<summary><strong>April 2026</strong> — 3,233 GitHub activity events · 28/30 active days · 40.4-80.8x vs 40-80/mo benchmark</summary>
+<summary><strong>April 2026</strong> — 3,233 profile-attributed GitHub events · 28/30 active days · 40.4-80.8x vs 40-80/mo benchmark</summary>
 
 | Metric | Value |
 |--------|-------|
-| GitHub activity events | 3,233 |
+| GitHub profile-attributed events | 3,233 |
 | Private/restricted events | 3,227 |
 | Public typed events | 5 |
 | Daily average | 107.8 |
 | Peak day | 520 on Apr 05 |
 | Activity ratio vs 40-80/mo benchmark | 40.4-80.8x |
 
-- Month closed at 3,233 GitHub activity events
+- Month closed at 3,233 GitHub profile-attributed events
 - Projected MoM activity trend finished +18.0% vs March
 - April crisis-build profile section restored below
+- April 30 was operationally active: 21 repo commits observed across LivHana-SoT and profile automation, but 0 were credited to `@reggieanddro` by GitHub's contribution calendar because of author/bot attribution.
 
 | Day | Activity bar | Events |
 |-----|--------------|--------|
@@ -250,7 +253,7 @@ While Texas hemp operators faced escalating regulatory pressure and the AI stack
 | Solo-operator constraint | Agentic CI/CD, RALPH verification hooks, deploy receipts, self-healing service patterns |
 | Trust gap for regulated commerce | Veriff age verification, Auth0, Secret Manager, Cloudflare WAF, fail-closed backend guards |
 
-**April close:** 3,233 GitHub activity events, 28 active days, 107.8/day average, 520-event peak day, +18.0% projected activity trend versus March.
+**April close:** 3,233 GitHub profile-attributed events, 28 active days, 107.8/day average, 520-event peak day, +18.0% projected activity trend versus March. April 30 still had operating work; GitHub's personal graph did not attribute that work to `@reggieanddro`.
 
 ---
 
