@@ -11,7 +11,7 @@ I build Liv Hana: autonomous strategic intelligence for regulated industries whe
 <!-- STATS_START -->
 ### 📊 May 2026 Live Stats (Solo, No CS Degree)
 
-> **🤖 Auto-Updated:** Friday, May 01, 2026 at 11:15 AM CT
+> **🤖 Auto-Updated:** Friday, May 01, 2026 at 11:17 AM CT
 > **📅 Day 1 of 31**
  | **🔥 Peak Day:** 01 with 3 contributions
 
@@ -46,39 +46,38 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 <!-- LEDGER_START -->
 ## Current & Historical Stats Ledger
 
-**Auto-updated:** Friday, May 01, 2026 at 11:15 AM CT
+**Auto-updated:** Friday, May 01, 2026 at 11:17 AM CT
 **Coverage:** 2025-01 through 2026-05
 
 | Lane | Count | What it means |
 |------|-------|---------------|
 | GitHub profile-attributed events | 10,048 | What GitHub credits to `@reggieanddro` under contribution-calendar rules |
 | Private/restricted profile events | 10,016 | GitHub-verified private/restricted profile events without public type disclosure |
-| Operational repo commits | 1,385 | Real default-branch commits across configured repos, regardless of whether GitHub credits the personal graph |
-| Bot/agent operational commits | 1,338 | Operational commits by bots or agent author identities |
+| Operational repo commits | 7,807 | Real default-branch commits across configured repos, regardless of whether GitHub credits the personal graph |
+| Bot/agent operational commits | 2,290 | Operational commits by bots or agent author identities |
 
 **Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro. Source: GitHub REST commits API, default branch per repo.
-**Operational caveat:** 17 repo-month fetches were unavailable, usually because the workflow token cannot read a private repo. Configure `PROFILE_PAT`/`OPERATIONAL_GITHUB_TOKEN` to close this gap.
 
 | Year | Profile-attributed events | Private/restricted profile events | Active profile days | Operational commits | Bot/agent commits |
 |------|---------------------------|-----------------------------------|---------------------|---------------------|------------------|
-| 2025 | 361 | 359 | 35 | 0 | 0 |
-| 2026 | 9,687 | 9,657 | 101 | 1,385 | 1,338 |
+| 2025 | 361 | 359 | 35 | 680 | 0 |
+| 2026 | 9,687 | 9,657 | 101 | 7,127 | 2,290 |
 
 <details>
-<summary><strong>2026</strong> — 9,687 profile events · 1,385 operational commits</summary>
+<summary><strong>2026</strong> — 9,687 profile events · 7,127 operational commits</summary>
 
 | Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |
 |-------|----------------|--------------------|-------------|---------------------|------------------|
-| January | 1,323 | 1,307 | 19/31 | 1 | 0 |
-| February | 2,384 | 2,383 | 27/28 | 61 | 27 |
-| March | 2,741 | 2,740 | 26/31 | 32 | 31 |
-| April | 3,236 | 3,227 | 28/30 | 1,277 | 1,266 |
-| May | 3 | 0 | 1/1 | 14 | 14 |
+| January | 1,323 | 1,307 | 19/31 | 1,158 | 5 |
+| February | 2,384 | 2,383 | 27/28 | 1,244 | 63 |
+| March | 2,741 | 2,740 | 26/31 | 1,314 | 135 |
+| April | 3,236 | 3,227 | 28/30 | 3,394 | 2,070 |
+| May | 3 | 0 | 1/1 | 17 | 17 |
 
 </details>
 
 <details>
-<summary><strong>2025</strong> — 361 profile events · 0 operational commits</summary>
+<summary><strong>2025</strong> — 361 profile events · 680 operational commits</summary>
 
 | Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |
 |-------|----------------|--------------------|-------------|---------------------|------------------|
@@ -90,17 +89,17 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | June | 0 | 0 | 0/30 | 0 | 0 |
 | July | 0 | 0 | 0/31 | 0 | 0 |
 | August | 0 | 0 | 0/31 | 0 | 0 |
-| September | 174 | 174 | 12/30 | 0 | 0 |
-| October | 58 | 58 | 8/31 | 0 | 0 |
-| November | 42 | 42 | 6/30 | 0 | 0 |
-| December | 85 | 85 | 8/31 | 0 | 0 |
+| September | 174 | 174 | 12/30 | 81 | 0 |
+| October | 58 | 58 | 8/31 | 265 | 0 |
+| November | 42 | 42 | 6/30 | 149 | 0 |
+| December | 85 | 85 | 8/31 | 185 | 0 |
 
 </details>
 
 ### Monthly Drop-Down Receipts
 
 <details>
-<summary><strong>May 2026</strong> — 3 profile events · 14 operational commits</summary>
+<summary><strong>May 2026</strong> — 3 profile events · 17 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -109,13 +108,13 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 3 |
 | Profile active days | 1/1 |
 | Profile daily average | 3.0 |
-| Operational repo commits | 14 |
-| Bot/agent operational commits | 14 |
+| Operational repo commits | 17 |
+| Bot/agent operational commits | 17 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
-| `reggieanddro/reggieanddro` | 14 | Liv Hana Stats Bot 🤖 (11), Jesse Niesen (3) |
+| `RND-Technology/LivHana-SoT` | 2 | Claude (2) |
+| `reggieanddro/reggieanddro` | 15 | Liv Hana Stats Bot 🤖 (12), Jesse Niesen (3) |
 
 | Day | Profile activity bar | Events |
 |-----|----------------------|--------|
@@ -124,7 +123,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>April 2026</strong> — 3,236 profile events · 1,277 operational commits</summary>
+<summary><strong>April 2026</strong> — 3,236 profile events · 3,394 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -133,12 +132,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 8 |
 | Profile active days | 28/30 |
 | Profile daily average | 107.9 |
-| Operational repo commits | 1,277 |
-| Bot/agent operational commits | 1,266 |
+| Operational repo commits | 3,394 |
+| Bot/agent operational commits | 2,070 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 2,117 | Jesse Niesen (1525), ReggieAndDro.com (276), Claude (182) |
 | `reggieanddro/reggieanddro` | 1,277 | Liv Hana Stats Bot 🤖 (1266), reggieanddro (8), Jesse Niesen (3) |
 
 | Day | Profile activity bar | Events |
@@ -147,8 +146,8 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | 02 | ██████░░░░░░░░░░░░░░ | 164 |
 | 03 | ██████░░░░░░░░░░░░░░ | 179 |
 | 04 | █████░░░░░░░░░░░░░░░ | 145 |
-| 05 | ████████████████████ | 518 |
-| 06 | ██████░░░░░░░░░░░░░░ | 171 |
+| 05 | ████████████████████ | 520 |
+| 06 | ██████░░░░░░░░░░░░░░ | 169 |
 | 07 | ████░░░░░░░░░░░░░░░░ | 125 |
 | 08 | ███░░░░░░░░░░░░░░░░░ | 100 |
 | 09 | █████░░░░░░░░░░░░░░░ | 154 |
@@ -177,7 +176,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>March 2026</strong> — 2,741 profile events · 32 operational commits</summary>
+<summary><strong>March 2026</strong> — 2,741 profile events · 1,314 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -186,12 +185,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 1 |
 | Profile active days | 26/31 |
 | Profile daily average | 88.4 |
-| Operational repo commits | 32 |
-| Bot/agent operational commits | 31 |
+| Operational repo commits | 1,314 |
+| Bot/agent operational commits | 135 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 1,282 | Jesse Niesen (1111), ReggieAndDro.com (63), Claude (33) |
 | `reggieanddro/reggieanddro` | 32 | Liv Hana Stats Bot 🤖 (31), reggieanddro (1) |
 
 | Day | Profile activity bar | Events |
@@ -231,7 +230,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>February 2026</strong> — 2,384 profile events · 61 operational commits</summary>
+<summary><strong>February 2026</strong> — 2,384 profile events · 1,244 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -240,12 +239,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 1 |
 | Profile active days | 27/28 |
 | Profile daily average | 85.1 |
-| Operational repo commits | 61 |
-| Bot/agent operational commits | 27 |
+| Operational repo commits | 1,244 |
+| Bot/agent operational commits | 63 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 1,183 | Jesse Niesen (1101), ReggieAndDro.com (33), Liv Hana Stats Bot 🤖 (25) |
 | `reggieanddro/reggieanddro` | 61 | Liv Hana Stats Bot 🤖 (27), reggieanddro (18), ReggieAndDro.com (16) |
 
 | Day | Profile activity bar | Events |
@@ -282,7 +281,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>January 2026</strong> — 1,323 profile events · 1 operational commits</summary>
+<summary><strong>January 2026</strong> — 1,323 profile events · 1,158 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -291,12 +290,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 15 |
 | Profile active days | 19/31 |
 | Profile daily average | 42.7 |
-| Operational repo commits | 1 |
-| Bot/agent operational commits | 0 |
+| Operational repo commits | 1,158 |
+| Bot/agent operational commits | 5 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 1,157 | reggieanddro (591), Jesse Niesen (517), ReggieAndDro.com (42) |
 | `reggieanddro/reggieanddro` | 1 | reggieanddro (1) |
 
 | Day | Profile activity bar | Events |
@@ -336,7 +335,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>December 2025</strong> — 85 profile events · 0 operational commits</summary>
+<summary><strong>December 2025</strong> — 85 profile events · 185 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -345,12 +344,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 0 |
 | Profile active days | 8/31 |
 | Profile daily average | 2.7 |
-| Operational repo commits | 0 |
+| Operational repo commits | 185 |
 | Bot/agent operational commits | 0 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 185 | reggieanddro (156), ReggieAndDro.com (24), Copilot (5) |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -390,7 +389,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>November 2025</strong> — 42 profile events · 0 operational commits</summary>
+<summary><strong>November 2025</strong> — 42 profile events · 149 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -399,12 +398,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 0 |
 | Profile active days | 6/30 |
 | Profile daily average | 1.4 |
-| Operational repo commits | 0 |
+| Operational repo commits | 149 |
 | Bot/agent operational commits | 0 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 149 | reggieanddro (143), ReggieAndDro.com (6) |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -443,7 +442,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>October 2025</strong> — 58 profile events · 0 operational commits</summary>
+<summary><strong>October 2025</strong> — 58 profile events · 265 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -452,12 +451,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 0 |
 | Profile active days | 8/31 |
 | Profile daily average | 1.9 |
-| Operational repo commits | 0 |
+| Operational repo commits | 265 |
 | Bot/agent operational commits | 0 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 265 | reggieanddro (249), ReggieAndDro.com (16) |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -497,7 +496,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 </details>
 
 <details>
-<summary><strong>September 2025</strong> — 174 profile events · 0 operational commits</summary>
+<summary><strong>September 2025</strong> — 174 profile events · 81 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
@@ -506,12 +505,12 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | Public typed profile events | 0 |
 | Profile active days | 12/30 |
 | Profile daily average | 5.8 |
-| Operational repo commits | 0 |
+| Operational repo commits | 81 |
 | Bot/agent operational commits | 0 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 81 | ReggieAndDro.com (41), reggieanddro (38), Jesse Niesen (2) |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -531,8 +530,8 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 | 13 | ███████░░░░░░░░░░░░░ | 22 |
 | 14 | ████████████████████ | 59 |
 | 15 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
-| 16 | ██░░░░░░░░░░░░░░░░░░ | 7 |
-| 17 | ███░░░░░░░░░░░░░░░░░ | 9 |
+| 16 | ██░░░░░░░░░░░░░░░░░░ | 8 |
+| 17 | ██░░░░░░░░░░░░░░░░░░ | 8 |
 | 18 | ████████░░░░░░░░░░░░ | 25 |
 | 19 | ░░░░░░░░░░░░░░░░░░░░ | 0 |
 | 20 | █░░░░░░░░░░░░░░░░░░░ | 3 |
@@ -564,7 +563,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -618,7 +617,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -672,7 +671,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -725,7 +724,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -779,7 +778,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -832,7 +831,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -886,7 +885,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
@@ -937,7 +936,7 @@ _Truth note: GitHub profile-attributed events include private/restricted activit
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
-| `RND-Technology/LivHana-SoT` | unavailable | HTTP 404 |
+| `RND-Technology/LivHana-SoT` | 0 | none |
 | `reggieanddro/reggieanddro` | 0 | none |
 
 | Day | Profile activity bar | Events |
