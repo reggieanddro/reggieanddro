@@ -443,28 +443,27 @@ class TestCompareL5(unittest.TestCase):
         comparison = compare_to_l5(SAMPLE_STATS)
         markdown = generate_markdown_table(SAMPLE_STATS, comparison)
 
-        self.assertIn("April 2026", markdown)
-        self.assertIn("Live Stats", markdown)
-        self.assertIn("| Metric |", markdown)
-        self.assertIn("Worklytics", markdown)
-        self.assertIn("210", markdown)  # peak day
-        self.assertIn("Daily Breakdown", markdown)
+        self.assertIn("Dark Factory Live Output", markdown)
+        self.assertIn("Operational repo commits", markdown)
+        self.assertIn("Bot/agent operational commits", markdown)
+        self.assertIn("CEO intent signal", markdown)
+        self.assertNotIn("GitHub Profile-Attributed", markdown)
 
     def test_generate_markdown_table_with_streak(self):
         """Test markdown includes streak when present"""
         comparison = compare_to_l5(SAMPLE_STATS)
         markdown = generate_markdown_table(SAMPLE_STATS, comparison)
 
-        self.assertIn("Current Streak", markdown)
-        self.assertIn("45", markdown)
+        self.assertIn("Current-month operational commits", markdown)
+        self.assertIn("Profile graph numbers are not a CEO success metric", markdown)
 
     def test_generate_markdown_table_with_mom(self):
         """Test markdown includes MoM trend when prev month data present"""
         comparison = compare_to_l5(SAMPLE_STATS)
         markdown = generate_markdown_table(SAMPLE_STATS, comparison)
 
-        self.assertIn("Projected MoM Activity Trend", markdown)
-        self.assertIn("March", markdown)
+        self.assertIn("Coverage", markdown)
+        self.assertIn("RND-Technology/LivHana-SoT", markdown)
 
     def test_generate_markdown_table_ct_timezone(self):
         """Test that timestamp uses CT timezone"""
@@ -495,7 +494,7 @@ class TestCompareL5(unittest.TestCase):
         self.assertIn("13,500", banner)  # YTD total
         self.assertIn("Day 95", banner)
         self.assertIn("45-day streak", banner)
-        self.assertIn("annualized profile-attribution ratio vs L5", banner)
+        self.assertIn("Year-to-Date", banner)
 
     def test_generate_ytd_banner_no_data(self):
         """Test YTD banner with minimal data"""
@@ -544,9 +543,9 @@ class TestCompareL5(unittest.TestCase):
         """Test all-month ledger includes profile and operational lanes."""
         ledger = generate_all_months_ledger(SAMPLE_STATS)
 
-        self.assertIn("Current & Historical Stats Ledger", ledger)
-        self.assertIn("GitHub profile-attributed events", ledger)
+        self.assertIn("Dark Factory Operational Ledger", ledger)
         self.assertIn("Operational repo commits", ledger)
+        self.assertNotIn("GitHub profile-attributed events", ledger)
         self.assertIn("March 2026", ledger)
         self.assertIn("April 2026", ledger)
         self.assertIn("RND-Technology/LivHana-SoT", ledger)

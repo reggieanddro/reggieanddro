@@ -118,7 +118,7 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
     projected = stats.get("projected_month", 0)
 
     # GitHub contribution calendar attribution comparison. This is an
-    # activity-rhythm comparison for the profile graph, not a productivity
+    # activity-rhythm comparison for the GitHub vanity graph, not a productivity
     # equivalence claim and not a complete operating-work ledger.
     commit_mult = calculate_multiplier(total, L5_BENCHMARKS["commits_per_month"]["min"],
                                         L5_BENCHMARKS["commits_per_month"]["max"])
@@ -194,98 +194,69 @@ def compare_to_l5(stats: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _coverage_label(stats: Dict[str, Any]) -> str:
+    months = stats.get("all_months") or []
+    if not months:
+        return "current runtime window"
+    return f"{months[0].get('month_key')} through {months[-1].get('month_key')}"
+
+
+def _current_operational_month(stats: Dict[str, Any]) -> Dict[str, Any]:
+    month_key = f"{int(stats.get('year', datetime.now(timezone.utc).year)):04d}-{datetime.now(timezone.utc).month:02d}"
+    operational = stats.get("operational_activity") or {}
+    for row in operational.get("months", []):
+        if row.get("month_key") == month_key:
+            return row
+    return {}
+
+
 def generate_markdown_table(stats: Dict[str, Any], comparison: Dict[str, Any]) -> str:
     """
-    Generate a formatted markdown table for the README.
+    Generate the top README proof block.
 
-    Args:
-        stats: GitHub statistics
-        comparison: L5 comparison results
-
-    Returns:
-        Formatted markdown string
+    CEO directive 2026-05-02: GitHub vanity attribution is not the
+    lead signal. Lead with operational dark-factory output and mission proof.
     """
-    month = stats.get("month", "Unknown")
-    year = stats.get("year", 2026)
-    day = stats.get("day_of_month", 1)
-    days_in_month = stats.get("days_in_month", 30)
-    peak = stats.get("peak_day", {})
-
-    # Format timestamp for Texas time (CT)
     ct_tz = ZoneInfo("America/Chicago")
     now_ct = datetime.now(ct_tz)
     tx_time = now_ct.strftime("%A, %B %d, %Y at %-I:%M %p CT")
+    operational = stats.get("operational_activity") or {}
+    totals = operational.get("totals") or {}
+    current_month = _current_operational_month(stats)
+    op_commits = int(totals.get("commits", 0) or 0)
+    bot_agent = int(totals.get("bot_or_agent_commits", 0) or 0)
+    trailers = int(totals.get("author_agent_trailers", 0) or 0)
+    current_commits = int(current_month.get("commits", 0) or 0)
+    current_agent = int(current_month.get("bot_or_agent_commits", 0) or 0)
+    error_count = int(operational.get("error_count", 0) or 0)
+    repos = ", ".join(operational.get("repos", [])) or "configured live repos"
+    coverage = _coverage_label(stats)
 
     lines = [
-        f"### 📊 {month} {year} Live Stats (Solo, No CS Degree)",
+        "### Dark Factory Live Output",
         "",
-        f"> **🤖 Auto-Updated:** {tx_time}",
-        f"> **📅 Day {day} of {days_in_month}**"
+        f"> **Auto-updated:** {tx_time}",
+        f"> **Coverage:** {coverage}",
+        "",
+        "| Mission metric | Live count | Why it matters |",
+        "|----------------|------------|----------------|",
+        f"| Operational repo commits | {_format_int(op_commits)} | Real default-branch work shipped across the live factory repos |",
+        f"| Bot/agent operational commits | {_format_int(bot_agent)} | Delegated dark-factory execution by bots and agent identities |",
+        f"| Commit-trailer receipts | {_format_int(trailers)} | Auditable `author-agent:` provenance where present |",
+        f"| Current-month operational commits | {_format_int(current_commits)} | This month's actual factory motion |",
+        f"| Current-month bot/agent commits | {_format_int(current_agent)} | Current autonomous execution share |",
+        "",
+        f"**Operational repos:** {repos}.",
+        "",
+        "**CEO intent signal:** build Liv Hana as a dark factory for regulated-industry AI assurance, prove it through Reggie & Dro, and scale toward the Unicorn Race with revenue, compliance, security, and runtime receipts.",
     ]
 
-    if peak.get("count", 0) > 0:
-        peak_day_num = peak.get("date", "").split("-")[-1] if peak.get("date") else "?"
-        lines.append(f" | **🔥 Peak Day:** {peak_day_num} with {peak['count']} contributions")
+    if error_count:
+        lines.append(f"**Data caveat:** {error_count} repo-month fetches were unavailable. The factory must keep `PROFILE_PAT`/`OPERATIONAL_GITHUB_TOKEN` live to preserve full private-repo coverage.")
 
-    lines.extend(["", "| Metric | Value | Activity benchmark | Ratio |",
-                  "|--------|-------|----------------------|------------|"])
-
-    for comp in comparison["comparisons"]:
-        value = comp["value"]
-        if isinstance(value, (int, float)) and not isinstance(value, bool):
-            value = f"{value:,}" if isinstance(value, int) else f"{value}"
-        if comp["multiplier_min"] is None:
-            mult_str = "context only"
-        else:
-            mult_str = f"**{comp['multiplier_min']}-{comp['multiplier_max']}x**"
-        lines.append(f"| **{comp['metric']}** | {value} | {comp['benchmark']} | {mult_str} |")
-
-    # Daily breakdown (collapsible)
-    daily = stats.get("daily_breakdown", [])
-    if daily:
-        lines.extend([
-            "",
-            "<details>",
-            "<summary>📈 Daily Breakdown (Click to expand)</summary>",
-            "",
-            "```"
-        ])
-
-        max_count = max((d["count"] for d in daily), default=1)
-        for d in daily:
-            bar_len = int((d["count"] / max(max_count, 1)) * 20)
-            bar = "█" * bar_len + "░" * (20 - bar_len)
-            day_num = d["date"].split("-")[-1]
-            lines.append(f"{day_num}: {bar} {d['count']}")
-
-        lines.extend([
-            "```",
-            "",
-            "</details>"
-        ])
-
-    # Streak + Month-over-Month trend
-    streak = stats.get("ytd_streak_current", 0)
-    prev_total = stats.get("prev_month_total", 0)
-    prev_name = stats.get("prev_month_name", "")
-    total_contributions = stats.get("total_contributions", 0)
-    if streak > 0:
-        lines.append(f"\n🔥 **Current Streak:** {streak} consecutive days with contributions")
-    if prev_total > 0 and total_contributions > 0:
-        # MoM comparison (projected vs actual prev)
-        projected = stats.get("projected_month", 0)
-        if projected > 0 and prev_total > 0:
-            mom_pct = round(((projected - prev_total) / prev_total) * 100, 1)
-            trend = "📈" if mom_pct > 0 else "📉"
-            sign = "+" if mom_pct > 0 else ""
-            lines.append(f"{trend} **Projected MoM Activity Trend:** {sign}{mom_pct}% vs {prev_name} ({prev_total:,} actual → ~{projected:,} projected)")
-
-    # Source
     lines.extend([
         "",
-        f"**Source:** [GitHub GraphQL API](https://docs.github.com/graphql) (live) • [{comparison['benchmark_source']}]({comparison['benchmark_url']})",
-        "",
-        "_Truth note: GitHub profile-attributed events include private/restricted activity. They are profile graph signals, not deployable commit counts, complete operating-work ledgers, or productivity equivalence claims. Bot/alternate-author commits can be real work while showing as zero on the personal contribution calendar._"
+        "_Truth note: this block intentionally ignores GitHub vanity contribution-graph attribution. It reports operational commit output from GitHub's commits API. Profile graph numbers are not a CEO success metric._",
     ])
 
     return "\n".join(lines)
@@ -393,111 +364,92 @@ def _daily_bar(count: int, max_count: int) -> str:
 
 def generate_all_months_ledger(stats: Dict[str, Any]) -> str:
     """
-    Generate permanent all-month stats ledger with profile and operational lanes.
+    Generate an operational-only dark-factory ledger.
 
-    The profile lane is GitHub contribution-calendar attribution. The operational
-    lane is real default-branch repo commit activity from configured repositories.
+    CEO directive 2026-05-02: remove profile-event vanity stats from the
+    public surface. Keep the machine focused on operational output.
     """
-    months = stats.get("all_months") or []
     operational = stats.get("operational_activity") or {}
-    op_months = {
-        row.get("month_key"): row
-        for row in operational.get("months", [])
-        if row.get("month_key")
-    }
+    op_months = [row for row in operational.get("months", []) if row.get("month_key")]
     ct_tz = ZoneInfo("America/Chicago")
     now_ct = datetime.now(ct_tz)
     updated = now_ct.strftime("%A, %B %d, %Y at %-I:%M %p CT")
-
-    if not months:
+    if not op_months:
         return "\n".join([
-            "## Current & Historical Stats Ledger",
+            "## Dark Factory Operational Ledger",
             "",
             f"**Auto-updated:** {updated}",
             "",
-            "All-month GitHub profile stats are temporarily unavailable. The live-month section above remains the fallback source.",
+            "Operational commit ledger is temporarily unavailable. Check CI token access to configured repos.",
         ])
 
     by_year: Dict[int, List[Dict[str, Any]]] = defaultdict(list)
-    for row in months:
+    for row in op_months:
         by_year[int(row["year"])].append(row)
 
-    total_profile = sum(int(row.get("profile_events", 0)) for row in months)
-    total_private = sum(int(row.get("private_restricted_events", 0)) for row in months)
-    total_operational = sum(int(row.get("commits", 0)) for row in op_months.values())
-    total_bot_agent = sum(int(row.get("bot_or_agent_commits", 0)) for row in op_months.values())
-    coverage_start = months[0]["month_key"]
-    coverage_end = months[-1]["month_key"]
+    total_operational = sum(int(row.get("commits", 0)) for row in op_months)
+    total_bot_agent = sum(int(row.get("bot_or_agent_commits", 0)) for row in op_months)
+    total_trailers = sum(int(row.get("author_agent_trailers", 0)) for row in op_months)
+    coverage_start = min(row["month_key"] for row in op_months)
+    coverage_end = max(row["month_key"] for row in op_months)
     repos = ", ".join(operational.get("repos", [])) or "not configured"
     op_error_count = int(operational.get("error_count", 0) or 0)
 
     lines = [
-        "## Current & Historical Stats Ledger",
+        "## Dark Factory Operational Ledger",
         "",
         f"**Auto-updated:** {updated}",
         f"**Coverage:** {coverage_start} through {coverage_end}",
         "",
-        "| Lane | Count | What it means |",
-        "|------|-------|---------------|",
-        f"| GitHub profile-attributed events | {_format_int(total_profile)} | What GitHub credits to `@{stats.get('username', 'reggieanddro')}` under contribution-calendar rules |",
-        f"| Private/restricted profile events | {_format_int(total_private)} | GitHub-verified private/restricted profile events without public type disclosure |",
-        f"| Operational repo commits | {_format_int(total_operational)} | Real default-branch commits across configured repos, regardless of whether GitHub credits the personal graph |",
-        f"| Bot/agent operational commits | {_format_int(total_bot_agent)} | Operational commits by bots or agent author identities |",
+        "| Output lane | Count | What it proves |",
+        "|-------------|-------|----------------|",
+        f"| Operational repo commits | {_format_int(total_operational)} | Real default-branch work shipped across live factory repos |",
+        f"| Bot/agent operational commits | {_format_int(total_bot_agent)} | Delegated dark-factory work executed by automation and agent identities |",
+        f"| `author-agent:` trailer receipts | {_format_int(total_trailers)} | Auditable agent provenance where enforced |",
         "",
         f"**Operational repos:** {repos}. Source: {operational.get('source', 'GitHub REST commits API')}.",
     ]
 
     if op_error_count:
-        lines.append(f"**Operational caveat:** {op_error_count} repo-month fetches were unavailable, usually because the workflow token cannot read a private repo. Configure `PROFILE_PAT`/`OPERATIONAL_GITHUB_TOKEN` to close this gap.")
-
-    year_rows = []
-    for year in sorted(by_year):
-        rows = by_year[year]
-        profile_sum = sum(int(row.get("profile_events", 0)) for row in rows)
-        private_sum = sum(int(row.get("private_restricted_events", 0)) for row in rows)
-        active_sum = sum(int(row.get("days_active", 0)) for row in rows)
-        op_sum = sum(int(op_months.get(row["month_key"], {}).get("commits", 0)) for row in rows)
-        agent_sum = sum(int(op_months.get(row["month_key"], {}).get("bot_or_agent_commits", 0)) for row in rows)
-        year_rows.append(f"| {year} | {_format_int(profile_sum)} | {_format_int(private_sum)} | {active_sum} | {_format_int(op_sum)} | {_format_int(agent_sum)} |")
+        lines.append(f"**Data caveat:** {op_error_count} repo-month fetches were unavailable. Fix token access before trusting this as complete.")
 
     lines.extend([
         "",
-        "| Year | Profile-attributed events | Private/restricted profile events | Active profile days | Operational commits | Bot/agent commits |",
-        "|------|---------------------------|-----------------------------------|---------------------|---------------------|------------------|",
-        *year_rows,
-        "",
+        "| Year | Operational commits | Bot/agent commits | Trailer receipts |",
+        "|------|---------------------|------------------|------------------|",
     ])
+    for year in sorted(by_year):
+        rows = by_year[year]
+        op_sum = sum(int(row.get("commits", 0)) for row in rows)
+        agent_sum = sum(int(row.get("bot_or_agent_commits", 0)) for row in rows)
+        trailer_sum = sum(int(row.get("author_agent_trailers", 0)) for row in rows)
+        lines.append(f"| {year} | {_format_int(op_sum)} | {_format_int(agent_sum)} | {_format_int(trailer_sum)} |")
 
+    lines.append("")
     for year in sorted(by_year, reverse=True):
         rows = sorted(by_year[year], key=lambda item: item["month_number"])
-        profile_sum = sum(int(row.get("profile_events", 0)) for row in rows)
-        op_sum = sum(int(op_months.get(row["month_key"], {}).get("commits", 0)) for row in rows)
+        op_sum = sum(int(row.get("commits", 0)) for row in rows)
+        agent_sum = sum(int(row.get("bot_or_agent_commits", 0)) for row in rows)
         lines.extend([
             "<details>",
-            f"<summary><strong>{year}</strong> — {_format_int(profile_sum)} profile events · {_format_int(op_sum)} operational commits</summary>",
+            f"<summary><strong>{year}</strong> — {_format_int(op_sum)} operational commits · {_format_int(agent_sum)} bot/agent commits</summary>",
             "",
-            "| Month | Profile events | Private/restricted | Active days | Operational commits | Bot/agent commits |",
-            "|-------|----------------|--------------------|-------------|---------------------|------------------|",
+            "| Month | Operational commits | Bot/agent commits | Trailer receipts |",
+            "|-------|---------------------|------------------|------------------|",
         ])
         for row in rows:
-            op = op_months.get(row["month_key"], {})
             lines.append(
-                f"| {row['month']} | {_format_int(row.get('profile_events', 0))} | "
-                f"{_format_int(row.get('private_restricted_events', 0))} | "
-                f"{row.get('days_active', 0)}/{row.get('days_elapsed', row.get('days_in_month', 0))} | "
-                f"{_format_int(op.get('commits', 0))} | {_format_int(op.get('bot_or_agent_commits', 0))} |"
+                f"| {row['month']} | {_format_int(row.get('commits', 0))} | "
+                f"{_format_int(row.get('bot_or_agent_commits', 0))} | "
+                f"{_format_int(row.get('author_agent_trailers', 0))} |"
             )
         lines.extend(["", "</details>", ""])
 
-    lines.append("### Monthly Drop-Down Receipts")
+    lines.append("### Monthly Operational Receipts")
     lines.append("")
-
-    for row in sorted(months, key=lambda item: item["month_key"], reverse=True):
-        op = op_months.get(row["month_key"], {})
-        daily = row.get("daily_breakdown") or []
-        max_count = max((int(day.get("count", 0)) for day in daily), default=0)
+    for row in sorted(op_months, key=lambda item: item["month_key"], reverse=True):
         repo_rows = []
-        for repo in op.get("repos", []):
+        for repo in row.get("repos", []):
             if repo.get("error"):
                 repo_rows.append(f"| `{repo.get('repo')}` | unavailable | {repo.get('error')} |")
             else:
@@ -509,40 +461,23 @@ def generate_all_months_ledger(stats: Dict[str, Any]) -> str:
 
         lines.extend([
             "<details>",
-            f"<summary><strong>{row['month']} {row['year']}</strong> — "
-            f"{_format_int(row.get('profile_events', 0))} profile events · "
-            f"{_format_int(op.get('commits', 0))} operational commits</summary>",
+            f"<summary><strong>{row['month']} {row['year']}</strong> — {_format_int(row.get('commits', 0))} operational commits</summary>",
             "",
             "| Metric | Value |",
             "|--------|-------|",
-            f"| GitHub profile-attributed events | {_format_int(row.get('profile_events', 0))} |",
-            f"| Private/restricted profile events | {_format_int(row.get('private_restricted_events', 0))} |",
-            f"| Public typed profile events | {_format_int(row.get('public_typed_events', 0))} |",
-            f"| Profile active days | {row.get('days_active', 0)}/{row.get('days_elapsed', row.get('days_in_month', 0))} |",
-            f"| Profile daily average | {row.get('daily_avg', 0)} |",
-            f"| Operational repo commits | {_format_int(op.get('commits', 0))} |",
-            f"| Bot/agent operational commits | {_format_int(op.get('bot_or_agent_commits', 0))} |",
+            f"| Operational repo commits | {_format_int(row.get('commits', 0))} |",
+            f"| Bot/agent operational commits | {_format_int(row.get('bot_or_agent_commits', 0))} |",
+            f"| `author-agent:` trailer receipts | {_format_int(row.get('author_agent_trailers', 0))} |",
             "",
             "| Operational repo | Commits | Top authors |",
             "|------------------|---------|-------------|",
             *(repo_rows or ["| unavailable | 0 | no configured repo data |"]),
             "",
+            "</details>",
+            "",
         ])
 
-        if daily:
-            lines.extend([
-                "| Day | Profile activity bar | Events |",
-                "|-----|----------------------|--------|",
-            ])
-            for day in daily:
-                count = int(day.get("count", 0))
-                day_num = str(day.get("date", "")).split("-")[-1]
-                lines.append(f"| {day_num} | {_daily_bar(count, max_count)} | {_format_int(count)} |")
-            lines.append("")
-
-        lines.extend(["</details>", ""])
-
-    lines.append("_Truth note: profile-attributed events are GitHub contribution-calendar signals. Operational commits are real default-branch repo commits. Both are useful; neither alone is the full truth._")
+    lines.append("_Truth note: operational commits are real default-branch repo commits from configured factory repos. GitHub vanity graph attribution is intentionally not used as a success metric._")
     return "\n".join(lines)
 
 

@@ -157,8 +157,6 @@ jobs:
           echo "📈 Stats fetched:"
           OPERATIONAL=$(echo "$STATS" | python -c "import sys, json; data=json.load(sys.stdin); print(data.get('operational_activity', {}).get('totals', {}).get('commits', 0))")
 
-          echo "   GitHub Profile-Attributed Events: $TOTAL"
-          echo "   Private/Restricted Events: $PRIVATE_EVENTS"
           echo "   Operational Repo Commits: $OPERATIONAL"
           echo "   Daily Average: $DAILY"
 
@@ -315,7 +313,7 @@ jobs:
           TOTAL="${{ steps.fetch-stats.outputs.total }}"
 
           # Commit with descriptive message
-          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${TOTAL} profile events / ${{ steps.fetch-stats.outputs.operational }} operational commits
+          git commit -m "📊 Auto-update: ${MONTH} ${DAY}, ${YEAR} - ${{ steps.fetch-stats.outputs.operational }} operational commits
 
           Stats refresh (every 2h + push-triggered)
           Source: GitHub GraphQL API + GitHub REST commits API
@@ -338,7 +336,6 @@ jobs:
           echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
           echo "| Fetch Stats | ${{ steps.fetch-stats.outputs.stats_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Compare L5 | ${{ steps.compare.outputs.compare_error == 'true' && '❌ Failed' || '✅ Success' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| GitHub Profile-Attributed Events | ${{ steps.fetch-stats.outputs.total || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Operational Repo Commits | ${{ steps.fetch-stats.outputs.operational || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Schedule:** Every 2h + push-triggered from LivHana-SoT" >> $GITHUB_STEP_SUMMARY
