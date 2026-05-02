@@ -105,7 +105,7 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 - Factory executes.
 - Runtime proves.
 - Cash validates.
-- Compliance never gets hand-waved.
+- Compliance immutable.
 
 ---
 
