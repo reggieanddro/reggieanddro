@@ -111,4 +111,4 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 
 [Liv Hana](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com) | San Antonio, TX
 
-*Self-taught. Mission-driven. Building the evidence trail before the ask.*
+*Self-taught. Mission-driven. Building unicron racing machines.*
