@@ -91,16 +91,16 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 <!-- STATS_START -->
 ### Dark Factory Live Output
 
-> **Auto-updated:** Saturday, May 02, 2026 at 1:20 AM CT
+> **Auto-updated:** Saturday, May 02, 2026 at 2:01 AM CT
 > **Coverage:** 2025-01 through 2026-05
 
 | Mission metric | Live count | Why it matters |
 |----------------|------------|----------------|
-| Operational repo commits | 7,822 | Real default-branch work shipped across the live factory repos |
-| Bot/agent operational commits | 2,305 | Delegated dark-factory execution by bots and agent identities |
+| Operational repo commits | 7,823 | Real default-branch work shipped across the live factory repos |
+| Bot/agent operational commits | 2,306 | Delegated dark-factory execution by bots and agent identities |
 | Commit-trailer receipts | 540 | Auditable `author-agent:` provenance where present |
-| Current-month operational commits | 32 | This month's actual factory motion |
-| Current-month bot/agent commits | 32 | Current autonomous execution share |
+| Current-month operational commits | 33 | This month's actual factory motion |
+| Current-month bot/agent commits | 33 | Current autonomous execution share |
 
 **Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro.
 
@@ -115,13 +115,13 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 <!-- LEDGER_START -->
 ## Dark Factory Operational Ledger
 
-**Auto-updated:** Saturday, May 02, 2026 at 1:20 AM CT
+**Auto-updated:** Saturday, May 02, 2026 at 2:01 AM CT
 **Coverage:** 2025-01 through 2026-05
 
 | Output lane | Count | What it proves |
 |-------------|-------|----------------|
-| Operational repo commits | 7,822 | Real default-branch work shipped across live factory repos |
-| Bot/agent operational commits | 2,305 | Delegated dark-factory work executed by automation and agent identities |
+| Operational repo commits | 7,823 | Real default-branch work shipped across live factory repos |
+| Bot/agent operational commits | 2,306 | Delegated dark-factory work executed by automation and agent identities |
 | `author-agent:` trailer receipts | 540 | Auditable agent provenance where enforced |
 
 **Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro. Source: GitHub REST commits API, default branch per repo.
@@ -129,10 +129,10 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 | Year | Operational commits | Bot/agent commits | Trailer receipts |
 |------|---------------------|------------------|------------------|
 | 2025 | 680 | 0 | 0 |
-| 2026 | 7,142 | 2,305 | 540 |
+| 2026 | 7,143 | 2,306 | 540 |
 
 <details>
-<summary><strong>2026</strong> — 7,142 operational commits · 2,305 bot/agent commits</summary>
+<summary><strong>2026</strong> — 7,143 operational commits · 2,306 bot/agent commits</summary>
 
 | Month | Operational commits | Bot/agent commits | Trailer receipts |
 |-------|---------------------|------------------|------------------|
@@ -140,7 +140,7 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 | February | 1,244 | 63 | 0 |
 | March | 1,314 | 135 | 0 |
 | April | 3,394 | 2,070 | 536 |
-| May | 32 | 32 | 4 |
+| May | 33 | 33 | 4 |
 
 </details>
 
@@ -167,18 +167,18 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 ### Monthly Operational Receipts
 
 <details>
-<summary><strong>May 2026</strong> — 32 operational commits</summary>
+<summary><strong>May 2026</strong> — 33 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
-| Operational repo commits | 32 |
-| Bot/agent operational commits | 32 |
+| Operational repo commits | 33 |
+| Bot/agent operational commits | 33 |
 | `author-agent:` trailer receipts | 4 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
 | `RND-Technology/LivHana-SoT` | 6 | Claude (6) |
-| `reggieanddro/reggieanddro` | 26 | Liv Hana Stats Bot 🤖 (22), Jesse Niesen (4) |
+| `reggieanddro/reggieanddro` | 27 | Liv Hana Stats Bot 🤖 (23), Jesse Niesen (4) |
 
 </details>
 
