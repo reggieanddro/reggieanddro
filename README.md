@@ -25,7 +25,7 @@ I am building a dark factory for regulated-industry AI assurance: compliance, vo
 
 ## RPM DNA
 
-RPM DNA is the operating map: purpose, revenue, memory, and meaning converted into execution.
+RPM DNA is expressed through AOM / COI / RPM planning: Aim, Outcome, Measure; Constraint, Opportunity, Issue; Result, Purpose, Massive Actions.
 
 | AOM | Role in the Unicorn Race | Dark Factory mandate |
 |-----|--------------------------|----------------------|
