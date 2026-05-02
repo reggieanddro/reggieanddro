@@ -91,22 +91,23 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 <!-- STATS_START -->
 ### Dark Factory Live Output
 
-> **Auto-updated:** Saturday, May 02, 2026 at 1:18 AM CT
+> **Auto-updated:** Saturday, May 02, 2026 at 1:20 AM CT
 > **Coverage:** 2025-01 through 2026-05
 
 | Mission metric | Live count | Why it matters |
 |----------------|------------|----------------|
-| Operational repo commits | 7,821 | Real default-branch work shipped across the live factory repos |
-| Bot/agent operational commits | 2,304 | Delegated dark-factory execution by bots and agent identities |
-| Commit-trailer receipts | 539 | Auditable `author-agent:` provenance where present |
-| Current-month operational commits | 31 | This month's actual factory motion |
-| Current-month bot/agent commits | 31 | Current autonomous execution share |
+| Operational repo commits | 7,822 | Real default-branch work shipped across the live factory repos |
+| Bot/agent operational commits | 2,305 | Delegated dark-factory execution by bots and agent identities |
+| Commit-trailer receipts | 540 | Auditable `author-agent:` provenance where present |
+| Current-month operational commits | 32 | This month's actual factory motion |
+| Current-month bot/agent commits | 32 | Current autonomous execution share |
 
 **Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro.
 
 **CEO intent signal:** build Liv Hana as a dark factory for regulated-industry AI assurance, prove it through Reggie & Dro, and scale toward the Unicorn Race with revenue, compliance, security, and runtime receipts.
 
 _Truth note: this block intentionally ignores GitHub vanity contribution-graph attribution. It reports operational commit output from GitHub's commits API. Profile graph numbers are not a CEO success metric._
+
 <!-- STATS_END -->
 
 ---
@@ -114,24 +115,24 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 <!-- LEDGER_START -->
 ## Dark Factory Operational Ledger
 
-**Auto-updated:** Saturday, May 02, 2026 at 1:18 AM CT
+**Auto-updated:** Saturday, May 02, 2026 at 1:20 AM CT
 **Coverage:** 2025-01 through 2026-05
 
 | Output lane | Count | What it proves |
 |-------------|-------|----------------|
-| Operational repo commits | 7,821 | Real default-branch work shipped across live factory repos |
-| Bot/agent operational commits | 2,304 | Delegated dark-factory work executed by automation and agent identities |
-| `author-agent:` trailer receipts | 539 | Auditable agent provenance where enforced |
+| Operational repo commits | 7,822 | Real default-branch work shipped across live factory repos |
+| Bot/agent operational commits | 2,305 | Delegated dark-factory work executed by automation and agent identities |
+| `author-agent:` trailer receipts | 540 | Auditable agent provenance where enforced |
 
 **Operational repos:** RND-Technology/LivHana-SoT, reggieanddro/reggieanddro. Source: GitHub REST commits API, default branch per repo.
 
 | Year | Operational commits | Bot/agent commits | Trailer receipts |
 |------|---------------------|------------------|------------------|
 | 2025 | 680 | 0 | 0 |
-| 2026 | 7,141 | 2,304 | 539 |
+| 2026 | 7,142 | 2,305 | 540 |
 
 <details>
-<summary><strong>2026</strong> — 7,141 operational commits · 2,304 bot/agent commits</summary>
+<summary><strong>2026</strong> — 7,142 operational commits · 2,305 bot/agent commits</summary>
 
 | Month | Operational commits | Bot/agent commits | Trailer receipts |
 |-------|---------------------|------------------|------------------|
@@ -139,7 +140,7 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 | February | 1,244 | 63 | 0 |
 | March | 1,314 | 135 | 0 |
 | April | 3,394 | 2,070 | 536 |
-| May | 31 | 31 | 3 |
+| May | 32 | 32 | 4 |
 
 </details>
 
@@ -166,18 +167,18 @@ _Truth note: this block intentionally ignores GitHub vanity contribution-graph a
 ### Monthly Operational Receipts
 
 <details>
-<summary><strong>May 2026</strong> — 31 operational commits</summary>
+<summary><strong>May 2026</strong> — 32 operational commits</summary>
 
 | Metric | Value |
 |--------|-------|
-| Operational repo commits | 31 |
-| Bot/agent operational commits | 31 |
-| `author-agent:` trailer receipts | 3 |
+| Operational repo commits | 32 |
+| Bot/agent operational commits | 32 |
+| `author-agent:` trailer receipts | 4 |
 
 | Operational repo | Commits | Top authors |
 |------------------|---------|-------------|
 | `RND-Technology/LivHana-SoT` | 6 | Claude (6) |
-| `reggieanddro/reggieanddro` | 25 | Liv Hana Stats Bot 🤖 (22), Jesse Niesen (3) |
+| `reggieanddro/reggieanddro` | 26 | Liv Hana Stats Bot 🤖 (22), Jesse Niesen (4) |
 
 </details>
 
