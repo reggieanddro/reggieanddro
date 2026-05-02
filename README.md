@@ -21,8 +21,6 @@ I am building a dark factory for regulated-industry AI assurance: compliance, vo
 | Expansion target | Cannabis/Hemp core plus Energy, Finance, Real Estate, Healthcare, Tech |
 | Federal posture | Secure-by-design, audit trails, software assurance, critical-infrastructure relevance |
 
-This profile does not lead with vanity contribution-graph numbers. It leads with operational factory output and the mission it serves.
-
 ---
 
 ## RPM DNA
@@ -50,7 +48,7 @@ The path is not to look like a normal developer. The path is to prove a new kind
 | One proof loop | Build, deploy, verify, document, sell, learn |
 | One scoreboard | Cash, demos, customers, runtime health, compliance risk, shipped proof |
 | One rule | If it does not move revenue, compliance, security, or proof, it waits |
-| One posture | No fake claims. No vanity metrics. Receipts or silence. |
+| One posture | No fake claims. Receipts or silence. |
 
 ---
 
@@ -108,7 +106,6 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 - Runtime proves.
 - Cash validates.
 - Compliance never gets hand-waved.
-- Profile graph vanity does not matter.
 
 ---
 
