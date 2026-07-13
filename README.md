@@ -78,6 +78,25 @@ Premium engines stay in private repositories by design — what's public here is
 
 ---
 
+## Liv Hana SI SOE — The Sovereign Operating Environment
+
+Liv Hana SI runs as a Sovereign Operating Environment: local-first compute, model-agnostic orchestration, and a governance layer that treats every token, claim, and deploy as an auditable event. The named subsystems:
+
+| Subsystem | What it does |
+|-----------|--------------|
+| **Slop Killa** | Anti-slop enforcement — output is measured against exact operator intent, not "close enough." Correctness is not a defense; drift from intent gets killed before it ships |
+| **BurnGuard** | Token-economics governor — measures cost vs. board movement per lane, two-strike stop rules on failing vectors, burn ledger receipts. Wasted compute is treated as a defect |
+| **CheckedFlag** | Finish-line gate — nothing is DONE on an agent's say-so. Runtime proof, test evidence, and human-visible receipts must cross the line before the flag drops |
+| **GoldMind** | Institutional memory engine — state, proof, risk, and progress made visible and queryable, so the operation compounds knowledge instead of re-deriving it |
+
+---
+
+## Distribution Layer — SEO · AEO · GEO Across 69+ Domains
+
+A 69+ domain portfolio operated as one answer-engine acquisition machine: classic **SEO** for search, **AEO** (answer-engine optimization: llms.txt, structured claims, citation-ready pages) so AI assistants quote the properties as sources, and **GEO** (generative-engine optimization) positioning the brands inside AI-generated answers — pointed at regulated-industry demand across all six target industries.
+
+---
+
 ## Six Target Industries
 
 Cannabis/hemp is the core. Five adjacent industries are where the same primitives compound.
