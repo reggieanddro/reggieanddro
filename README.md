@@ -1,8 +1,8 @@
 # Jesse Niesen — The Unicorn Operator
 
-**CEO & Sole Founder, Reggie & Dro LLC** | **US Marine Corps Veteran** | **Builder of Liv Hana** | San Antonio, Texas
+**CEO & Sole Founder, Reggie & Dro LLC** | **US Marine Corps Veteran** | **Builder of Liv Hana** | **Forward Deployed Engineer — AI systems in regulated production** | San Antonio, Texas
 
-I am building a dark factory for regulated-industry AI assurance: compliance, voice commerce, multi-model verification, revenue automation, and self-healing operating systems that produce proof instead of theater.
+I am building a dark factory for regulated-industry AI assurance: compliance, voice commerce, multi-model verification, revenue automation, and self-healing operating systems that produce proof instead of theater. I operate the way a forward deployed engineer operates: dropped into a live regulated business, shipping AI systems that real customers and real regulators touch, owning the outcome end to end — architecture, deployment, verification, and the revenue receipt.
 
 **LIFEWARD Mission:** deschedule Cannabis sativa L, protect lawful operators, and build Liv Hana into the AI-native infrastructure layer for regulated industries.
 
@@ -60,6 +60,21 @@ The path is not to look like a normal developer. The path is to prove a new kind
 | **LLM Council** | Multi-model review, adversarial checks, decision provenance | Teams get AI assurance and risk-controlled model output |
 | **Voice AI** | Low-latency operator/customer interface | Regulated commerce can be assisted without leaking internal state |
 | **Self-Healing Factory** | Hooks, deploy gates, learning loops, runtime receipts | Software improves with evidence, not vibes |
+| **DealSponsor** | Adversarial AI real-estate underwriting: independent claim verification, fail-closed decision gates, listing-vs-public-record truth checks | Speculators see the lemon before their money does |
+
+---
+
+## Shipped — Products in Production & Private Beta
+
+| Product | Status | What it is |
+|---------|--------|------------|
+| **Liv Hana SI** | Production | Sovereign AI operating system: voice, cockpit, compliance hooks, multi-model council, local-first Golden Voice stack ($0-inference loopback, sub-second STT/TTS) |
+| **Reggie & Dro commerce** | Production | Live regulated retail: age-gated checkout, COA compliance, LightSpeed/Authorize.Net rails, DSHS #690 discipline |
+| **RALPH CaaS** | Production | Compliance-as-code hook engine — 140+ runtime gates enforcing verify-before-act across the entire factory |
+| **DealSponsor** | Private beta | Freemium→premium adversarial underwriting for real-estate deal sponsors: time-to-operate, capital-at-risk, listing–reality gap, independent verifier subagents. Engine and rules IP held private; distributed as a gated Claude Code plugin |
+| **High Noon Cartoon** | Production | AI-assisted media pipeline turning policy truth into audience |
+
+Premium engines stay in private repositories by design — what's public here is the proof they run, not the IP that runs them.
 
 ---
 
@@ -72,7 +87,7 @@ Cannabis/hemp is the core. Five adjacent industries are where the same primitive
 | **Cannabis / Hemp** | State legality, COAs, age gates, payments, inventory, retail compliance | RALPH CaaS, product gates, audit ledger |
 | **Energy** | Critical infrastructure, OT/IT risk, sustainability, grow operations | Monitoring, incident learning, secure AI workflows |
 | **Finance** | Payments, fraud, chargebacks, compliance, auditability | Reconciliation, transaction evidence, risk scoring |
-| **Real Estate** | Zoning, leases, location policy, retail expansion | Document intelligence, location gates, approval workflows |
+| **Real Estate** | Zoning, leases, location policy, retail expansion, deal underwriting | **DealSponsor** — adversarial feasibility + entitlement-path underwriting, document intelligence, approval workflows |
 | **Healthcare** | Safety, privacy, patient-facing risk, operational resilience | Guardrails, evidence-backed responses, secure AI operation |
 | **Technology** | AI agents, cybersecurity, SaaS, compliance automation | Council, DSPy, RALPH hooks, secure-by-design CI/CD |
 
@@ -111,4 +126,4 @@ No fake federal claims. No fake contracts. The posture is readiness: build the e
 
 [Liv Hana](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com) | San Antonio, TX
 
-*Self-taught. Mission-driven. Building unicron racing machines.*
+*Self-taught. Mission-driven. Building unicorn racing machines.*
