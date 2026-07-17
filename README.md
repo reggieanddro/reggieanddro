@@ -1,4 +1,4 @@
-# Jesse Niesen — The Unicorn Operator
+# Jesse Niesen — CEO intent in, verified runtime out.
 
 **CEO & Sole Founder, Reggie & Dro LLC** | **US Marine Corps Veteran** | **Builder of Liv Hana** | **Forward Deployed Engineer — AI systems in regulated production** | San Antonio, Texas
 
