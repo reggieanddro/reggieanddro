@@ -1,148 +1,116 @@
-# Jesse Niesen — CEO intent in, verified runtime out.
+<div align="center">
 
-**CEO & Sole Founder, Reggie & Dro LLC** | **US Marine Corps Veteran** | **Builder of Liv Hana** | **Forward Deployed Engineer — AI systems in regulated production** | San Antonio, Texas
+![Jesse Niesen](https://img.shields.io/badge/JESSE_NIESEN-000000?style=for-the-badge&logoColor=white)
+![Solo Founder](https://img.shields.io/badge/SOLO_FOUNDER-22FF00?style=for-the-badge&logoColor=000000)
+![USMC Veteran](https://img.shields.io/badge/USMC_VETERAN-000000?style=for-the-badge&logoColor=22FF00)
 
-I am building a dark factory for regulated-industry AI assurance: compliance, voice commerce, multi-model verification, revenue automation, and self-healing operating systems that produce proof instead of theater. I operate the way a forward deployed engineer operates: dropped into a live regulated business, shipping AI systems that real customers and real regulators touch, owning the outcome end to end — architecture, deployment, verification, and the revenue receipt.
+**Frontier-deployment agentic engineer.** I run a sovereign software factory that builds sovereign software factories.
 
-**LIFEWARD Mission:** deschedule Cannabis sativa L, protect lawful operators, and build Liv Hana into the AI-native infrastructure layer for regulated industries.
+Harnesser of harnesses harness. First to GTM with SOE.
 
-[Liv Hana](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com) | [Instagram](https://instagram.com/reggieanddro) | [YouTube](https://youtube.com/@reggieanddro)
+[![Book](https://img.shields.io/badge/BOOK_TIME-22FF00?style=flat-square&logoColor=000000)](https://cal.com/jesseniesen)
+[![Site](https://img.shields.io/badge/jesseniesen.com-000000?style=flat-square&labelColor=000000&color=22FF00)](https://jesseniesen.com)
+[![Liv Hana](https://img.shields.io/badge/livhana.ai-000000?style=flat-square&labelColor=000000&color=22FF00)](https://livhana.ai)
 
----
-
-## Dark Factory Proof Strip
-
-| Proof | Current signal |
-|-------|----------------|
-| Operational output | Runtime receipts, shipped systems, deploy gates, and public proof surfaces |
-| Factory mode | Solo CEO + agent swarm + CI/CD + runtime verification |
-| Core wedge | RALPH CaaS + LLM Council + Voice AI for regulated operators |
-| Compliance root | Reggie & Dro, Texas hemp operator, DSHS #690 discipline |
-| Expansion target | Cannabis/Hemp core plus Energy, Finance, Real Estate, Healthcare, Tech |
-| Federal posture | Secure-by-design, audit trails, software assurance, critical-infrastructure relevance |
+</div>
 
 ---
 
-## RPM DNA
-
-RPM DNA is expressed through AOM / COI / RPM planning: Aim, Outcome, Measure; Constraint, Opportunity, Issue; Result, Purpose, Massive Actions.
-
-| AOM | Role in the Unicorn Race | Dark Factory mandate |
-|-----|--------------------------|----------------------|
-| **R&D Revenue** | Cash engine and regulated proof ground | Convert compliance, catalog, checkout, members, and inventory into revenue receipts |
-| **High Noon Cartoon** | Media and narrative leverage | Turn cultural truth into audience, attention, and defensible brand gravity |
-| **One Plant Solution** | Policy and education layer | Advance descheduling, hemp legitimacy, and public-interest advocacy |
-| **Herbitrage Technology** | AI/SaaS factory | Productize Liv Hana, RALPH, Council, and autonomous verification for external buyers |
-
-Strongest lane: **Herbitrage Technology** for scalable enterprise value. Constraint lane: **R&D Revenue** until checkout, catalog truth, and paid pilot receipts are boringly reliable.
+Solo. No team, no runway. I operate a licensed Texas cannabis business — one of the most
+regulated categories in the US — on infrastructure I built alone. When an agent falsely
+reports a job done, I lose inventory, licensing, or a month of cash. So I built harnesses
+where **nothing counts until it emits a receipt**.
 
 ---
 
-## Unicorn Race Doctrine
+### The factory — hierarchy, not a tool list
 
-The path is not to look like a normal developer. The path is to prove a new kind of operator: CEO intent in, verified runtime out.
+```
+Liv Hana SI              SOE / DCP harness orchestrator — top of stack
+  └─ Pi + Aider          local harness operators
+       └─ Claude Code · Codex · Grok    frontier agents, harnessed for judgment
+                                        only — maximum token arbitrage
+  └─ ollama 35B / 9B / 7B               census, classify, synthesize @ $0 marginal
+  └─ gates + ledger      verification gates · cost routing · receipt ledger
+```
 
-| Doctrine | Meaning |
-|----------|---------|
-| One wedge | RALPH CaaS + LLM Council + Voice AI for regulated operators |
-| One proof loop | Build, deploy, verify, document, sell, learn |
-| One scoreboard | Cash, demos, customers, runtime health, compliance risk, shipped proof |
-| One rule | If it does not move revenue, compliance, security, or proof, it waits |
-| One posture | No fake claims. Receipts or silence. |
+**Verification gates.** An agent's output is not accepted until it produces a
+machine-readable receipt — a file, hash, test result, or diff. Agent self-certification
+and human approval are separate records. Fail-closed.
 
----
+**Token arbitrage.** Frontier models are restricted to accept/block judgment on money,
+auth, and irreversible diffs. Local models run everything mechanical at $0. A pre-flight
+gate refuses a premium call the return doesn't justify.
 
-## Product Wedge
+**Receipt ledger.** Every run appends one row: seat, verdict, duration, cost. That ledger
+is what makes spend gating and model ranking possible instead of vibes.
 
-| Product | What it proves | Buyer value |
-|---------|----------------|-------------|
-| **RALPH CaaS** | Compliance-as-code, COA logic, age gate, audit trails | Operators prove lawful workflows instead of guessing |
-| **LLM Council** | Multi-model review, adversarial checks, decision provenance | Teams get AI assurance and risk-controlled model output |
-| **Voice AI** | Low-latency operator/customer interface | Regulated commerce can be assisted without leaking internal state |
-| **Self-Healing Factory** | Hooks, deploy gates, learning loops, runtime receipts | Software improves with evidence, not vibes |
-| **DealSponsor** | Adversarial AI real-estate underwriting: independent claim verification, fail-closed decision gates, listing-vs-public-record truth checks | Speculators see the lemon before their money does |
-
----
-
-## Shipped — Products in Production & Private Beta
-
-| Product | Status | What it is |
-|---------|--------|------------|
-| **Liv Hana SI** | Production | Sovereign AI operating system: voice, cockpit, compliance hooks, multi-model council, local-first Golden Voice stack ($0-inference loopback, sub-second STT/TTS) |
-| **Reggie & Dro commerce** | Production | Live regulated retail: age-gated checkout, COA compliance, LightSpeed/Authorize.Net rails, DSHS #690 discipline |
-| **RALPH CaaS** | Production | Compliance-as-code hook engine — 140+ runtime gates enforcing verify-before-act across the entire factory |
-| **DealSponsor** | Private beta | Freemium→premium adversarial underwriting for real-estate deal sponsors: time-to-operate, capital-at-risk, listing–reality gap, independent verifier subagents. Engine and rules IP held private; distributed as a gated Claude Code plugin |
-| **High Noon Cartoon** | Production | AI-assisted media pipeline turning policy truth into audience |
-
-Premium engines stay in private repositories by design — what's public here is the proof they run, not the IP that runs them.
+**GCP is true — and fallback.** Cloud Run, AlloyDB, BigQuery: built, deployed, proven at
+production scale. Current focus is deliberately free/cheap local-first — highest
+intelligence per byte per second per dollar, shipping weekly, no slop. The cloud system
+fires up when scale demands it.
 
 ---
 
-## Liv Hana SI SOE — The Sovereign Operating Environment
+### Principles (earned, not aspirational)
 
-Liv Hana SI runs as a Sovereign Operating Environment: local-first compute, model-agnostic orchestration, and a governance layer that treats every token, claim, and deploy as an auditable event. The named subsystems:
-
-| Subsystem | What it does |
-|-----------|--------------|
-| **Slop Killa** | Anti-slop enforcement — output is measured against exact operator intent, not "close enough." Correctness is not a defense; drift from intent gets killed before it ships |
-| **BurnGuard** | Token-economics governor — measures cost vs. board movement per lane, two-strike stop rules on failing vectors, burn ledger receipts. Wasted compute is treated as a defect |
-| **CheckedFlag** | Finish-line gate — nothing is DONE on an agent's say-so. Runtime proof, test evidence, and human-visible receipts must cross the line before the flag drops |
-| **GoldMind** | Institutional memory engine — state, proof, risk, and progress made visible and queryable, so the operation compounds knowledge instead of re-deriving it |
+- **Receipts, not claims.** A proof nobody consumes is exhaust. Telling those apart is the job.
+- **A plan cannot fail visibly, so plan-loops run forever.** Produce the plan once, then execute.
+- **Audit your own doctrine.** Mine went 552 → 162 lines when checked against live reality; 1 of 16 dated claims survived. Stale instructions are worse than none.
+- **The expensive seat never does census.** If a frontier model is scanning files, the routing is broken.
+- **Simplicity is the destination:** the shore of simplicity on the other side of the sea of complexity. Complex machinery underneath, simple engaging flows for the human in front of it.
 
 ---
 
-## Distribution Layer — SEO · AEO · GEO Across 69+ Domains
+### Shipped · live right now
 
-A 69+ domain portfolio operated as one answer-engine acquisition machine: classic **SEO** for search, **AEO** (answer-engine optimization: llms.txt, structured claims, citation-ready pages) so AI assistants quote the properties as sources, and **GEO** (generative-engine optimization) positioning the brands inside AI-generated answers — pointed at regulated-industry demand across all six target industries.
+| | What it is | Live |
+|---|---|---|
+| **Liv Hana SI** | Strategic intelligence for regulated industries — voice, council, compliance | [livhana.ai](https://livhana.ai) |
+| **StrategySI** | One engine, two skins. The SI platform packaged for operators | [strategysi.com](https://strategysi.com) |
+| **Reggie & Dro** | Licensed TX cannabis operation — the proving ground | [reggieanddro.com](https://reggieanddro.com) |
+| **THCA San Antonio** | D2C funnel on the same rail | [thcasanantonio.com](https://thcasanantonio.com) |
+| **High Noon Cartoon** | Original animated policy satire. Owned IP, same pipeline | [highnooncartoon.com](https://highnooncartoon.com) |
+| **Craft** | Independent operator coalition | [joincraft.org](https://joincraft.org) |
+| **MCP Connector** | Live MCP server, token-auth (401 to the public by design) | `mcp.herbitrage.com` |
 
----
-
-## Six Target Industries
-
-Cannabis/hemp is the core. Five adjacent industries are where the same primitives compound.
-
-| Industry | Why it matters | Liv Hana primitive |
-|----------|----------------|--------------------|
-| **Cannabis / Hemp** | State legality, COAs, age gates, payments, inventory, retail compliance | RALPH CaaS, product gates, audit ledger |
-| **Energy** | Critical infrastructure, OT/IT risk, sustainability, grow operations | Monitoring, incident learning, secure AI workflows |
-| **Finance** | Payments, fraud, chargebacks, compliance, auditability | Reconciliation, transaction evidence, risk scoring |
-| **Real Estate** | Zoning, leases, location policy, retail expansion, deal underwriting | **DealSponsor** — adversarial feasibility + entitlement-path underwriting, document intelligence, approval workflows |
-| **Healthcare** | Safety, privacy, patient-facing risk, operational resilience | Guardrails, evidence-backed responses, secure AI operation |
-| **Technology** | AI agents, cybersecurity, SaaS, compliance automation | Council, DSPy, RALPH hooks, secure-by-design CI/CD |
+Plus a 69+ domain portfolio routed through Cloudflare — every domain a funnel into the
+flow that matches the visitor's need to the right offer: project, product, service,
+community, or me directly.
 
 ---
 
-## Defense / Cyber / Critical Infrastructure Posture
+### Receipts, not claims
 
-The work is aligned with the public direction of [DARPA AIxCC](https://www.darpa.mil/research/programs/ai-cyber) and [CISA Secure by Design](https://www.cisa.gov/securebydesign): autonomous vulnerability discovery, patching, secure software supply chains, evidence trails, and customer-security outcomes.
+Measured `2026-07-21` on my own hardware:
 
-No fake federal claims. No fake contracts. The posture is readiness: build the evidence, prove the system, then enter the room.
+```
+107,827 files audited                                0.67s, $0 cloud
+636 MB of waste found that every prior audit missed  ignore-listed -> invisible to status
+53,272 generated "proof" files                       consumers found: 0
+root-caused and throttled the same day               ec1b5396a · deddd4588
+my own doctrine, audited against live reality        552 -> 162 lines, 1 of 16 claims survived
+```
 
----
-## Stack
-
-| Layer | Tools |
-|-------|-------|
-| Cloud | GCP Cloud Run, Cloud Build, Secret Manager, Cloud Storage, GitHub Actions |
-| Data | AlloyDB PostgreSQL, pgvector, BigQuery, Redis patterns, migration-led schema control |
-| Runtime | Node.js, TypeScript, Python, FastAPI, Next.js |
-| AI | Direct Claude, Gemini, Grok, GPT/Codex APIs, DSPy, LLM Council, agent routing |
-| Voice | Deepgram STT, ElevenLabs TTS, Gemini Live patterns, WebSocket/SSE orchestration |
-| Commerce | LightSpeed, Authorize.net, Shopify/Ecwid patterns, Klaviyo, Twilio |
-| Security | Auth0, Veriff, Cloudflare WAF, JWT, fail-closed route guards, compliance hooks |
+I audit my own operating doctrine and delete most of it. Stale instructions are worse than none.
 
 ---
 
-## Operating Law
+### Stack
 
-- CEO decides.
-- Factory executes.
-- Runtime proves.
-- Cash validates.
-- Compliance immutable.
+```
+Liv Hana SI (SOE/DCP orchestrator) · Pi + Aider harnessing Claude Code, Codex, Grok
+ollama (local 35B/9B/7B) · DSPy · MCP · Node · TypeScript · Python · Next.js
+Fly.io + Neon · Cloudflare · Postgres/pgvector · Auth0 · WorkOS M2M
+Apple silicon 48GB, local-first · GCP (Cloud Run/AlloyDB/BigQuery) proven, held as fallback
+```
 
 ---
 
-[Liv Hana](https://livhana.ai) | [Reggie & Dro](https://ReggieAndDro.com) | San Antonio, TX
+### Work with me
 
-*Self-taught. Mission-driven. Building unicorn racing machines.*
+Advisory and hands-on build for teams putting AI into regulated or high-consequence work.
+I come in as the operator who already did it under real exposure.
+
+**[cal.com/jesseniesen](https://cal.com/jesseniesen)** — no email chain, no intake funnel, no
+assistant screening you.
