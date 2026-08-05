@@ -4,7 +4,7 @@
 ![Solo Founder](https://img.shields.io/badge/SOLO_FOUNDER-22FF00?style=for-the-badge&logoColor=000000)
 ![USMC Veteran](https://img.shields.io/badge/USMC_VETERAN-000000?style=for-the-badge&logoColor=22FF00)
 
-**Frontier-deployment agentic engineer.** I run a sovereign software factory that builds sovereign software factories.
+**Deterministic Operator. Frontier-deployment agentic engineer.** I run a sovereign software factory that builds sovereign software factories.
 
 Harnesser of harnesses harness. First to GTM with SOE.
 
