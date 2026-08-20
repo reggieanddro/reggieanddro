@@ -21,13 +21,13 @@
 
 | # | World | Destination |
 |---|---|---|
-| 01 | Deal Room | [reggieanddro.com](https://reggieanddro.com) |
-| 02 | SI SOE | [livhana.ai](https://livhana.ai) |
-| 03 | RPM Weekly | [jesseniesen.com/rpm](https://jesseniesen.com/rpm) |
-| 04 | Unicorn Racing | [jesseniesen.com/urm](https://jesseniesen.com/urm) |
-| 05 | Stable Coin Spine | [jesseniesen.com/spine](https://jesseniesen.com/spine) |
-| 06 | Golden Voice | [jesseniesen.com/goldenvoice](https://jesseniesen.com/goldenvoice) |
-| 07 | Book | [jesseniesen.com](https://jesseniesen.com) |
+| 01 | World · Deal Room | [reggieanddro.com](https://reggieanddro.com) |
+| 02 | World · SI SOE | [livhana.ai](https://livhana.ai) |
+| 03 | World · RPM Weekly | [jesseniesen.com/rpm](https://jesseniesen.com/rpm) |
+| 04 | World · Unicorn Racing | [jesseniesen.com/urm](https://jesseniesen.com/urm) |
+| 05 | World · Stable Coin Spine | [jesseniesen.com/spine](https://jesseniesen.com/spine) |
+| 06 | World · Golden Voice | [jesseniesen.com/goldenvoice](https://jesseniesen.com/goldenvoice) |
+| 07 | World · Book | [jesseniesen.com](https://jesseniesen.com) |
 
 USMC Veteran. TX DSHS #690. 25+ years paying programmers → shipping my own. Texas licensed ~14,000 consumable-hemp retail stores through a live THC-ban fight (KERA / Tribune Aug 2026). Not a coach. Not blurple.
 
