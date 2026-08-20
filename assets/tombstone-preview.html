@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jesse Niesen — Forward Deployed Engineer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Forward Deployed Engineer. USMC Veteran. TX DSHS #690. Receipts, not narrative.">
+<style>
+:root{--bg:#0a0a0a;--fg:#eaeaea;--line:#2a2a2a;--accent:#c9ff3f;--muted:#777}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:ui-monospace,"JetBrains Mono","IBM Plex Mono",Menlo,monospace;line-height:1.4}
+.wrap{max-width:960px;margin:0 auto;padding:32px 20px}
+.hero{border:1px solid var(--line);padding:24px;margin-bottom:24px}
+.hero h1{font-size:1.6rem;font-weight:700}
+.hero .tag{color:var(--accent);font-size:.85rem;letter-spacing:.05em}
+.hero p{color:#999;margin-top:10px;font-size:.9rem;max-width:70ch}
+.graph{border:1px solid var(--line);border-bottom:0;padding:12px 16px;display:none}
+.graph img{width:100%;height:auto;filter:grayscale(1) contrast(1.1);opacity:.95}
+[data-skin="jn"] .graph{display:block}
+.tabs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;border:1px solid var(--line);background:var(--line)}
+.tab{background:var(--bg);padding:20px;text-decoration:none;color:var(--fg);display:block}
+.tab:hover{background:#151515;color:var(--accent)}
+.tab .k{font-size:.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.tab .v{font-size:1.05rem;margin-top:6px;font-weight:600}
+.tab .s{font-size:.65rem;color:var(--muted);margin-top:8px}
+.foot{margin-top:24px;font-size:.75rem;color:#555}
+</style>
+</head>
+<body data-skin="acc">
+<div class="wrap">
+  <div class="hero">
+    <div class="tag">FORWARD DEPLOYED ENGINEER · 25+ YRS PAYING PROGRAMMERS → NOW SHIPPING MY OWN</div>
+    <h1>Jesse Niesen</h1>
+    <p>USMC Veteran. TX DSHS #690. Frontline operator while Texas licensed ~14,000 consumable-hemp retail stores through a live THC-ban fight (KERA / Tribune Aug 2026). Receipts, not narrative. Not a coach.</p>
+  </div>
+  <div class="graph" id="graph">
+    <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=reggieanddro&show_icons=true&hide_border=true&title_color=c9ff3f&icon_color=c9ff3f&text_color=eaeaea&bg_color=0a0a0a">
+  </div>
+  <div class="tabs" id="worlds"></div>
+  <div class="foot">reggieanddro.com · aicrisiscoach.com · jesseniesen.com · livhana.ai — deployed, not designed</div>
+</div>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search).get("skin");
+  var skin=q||document.body.getAttribute("data-skin")||"acc";
+  document.body.setAttribute("data-skin", skin);
+  var acc=["https://reggieanddro.com","https://livhana.ai","https://jesseniesen.com"];
+  fetch("worlds.json").then(function(r){return r.json()}).then(function(w){
+    var rows=skin==="jn"?w:w.filter(function(x){return acc.indexOf(x.url)>=0});
+    document.getElementById("worlds").innerHTML=rows.map(function(x){
+      return '<a class="tab" href="'+x.url+'"><div class="k">'+x.k+'</div><div class="v">'+x.v+'</div><div class="s">'+(x.status||"")+'</div></a>';
+    }).join("");
+  });
+})();
+</script>
+</body>
+</html>
