@@ -1,12 +1,18 @@
-<div align="center">
+# Jesse Niesen
 
-![Jesse Niesen](https://img.shields.io/badge/JESSE_NIESEN-000000?style=for-the-badge)
-![FDE](https://img.shields.io/badge/FORWARD_DEPLOYED_ENGINEER-c9ff3f?style=for-the-badge&logoColor=000000)
-![USMC](https://img.shields.io/badge/USMC_VETERAN-000000?style=for-the-badge)
-![DSHS](https://img.shields.io/badge/TX_DSHS_%23690-000000?style=for-the-badge&color=c9ff3f)
+No one works more—or more intensely—than I do.
 
-**Forward Deployed Engineer.** 25+ years paying programmers → now shipping my own.
+For 25+ years, I built businesses, hired programmers, carried the cost, and learned what breaks when reality does not care about the roadmap.
 
-[Book](https://cal.com/jesseniesen) · [jesseniesen.com](https://jesseniesen.com) · [livhana.ai](https://livhana.ai) · [reggieanddro.com](https://reggieanddro.com)
+Now I build the work myself.
 
-</div>
+**Forward Deployed Entrepreneur + Engineer.** Working inside my own businesses under real regulatory pressure.
+
+Texas is forcing a pivot through the cannabis and hemp collapse. I am making that pivot in public.
+
+If you run something real:
+[see the work](https://github.com/reggieanddro) ·
+[watch the record](https://www.youtube.com/@aicrisiscoach) ·
+[bring me a hard problem](https://cal.com/jesseniesen)
+
+People. Plant. Profit. De-Schedule ASAP.
