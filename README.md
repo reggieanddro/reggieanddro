@@ -2,17 +2,18 @@
 
 No one works more—or more intensely—than I do.
 
-For 25+ years, I built businesses, hired programmers, carried the cost, and learned what breaks when reality does not care about the roadmap.
+For 25+ years, I've built businesses, hired programmers, paid all the costs, and learned to engineer and pioneer breakthroughs in business more and more every year.
 
-Now I build the work myself.
+I'm currently deep on a 20+ month 10,000+ HOUR work sprint proving SI > AI.
+
+Program > Model Research Paper in Progress.
 
 **Forward Deployed Entrepreneur + Engineer.** Working inside my own businesses under real regulatory pressure.
 
-Texas is forcing a pivot through the cannabis and hemp collapse. I am making that pivot in public.
-
-If you run something real:
-[see the work](https://github.com/reggieanddro) ·
-[watch the record](https://www.youtube.com/@aicrisiscoach) ·
-[bring me a hard problem](https://cal.com/jesseniesen)
+Texas just shut down the hemp industry. I am making my pivot here and inside ReggieAndDro.com.
 
 People. Plant. Profit. De-Schedule ASAP.
+
+If you run something real:
+
+[bring me a hard problem you need solved](https://cal.com/jesseniesen)
