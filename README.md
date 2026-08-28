@@ -1,19 +1,30 @@
 # Jesse Niesen
 
-No one works more—or more intensely—than I do.
+**Frontier-deployment engineer (FDE).** I operate a licensed Texas cannabis business on infrastructure I built, and I take the same receipt-or-it-didn't-happen bar into client work.
 
-For 25+ years, I've built businesses, hired programmers, paid all the costs, and learned to engineer and pioneer breakthroughs in business more and more every year.
+[jesseniesen.com](https://jesseniesen.com) · [livhana.ai](https://livhana.ai) · [cal.com/jesseniesen](https://cal.com/jesseniesen)
 
-I'm currently deep on a 20+ month 10,000+ HOUR work sprint proving SI > AI.
+---
 
-Program > Model Research Paper in Progress.
+Solo. No team. When an agent falsely reports a job done, I lose inventory, licensing, or a month of cash — so nothing counts until it emits a receipt.
 
-**Forward Deployed Entrepreneur + Engineer.** Working inside my own businesses under real regulatory pressure.
+## Live
 
-Texas just shut down the hemp industry. I am making my pivot here and inside ReggieAndDro.com.
+| | |
+|---|---|
+| **Site** | [jesseniesen.com](https://jesseniesen.com) |
+| **Liv Hana** | [livhana.ai](https://livhana.ai) |
+| **Shop** | Licensed TX cannabis retail, live at [thcasanantonio.com](https://thcasanantonio.com). `reggieanddro.com` is parked/expired — not the live shop. Storefront is on a fly.dev transition hold. |
+| **toROI paper** | [jesseniesen.com/toROI.html](https://jesseniesen.com/toROI.html) — local voice-inference benchmark (Kokoro TTS measured) |
+| **Signal Scan** | [jesseniesen.com/signal-scan](https://jesseniesen.com/signal-scan) |
+| **Book time** | [cal.com/jesseniesen](https://cal.com/jesseniesen) |
 
-People. Plant. Profit. De-Schedule ASAP.
+## Not proven
 
-If you run something real:
+**Golden Voice / `/gv` is not a live public product.** The toROI paper documents what is actually running. Do not treat `/gv` as shipped.
 
-[bring me a hard problem you need solved](https://cal.com/jesseniesen)
+---
+
+Advisory and hands-on build for teams putting AI into regulated or high-consequence work.
+
+**[cal.com/jesseniesen](https://cal.com/jesseniesen)**
