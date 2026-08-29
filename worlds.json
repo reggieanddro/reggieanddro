@@ -1,9 +1,8 @@
 [
-  {"k":"01 · deal room","v":"Reggie & Dro LLC — Texas","url":"https://reggieanddro.com","status":"PROVEN"},
-  {"k":"02 · SI SOE","v":"Liv Hana","url":"https://livhana.ai","status":"PROVEN"},
-  {"k":"03 · ops cadence","v":"RPM Weekly Planning","url":"https://jesseniesen.com/rpm","status":"UNVERIFIED"},
-  {"k":"04 · racing","v":"Unicorn Racing Machine","url":"https://jesseniesen.com/urm","status":"UNVERIFIED"},
-  {"k":"05 · finance rail","v":"Stable Coin Spine + NFT Wrapper","url":"https://jesseniesen.com/spine","status":"UNVERIFIED"},
-  {"k":"06 · legacy voice","v":"Golden Voice (LivVoice + MaxAutoVibes)","url":"https://jesseniesen.com/goldenvoice","status":"UNVERIFIED"},
-  {"k":"07 · book","v":"Jesse Niesen","url":"https://jesseniesen.com","status":"PROVEN"}
+  {"k":"SHOP","v":"Reggie & Dro","url":"https://github.com/reggieanddro/rad","live":"https://reggieanddro.com","status":"PROVEN"},
+  {"k":"CARTOON","v":"High Noon Cartoon","url":"https://github.com/reggieanddro/hnc","live":"https://highnooncartoon.com","status":"PROVEN"},
+  {"k":"POLICY","v":"One Plant Solution","url":"https://github.com/reggieanddro/ops","live":"https://joincraft.org","status":"UNVERIFIED"},
+  {"k":"TRADE","v":"Herbitrage","url":"https://github.com/reggieanddro/her","live":"https://mcp.herbitrage.com","status":"PROVEN"},
+  {"k":"DEMAND","v":"D2C Funnels","url":"https://github.com/reggieanddro/df","live":"https://thcasanantonio.com","status":"PROVEN"},
+  {"k":"OPERATE","v":"Liv Hana SI","url":"https://github.com/reggieanddro/rpm-dna","live":"https://livhana.ai","status":"PROVEN"}
 ]
