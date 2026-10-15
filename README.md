@@ -1,10 +1,6 @@
 # Jesse Niesen
 
-**Forward Deployed Engineer · USMC**
-
-Multi-entity operator. Local-first AI under live constraint.
-
-If you have one expensive workflow that keeps breaking, start here: establish the constraint, set a baseline, and make the next proof visible.
+USMC veteran. Forward Deployed Engineer. I am the customer, the licensed operator, and the engineer in the same seat. Ran TX hemp retail (Reggie & Dro, DSHS #690) from 2022-06-01 until the state banned it on 2026-06-05. Before that, Co-CEO of a California hemp biotech. Last 20+ months: rebuilt systems live under that constraint — local-first, fail-closed, receipts not decks. Empty nester. 100% travel. I can be on your highest-cost broken workflow tomorrow.
 
 **FDE path:** [RPM DNA](https://github.com/reggieanddro/rpm-dna) · [Driving Force](https://github.com/reggieanddro/df)
 
