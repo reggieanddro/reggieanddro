@@ -1,9 +1,5 @@
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=reggieanddro&show_icons=true&hide_border=true&title_color=111111&icon_color=111111&text_color=111111&bg_color=ffffff" alt="GitHub stats" />
-
-<img src="https://streak-stats.demolab.com?user=reggieanddro&hide_border=true" alt="GitHub streak" />
-
 <table>
 <tr>
 <td align="center" width="16%"><a href="https://github.com/reggieanddro/rad"><b>SHOP</b><br/>Reggie & Dro</a></td>
